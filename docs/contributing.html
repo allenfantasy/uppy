@@ -549,7 +549,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Contributing</h1>
-    <h2 id="Uppy-development"><a href="#Uppy-development" class="headerlink" title="Uppy development"></a>Uppy development</h2><p>Fork the repository into your own account first. See the <a href="https://help.github.com/articles/fork-a-repo/" target="_blank" rel="noopener">GitHub Help</a> article for instructions.</p>
+    <!-- WARNING! This file was injected. Please edit in ".github/CONTRIBUTING.md" instead and run "update.js" -->
+<h2 id="Uppy-development"><a href="#Uppy-development" class="headerlink" title="Uppy development"></a>Uppy development</h2><p>Fork the repository into your own account first. See the <a href="https://help.github.com/articles/fork-a-repo/" target="_blank" rel="noopener">GitHub Help</a> article for instructions.</p>
 <p>After you have successfully forked the repo, clone and install the project:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">git</span> clone git@github.com:YOUR_USERNAME/uppy.git
 <span class="token function">cd</span> uppy
@@ -604,6 +605,7 @@ selenium-standalone <span class="token function">install</span>
 <p>Other things to keep in mind during release:</p>
 <ul>
 <li>When doing a minor release below 1.0, or a major release &gt;= 1.0, of the <code>@uppy/core</code> package, the peerDependency of the plugin packages needs to be updated first. Eg when updating from 0.25.5 to 0.26.0, the peerDependency of each should be <code>&quot;@uppy/core&quot;: &quot;^0.26.0&quot;</code> before doing <code>npm run release</code>.</li>
+<li>When publishing a new package, publish it manually first with <code>npm publish --access public</code>, since by default <code>@</code>-prefixed packages are private on NPM, and Lerna will fail.</li>
 </ul>
 <p>After a release, the demos on transloadit.com should also be updated. After updating, check that some things work locally:</p>
 <ul>
@@ -618,17 +620,17 @@ selenium-standalone <span class="token function">install</span>
 <p>To install the required node modules, type:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> website <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> <span class="token punctuation">..</span>
 </pre></td></tr></table></figure>
-<p>For local previews on <a href="http://127.0.0.1:4000" target="_blank" rel="noopener">http://127.0.0.1:4000</a>, type:</p>
+<p>For local previews on <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>, type:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> start
 </pre></td></tr></table></figure>
 <p>This will watch the website, as well as Uppy, as the examples, and rebuild everything and refresh your browser as files change.</p>
 <p>Then, to work on, for instance, the XHRUpload example, you would edit the following files:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre>atom src/core/Core.js \
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="token variable">${EDITOR}</span> src/core/Core.js \
   src/plugins/XHRUpload.js \
   src/plugins/Plugin.js \
   website/src/examples/xhrupload/app.es6
 </pre></td></tr></table></figure>
-<p>And open <a href="http://0.0.0.0:4000/examples/xhrupload/" target="_blank" rel="noopener">http://0.0.0.0:4000/examples/xhrupload/</a> in your web browser.</p>
+<p>And open <a href="http://localhost:4000/examples/xhrupload/" target="_blank" rel="noopener">http://localhost:4000/examples/xhrupload/</a> in your web browser.</p>
 <h2 id="CSS-guidelines"><a href="#CSS-guidelines" class="headerlink" title="CSS guidelines"></a>CSS guidelines</h2><p>The CSS standards followed in this project closely resemble those from <a href="https://gist.github.com/fat/a47b882eb5f84293c4ed" target="_blank" rel="noopener">Medium’s CSS Guidelines</a>. If something is not mentioned here, follow their guidelines.</p>
 <h3 id="Naming-conventions"><a href="#Naming-conventions" class="headerlink" title="Naming conventions"></a>Naming conventions</h3><p>This project uses naming conventions adopted from the SUIT CSS framework.<br><a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank" rel="noopener">Read about them here</a>.</p>
 <p>To quickly summarize:</p>
