@@ -98,7 +98,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -162,34 +158,34 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     <p>Uppy 0.26 replaces the monolithic Uppy package with a separate npm package for every plugin.</p>
 <p><img width="448" src="/images/blog/0.26/uppy-multiple-packages.png"></p>
 <a id="more"></a>
-<h2 id="Lerna"><a href="#Lerna" class="headerlink" title="Lerna"></a>Lerna</h2><p>⚠️ <strong>breaking</strong></p>
+<h2 id="Lerna"><a href="#Lerna" class="headerlink" title="Lerna"></a>Lerna</h2><p>&#x26A0;&#xFE0F; <strong>breaking</strong></p>
 <p>All Uppy plugins have moved into their own npm packages. This means you need to install the plugins you use separately in the future, and you have to update all your Uppy <code>require()</code> calls or <code>import</code> paths.</p>
 <p>The packages are published under the <code>@uppy</code> scope on npm:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> @uppy/core @uppy/dashboard @uppy/tus
 </pre></td></tr></table></figure>
 <p>This has some benefits, like:</p>
 <ul>
-<li>No need to know the file path of a plugin—use <code>@uppy/dashboard</code> instead of <code>uppy/lib/plugins/Dashboard</code>. This also allows us to move our file structure around internally without breaking everyone.</li>
-<li>Only have the code you actually use in <code>node_modules</code>—large plugin dependencies are not installed if you don’t use the plugin.</li>
+<li>No need to know the file path of a plugin&#x2014;use <code>@uppy/dashboard</code> instead of <code>uppy/lib/plugins/Dashboard</code>. This also allows us to move our file structure around internally without breaking everyone.</li>
+<li>Only have the code you actually use in <code>node_modules</code>&#x2014;large plugin dependencies are not installed if you don&#x2019;t use the plugin.</li>
 <li>Separate versioning allows making breaking changes in plugins, without requiring users of other unrelated plugins to upgrade.</li>
 </ul>
 <p>You can still use the <code>uppy</code> package for now to simplify upgrading, although it may be deprecated in the future. It installs all the <code>@uppy/</code> packages and re-exports them:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> <span class="token punctuation">{</span> Core<span class="token punctuation">,</span> Dashboard<span class="token punctuation">,</span> Tus <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppy'</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>It’s very important to set up tree shaking when using Uppy in this way; otherwise you may include dozens of KBs of unused plugins. Using the <code>@uppy/</code> packages instead is strongly recommended, as those do not include unused code in the first place.</p>
+<p>It&#x2019;s very important to set up tree shaking when using Uppy in this way; otherwise you may include dozens of KBs of unused plugins. Using the <code>@uppy/</code> packages instead is strongly recommended, as those do not include unused code in the first place.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> Uppy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/core'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Dashboard <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/dashboard'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Tus <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/tus'</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>The CSS required for plugins is included in each package at <code>dist/style.css</code>. Each plugin contains <em>all</em> the CSS it needs, eg. the Dashboard includes Status Bar CSS. If you use both plugins, only include the Dashboard CSS file. Even better is to use a CSS minifier so any duplicate styles are removed for you :) Caveats like this are documented on the plugin pages, and hopefully we can smooth it out over time!</p>
-<h2 id="Typings"><a href="#Typings" class="headerlink" title="Typings"></a>Typings</h2><p><a href="https://github.com/taoqf" target="_blank" rel="noopener">@taoqf</a> contributed TypeScript typings to 0.25—0.26 moves those into each package and adds a few missing ones.</p>
-<p>We’re not TypeScript experts ourselves, so feedback, bug reports &amp; PRs are very much appreciated :sparkles:</p>
+<h2 id="Typings"><a href="#Typings" class="headerlink" title="Typings"></a>Typings</h2><p><a href="https://github.com/taoqf" target="_blank" rel="noopener">@taoqf</a> contributed TypeScript typings to 0.25&#x2014;0.26 moves those into each package and adds a few missing ones.</p>
+<p>We&#x2019;re not TypeScript experts ourselves, so feedback, bug reports &amp; PRs are very much appreciated <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span></p>
 <h2 id="Documentation-Updates"><a href="#Documentation-Updates" class="headerlink" title="Documentation Updates"></a>Documentation Updates</h2><p>The documentation sidebar now lists plugins in several sections. This should make it easier to navigate. Of course, each plugin page now lists the <code>npm install</code> instruction needed to install it, too!</p>
-<h2 id="Renaming-the-host-Option-in-Remote-Providers"><a href="#Renaming-the-host-Option-in-Remote-Providers" class="headerlink" title="Renaming the host Option in Remote Providers"></a>Renaming the <code>host</code> Option in Remote Providers</h2><p>⚠️ <strong>breaking</strong></p>
-<p>The <code>host</code> name in remote provider plugins was not great—for one, it could be a URL to an Uppy Server running in a subdirectory, not a hostname. As of 0.26, <code>serverUrl</code> should be used instead.</p>
+<h2 id="Renaming-the-host-Option-in-Remote-Providers"><a href="#Renaming-the-host-Option-in-Remote-Providers" class="headerlink" title="Renaming the host Option in Remote Providers"></a>Renaming the <code>host</code> Option in Remote Providers</h2><p>&#x26A0;&#xFE0F; <strong>breaking</strong></p>
+<p>The <code>host</code> name in remote provider plugins was not great&#x2014;for one, it could be a URL to an Uppy Server running in a subdirectory, not a hostname. As of 0.26, <code>serverUrl</code> should be used instead.</p>
 <h2 id="Other-Cool-Changes"><a href="#Other-Cool-Changes" class="headerlink" title="Other Cool Changes"></a>Other Cool Changes</h2><ul>
 <li>providers: Add <code>serverPattern</code> option for third party authentication validation on dynamic Uppy Server hostnames (@ifedapoolarewaju)</li>
-<li>thumbnailgenerator: Polyfill Math.log2 since IE11 doesn’t support this method (#892 / @DJWassink)</li>
+<li>thumbnailgenerator: Polyfill Math.log2 since IE11 doesn&#x2019;t support this method (#892 / @DJWassink)</li>
 <li>dashboard: added browser back button listening (#575 / @zcallan)</li>
 <li>providers: Better provider errors (#895 / @arturi)</li>
 <li>xhr-upload: Add withCredentials option (#874 / @tuoxiansp)</li>
@@ -197,7 +193,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>See <a href="https://github.com/transloadit/uppy/blob/master/CHANGELOG.md#0260" target="_blank" rel="noopener">full changelog (0.26 and 0.25.x patches) for more</a></p>
 <p>See you in the next release!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#renee">

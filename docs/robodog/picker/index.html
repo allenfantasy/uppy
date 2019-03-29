@@ -573,17 +573,17 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <h3 id="restrictions-maxFileSize"><a href="#restrictions-maxFileSize" class="headerlink" title="restrictions.maxFileSize"></a><code>restrictions.maxFileSize</code></h3><p>Maximum file size in bytes for each individual file.</p>
 <h3 id="restrictions-maxNumberOfFiles"><a href="#restrictions-maxNumberOfFiles" class="headerlink" title="restrictions.maxNumberOfFiles"></a><code>restrictions.maxNumberOfFiles</code></h3><p>The total number of files that can be selected. If this is equal to 1, users can only select a single file in system dialogs; else they can select multiple.</p>
 <h3 id="restrictions-minNumberOfFiles"><a href="#restrictions-minNumberOfFiles" class="headerlink" title="restrictions.minNumberOfFiles"></a><code>restrictions.minNumberOfFiles</code></h3><p>The minimum number of files that must be selected before the upload.</p>
-<h3 id="restrictions-allowedFileTypes"><a href="#restrictions-allowedFileTypes" class="headerlink" title="restrictions.allowedFileTypes"></a><code>restrictions.allowedFileTypes</code></h3><p>Array of mime type wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&#39;image/*&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.png&#39;, &#39;.gif&#39;]</code>.</p>
+<h3 id="restrictions-allowedFileTypes"><a href="#restrictions-allowedFileTypes" class="headerlink" title="restrictions.allowedFileTypes"></a><code>restrictions.allowedFileTypes</code></h3><p>Array of mime type wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&apos;image/*&apos;, &apos;.jpg&apos;, &apos;.jpeg&apos;, &apos;.png&apos;, &apos;.gif&apos;]</code>.</p>
 <p>If provided, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types" target="_blank" rel="noopener"><code>&lt;input accept&gt;</code></a> attribute will be used for the internal file input field, so only acceptable files can be selected in the system file dialog.</p>
 <h2 id="Providers"><a href="#Providers" class="headerlink" title="Providers"></a>Providers</h2><p>Providers import files from third party services using <a href="/docs/companion">Uppy Companion</a> or from local sources like the device camera.</p>
-<p>By default, the Picker will use Transloadit’s <a href="/docs/companion">Uppy Companion</a> servers for imports from third party service. You can self-host your own instances as well.</p>
+<p>By default, the Picker will use Transloadit&#x2019;s <a href="/docs/companion">Uppy Companion</a> servers for imports from third party service. You can self-host your own instances as well.</p>
 <h3 id="providers"><a href="#providers" class="headerlink" title="providers: []"></a><code>providers: []</code></h3><p>Array of providers to use. Each entry is the name of a provider. The available ones are:</p>
 <ul>
-<li><code>&#39;dropbox&#39;</code> – Import files from Dropbox using <a href="/docs/companion">Uppy Companion</a>.</li>
-<li><code>&#39;google-drive&#39;</code> – Import files from Google Drive using <a href="/docs/companion">Uppy Companion</a>.</li>
-<li><code>&#39;instagram&#39;</code> – Import files from Instagram using <a href="/docs/companion">Uppy Companion</a>.</li>
-<li><code>&#39;url&#39;</code> – Import files from public Web URLs using <a href="/docs/companion">Uppy Companion</a>.</li>
-<li><code>&#39;webcam&#39;</code> – Take photos and record videos using thee user’s device camera.</li>
+<li><code>&apos;dropbox&apos;</code> &#x2013; Import files from Dropbox using <a href="/docs/companion">Uppy Companion</a>.</li>
+<li><code>&apos;google-drive&apos;</code> &#x2013; Import files from Google Drive using <a href="/docs/companion">Uppy Companion</a>.</li>
+<li><code>&apos;instagram&apos;</code> &#x2013; Import files from Instagram using <a href="/docs/companion">Uppy Companion</a>.</li>
+<li><code>&apos;url&apos;</code> &#x2013; Import files from public Web URLs using <a href="/docs/companion">Uppy Companion</a>.</li>
+<li><code>&apos;webcam&apos;</code> &#x2013; Take photos and record videos using thee user&#x2019;s device camera.</li>
 </ul>
 <h3 id="serverUrl-Transloadit-COMPANION"><a href="#serverUrl-Transloadit-COMPANION" class="headerlink" title="serverUrl: Transloadit.COMPANION"></a><code>serverUrl: Transloadit.COMPANION</code></h3><p>The URL to a <a href="/docs/companion">Uppy Companion</a> server to use.</p>
 <h3 id="serverPattern-Transloadit-COMPANION-PATTERN"><a href="#serverPattern-Transloadit-COMPANION-PATTERN" class="headerlink" title="serverPattern: Transloadit.COMPANION_PATTERN"></a><code>serverPattern: Transloadit.COMPANION_PATTERN</code></h3><p>The valid and authorised URL(s) from which OAuth responses should be accepted.</p>
@@ -595,7 +595,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <h3 id="instagram"><a href="#instagram" class="headerlink" title="instagram: {}"></a><code>instagram: {}</code></h3><p>Specific options for the <a href="/docs/instagram">Instagram</a> provider.</p>
 <h3 id="url"><a href="#url" class="headerlink" title="url: {}"></a><code>url: {}</code></h3><p>Specific options for the <a href="/docs/url">URL</a> provider.</p>
 <h3 id="webcam"><a href="#webcam" class="headerlink" title="webcam: {}"></a><code>webcam: {}</code></h3><p>Specific options for the <a href="/docs/webcam">Webcam</a> provider.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/robodog-picker.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -561,9 +561,9 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <span class="token keyword">import</span> <span class="token string">'@uppy/drag-drop/dist/style.css'</span>
 </pre></td></tr></table></figure>
 <p>Import general Core styles from <code>@uppy/core/dist/style.css</code> first, then add the Drag &amp; Drop styles from <code>@uppy/drag-drop/dist/style.css</code>. A minified version is also available as <code>style.min.css</code> at the same path. The way to do import depends on your build system.</p>
-<h2 id="Initializing-Uppy"><a href="#Initializing-Uppy" class="headerlink" title="Initializing Uppy"></a>Initializing Uppy</h2><p>Your Uppy instance must be initialized before passing it to an <code>uppy={}</code> prop, and should be cleaned up using <code>uppy.close()</code> when you are done with it. A simple approach is to initialize it in your React component’s <code>constructor()</code> and destroy it in <code>componentWillUnmount()</code>.</p>
+<h2 id="Initializing-Uppy"><a href="#Initializing-Uppy" class="headerlink" title="Initializing Uppy"></a>Initializing Uppy</h2><p>Your Uppy instance must be initialized before passing it to an <code>uppy={}</code> prop, and should be cleaned up using <code>uppy.close()</code> when you are done with it. A simple approach is to initialize it in your React component&#x2019;s <code>constructor()</code> and destroy it in <code>componentWillUnmount()</code>.</p>
 <blockquote>
-<p>⚠ Uppy instances are stateful, so the same instance must be used across different renders.<br>Do <strong>NOT</strong> initialize Uppy in a <code>render()</code> method!<br>Do <strong>NOT</strong> initialize Uppy in a function component!</p>
+<p>&#x26A0; Uppy instances are stateful, so the same instance must be used across different renders.<br>Do <strong>NOT</strong> initialize Uppy in a <code>render()</code> method!<br>Do <strong>NOT</strong> initialize Uppy in a function component!</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -588,7 +588,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   note<span class="token operator">=</span><span class="token string">"Images up to 200×200px"</span>
 <span class="token operator">/</span><span class="token operator">></span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/react-dragdrop.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

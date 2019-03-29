@@ -98,7 +98,7 @@ Uppy React componentsUppy now ships with React components! We’ve been explorin
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Uppy React componentsUppy now ships with React components! We’ve been explorin
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -160,7 +156,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h4>Thursday Oct 5, 2017</h4>
     
     <p>We are proud to present Uppy <code>0.20</code>. This one focuses on React and Redux support, adding storage expirations to <code>GoldenRetriever</code> and upload retries. Enjoy!</p>
-<h2 id="Uppy-React-components"><a href="#Uppy-React-components" class="headerlink" title="Uppy React components"></a>Uppy React components</h2><p>Uppy now ships with React components! We’ve been exploring different approaches to React components for several months, so we’re excited to finally have them in ✨ There are components for each of Uppy’s UI elements, like the Dashboard and the StatusBar.</p>
+<h2 id="Uppy-React-components"><a href="#Uppy-React-components" class="headerlink" title="Uppy React components"></a>Uppy React components</h2><p>Uppy now ships with React components! We&#x2019;ve been exploring different approaches to React components for several months, so we&#x2019;re excited to finally have them in &#x2728; There are components for each of Uppy&#x2019;s UI elements, like the Dashboard and the StatusBar.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> uppy <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Tus10<span class="token punctuation">,</span> <span class="token punctuation">{</span> endpoint<span class="token punctuation">:</span> <span class="token string">'/upload'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
@@ -176,7 +172,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
 </pre></td></tr></table></figure>
 <a id="more"></a>
 <p><a href="/docs/react/">Check out the docs for more!</a></p>
-<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><p><a href="https://github.com/richardwillars" target="_blank" rel="noopener">@richardwillars</a> contributed a plugin that will sync Uppy’s internal state with an existing Redux store.<br>To use it, define a Redux action and reducer:</p>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><p><a href="https://github.com/richardwillars" target="_blank" rel="noopener">@richardwillars</a> contributed a plugin that will sync Uppy&#x2019;s internal state with an existing Redux store.<br>To use it, define a Redux action and reducer:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// The action creator receives 3 parameters:</span>
 <span class="token comment">// - The previous state</span>
 <span class="token comment">// - The new state</span>
@@ -198,7 +194,7 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<p>Then pass your Redux store’s <code>dispatch</code> function and the action creator to the Redux plugin:</p>
+<p>Then pass your Redux store&#x2019;s <code>dispatch</code> function and the action creator to the Redux plugin:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> ReduxStore <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppy/lib/Redux'</span><span class="token punctuation">)</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ReduxStore<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   dispatch<span class="token punctuation">:</span> store<span class="token punctuation">.</span>dispatch<span class="token punctuation">,</span>
@@ -206,7 +202,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p><a href="/docs/redux/">See the docs</a></p>
-<h2 id="Redux-DevTools"><a href="#Redux-DevTools" class="headerlink" title="Redux DevTools"></a>Redux DevTools</h2><p>Even if you’re not using Redux in your application, there’s some Redux-related news! Uppy now has a new plugin, <code>ReduxDevTools</code>, which adds debug support for Redux DevTools and allows you to time travel while debugging Uppy:</p>
+<h2 id="Redux-DevTools"><a href="#Redux-DevTools" class="headerlink" title="Redux DevTools"></a>Redux DevTools</h2><p>Even if you&#x2019;re not using Redux in your application, there&#x2019;s some Redux-related news! Uppy now has a new plugin, <code>ReduxDevTools</code>, which adds debug support for Redux DevTools and allows you to time travel while debugging Uppy:</p>
 <figure class="wide"><video alt="Demo video showing Uppy with Redux Dev Tools and time traveling" controls autoplay><source src="/images/blog/0.20/uppy-reduxdevtools.mp4" type="video/mp4">Your browser does not support the video tag, you can <a href="/images/blog/0.20/uppy-reduxdevtools.mp4">download the video</a> to watch it.</video></figure>
 
 <p>To try it, add the plugin:</p>
@@ -215,9 +211,9 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 </pre></td></tr></table></figure>
 <p>And then <a href="https://github.com/zalmoxisus/redux-devtools-extension" target="_blank" rel="noopener">activate the browser extension</a>.</p>
 <p>See <a href="https://github.com/transloadit/uppy/pull/373" target="_blank" rel="noopener">#373</a> for details and discussion.</p>
-<h2 id="Retries"><a href="#Retries" class="headerlink" title="Retries"></a>Retries</h2><p>We’ve added a retry UI to the <code>Dashboard</code>. If some of your uploads fail—maybe the network is down or the endpoint is unresponsive—you’ll see this:</p>
-<p><img alt="Uppy Dashboard retry UI with individual retry buttons and “retry all”" src="/images/blog/0.20/retry.jpg"></p>
-<p>From here it’s easy to retry individual uploads or all at once. This feature currenty works best with <code>Tus10</code> plugin, and has basic <code>XHRUpload</code> support, but we’ll improve on the latter in the future releases.</p>
+<h2 id="Retries"><a href="#Retries" class="headerlink" title="Retries"></a>Retries</h2><p>We&#x2019;ve added a retry UI to the <code>Dashboard</code>. If some of your uploads fail&#x2014;maybe the network is down or the endpoint is unresponsive&#x2014;you&#x2019;ll see this:</p>
+<p><img alt="Uppy Dashboard retry UI with individual retry buttons and &#x201C;retry all&#x201D;" src="/images/blog/0.20/retry.jpg"></p>
+<p>From here it&#x2019;s easy to retry individual uploads or all at once. This feature currenty works best with <code>Tus10</code> plugin, and has basic <code>XHRUpload</code> support, but we&#x2019;ll improve on the latter in the future releases.</p>
 <h2 id="Re-designed-Drag-and-Drop-plugin"><a href="#Re-designed-Drag-and-Drop-plugin" class="headerlink" title="Re-designed Drag and Drop plugin"></a>Re-designed Drag and Drop plugin</h2><p>The old trustly <code>DragDrop</code> plugin has been re-designed by <a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a> and <a href="http://zaytsev.io" target="_blank" rel="noopener">@nqst</a>:</p>
 <ul>
 <li>Fresh simple design, arrow icon, white background;</li>
@@ -233,29 +229,29 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   note<span class="token punctuation">:</span> <span class="token string">'Videos only, up to 100 MB'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h2 id="The-Golden-Retriever-cleans-up-after-itself"><a href="#The-Golden-Retriever-cleans-up-after-itself" class="headerlink" title="The Golden Retriever cleans up after itself"></a>The Golden Retriever cleans up after itself</h2><p>We recently released the <code>GoldenRetriever</code> plugin, which stores selected files on the client so that it can recover them after a browser crash. Previously, these stored files would stay around forever, and clog up the user’s disk space. As of 0.20.0, files will be removed from client-side storage when they have been uploaded. Files that have had nothing happen to them for longer than 24 hours will be cleaned up automatically. This timeframe can be configured using the new <code>expires</code> option:</p>
+<h2 id="The-Golden-Retriever-cleans-up-after-itself"><a href="#The-Golden-Retriever-cleans-up-after-itself" class="headerlink" title="The Golden Retriever cleans up after itself"></a>The Golden Retriever cleans up after itself</h2><p>We recently released the <code>GoldenRetriever</code> plugin, which stores selected files on the client so that it can recover them after a browser crash. Previously, these stored files would stay around forever, and clog up the user&#x2019;s disk space. As of 0.20.0, files will be removed from client-side storage when they have been uploaded. Files that have had nothing happen to them for longer than 24 hours will be cleaned up automatically. This timeframe can be configured using the new <code>expires</code> option:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> ms <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'ms'</span><span class="token punctuation">)</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>GoldenRetriever<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   expires<span class="token punctuation">:</span> <span class="token function">ms</span><span class="token punctuation">(</span><span class="token string">'4 hours'</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>(The <a href="https://npmjs.com/package/ms" target="_blank" rel="noopener"><code>ms</code></a> module is great for converting text durations to milliseconds!)</p>
-<p>This will clean up files when Uppy runs, but perhaps not every page of your app uses Uppy. If a user selected some files, but then never came back to that same page, files could still hang around for a long time. To aid this, there’s a new module that you can call to clean up Uppy’s cache without needing an Uppy instance:</p>
+<p>This will clean up files when Uppy runs, but perhaps not every page of your app uses Uppy. If a user selected some files, but then never came back to that same page, files could still hang around for a long time. To aid this, there&#x2019;s a new module that you can call to clean up Uppy&#x2019;s cache without needing an Uppy instance:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> cleanup <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppy/lib/plugins/GoldenRetriever/cleanup'</span><span class="token punctuation">)</span>
 <span class="token function">cleanup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>We’ll hopefully make that require path easier to remember in the future :)</p>
+<p>We&#x2019;ll hopefully make that require path easier to remember in the future :)</p>
 <h2 id="Misc-good-stuff"><a href="#Misc-good-stuff" class="headerlink" title="Misc good stuff"></a>Misc good stuff</h2><ul>
-<li>The GoldenRetriever now detects a serviceWorker registration automatically—it’s no longer necessary to emit an <code>core:sw-file-ready</code> event.</li>
+<li>The GoldenRetriever now detects a serviceWorker registration automatically&#x2014;it&#x2019;s no longer necessary to emit an <code>core:sw-file-ready</code> event.</li>
 <li>Request headers are now configurable in the AWS S3 plugin.</li>
 <li>A new <code>setPluginState</code> allows plugins to set state scoped to the plugin.</li>
-<li>Some unused code was removed 🎉</li>
-<li>More tests were added! Thanks <a href="https://github.com/gavboulton" target="_blank" rel="noopener">@gavboulton</a> and <a href="https://github.com/richardwillars" target="_blank" rel="noopener">@richardwillars</a> 🎉</li>
+<li>Some unused code was removed &#x1F389;</li>
+<li>More tests were added! Thanks <a href="https://github.com/gavboulton" target="_blank" rel="noopener">@gavboulton</a> and <a href="https://github.com/richardwillars" target="_blank" rel="noopener">@richardwillars</a> &#x1F389;</li>
 <li>Documentation for the <a href="/docs/statusbar">StatusBar</a>, <a href="/docs/xhrupload">XHRUpload</a> and <a href="/docs/tus">Tus</a> plugins.</li>
 </ul>
 <h2 id="Full-Changelog"><a href="#Full-Changelog" class="headerlink" title="Full Changelog"></a>Full Changelog</h2><p>Here is the full list of changes for version <code>0.20.0</code> (and patch <code>0.19.1</code>):</p>
 <ul>
-<li>core: retry/error when upload can’t start or fails (offline, connection lost, wrong endpoint); add error in file progress state, UI, question mark button (#307 / @arturi)</li>
+<li>core: retry/error when upload can&#x2019;t start or fails (offline, connection lost, wrong endpoint); add error in file progress state, UI, question mark button (#307 / @arturi)</li>
 <li>core: support for retry in Tus plugin (#307 / @arturi)</li>
 <li>core: support for retry in XHRUpload plugin (#307 / @arturi)</li>
 <li>core: Add support for Redux DevTools via a plugin (#373 / @arturi)</li>
@@ -265,8 +261,8 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <li>uploaders: upload resolution changes, followup to #323 (#347 / @goto-bus-stop)</li>
 <li>uploaders: issue warning when no uploading plugins are used (#372 / @arturi)</li>
 <li>core: fix <code>replaceTargetContent</code> and add tests for <code>Plugin</code> (#354 / @gavboulton)</li>
-<li>goldenretriever: Omit completed uploads from saved file state—previously, when an upload was finished and the user refreshed the page, all the finished files would still be there because we saved the entire list of files. Changed this to only store files that are part of an in-progress upload, or that have yet to be uploaded (#358, #324 / @goto-bus-stop)</li>
-<li>goldenretriever: Remove files from cache when upload finished—this uses the deleteBlobs function when core:success fires (#358, #324 / @goto-bus-stop)</li>
+<li>goldenretriever: Omit completed uploads from saved file state&#x2014;previously, when an upload was finished and the user refreshed the page, all the finished files would still be there because we saved the entire list of files. Changed this to only store files that are part of an in-progress upload, or that have yet to be uploaded (#358, #324 / @goto-bus-stop)</li>
+<li>goldenretriever: Remove files from cache when upload finished&#x2014;this uses the deleteBlobs function when core:success fires (#358, #324 / @goto-bus-stop)</li>
 <li>goldenretriever: add a timestamp to cached blobs, and to delete old blobs on boot (#358, #324 / @goto-bus-stop)</li>
 <li>s3: have some way to configure content-disposition for uploads, see #243 (@goto-bus-stop)</li>
 <li>core: move <code>setPluginState</code> and add <code>getPluginState</code> to <code>Plugin</code> class (#363 / @goto-bus-stop)</li>
@@ -276,7 +272,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <li>docs: Document StatusBar plugin (#350 / @goto-bus-stop)</li>
 </ul>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#renee">

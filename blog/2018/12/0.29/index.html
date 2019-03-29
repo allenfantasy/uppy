@@ -98,7 +98,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -160,27 +156,27 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h4>Tuesday Dec 11, 2018</h4>
     
     <p><img src="/images/blog/0.29/uppy-core-plugins-separate-styles.jpg"></p>
-<p><code>0.29</code> brings bug fixes and improvements, while we are busy working on Uppy React Native support (which first had to <a href="https://github.com/tus/tus-js-client#react-native-support" target="_blank" rel="noopener">land in the js client for our resumable file upload protocol: tus.io</a>) and a Preset (still debating the name) which will make it easier to leverage Transloadit’s encoding platform, and offer a smooth migration path for users not yet on Uppy. The highlights of this release are: separating Core and Plugin styles, more accurate progress reporting by factoring in sizes across files, adding a <code>responseType</code> option for XHR Upload, and fixing visual Webcam bugs.</p>
+<p><code>0.29</code> brings bug fixes and improvements, while we are busy working on Uppy React Native support (which first had to <a href="https://github.com/tus/tus-js-client#react-native-support" target="_blank" rel="noopener">land in the js client for our resumable file upload protocol: tus.io</a>) and a Preset (still debating the name) which will make it easier to leverage Transloadit&#x2019;s encoding platform, and offer a smooth migration path for users not yet on Uppy. The highlights of this release are: separating Core and Plugin styles, more accurate progress reporting by factoring in sizes across files, adding a <code>responseType</code> option for XHR Upload, and fixing visual Webcam bugs.</p>
 <a id="more"></a>
-<h2 id="Separate-Core-and-Plugin-styles"><a href="#Separate-Core-and-Plugin-styles" class="headerlink" title="Separate Core and Plugin styles"></a>Separate Core and Plugin styles</h2><p><strong>⚠️ breaking</strong></p>
-<p>When installing <code>uppy</code> and Plugins from npm, you had to include their styles. Prior to this release, you only had to include the Plugin’s CSS, say, for <code>@uppy/webcam</code>:</p>
+<h2 id="Separate-Core-and-Plugin-styles"><a href="#Separate-Core-and-Plugin-styles" class="headerlink" title="Separate Core and Plugin styles"></a>Separate Core and Plugin styles</h2><p><strong>&#x26A0;&#xFE0F; breaking</strong></p>
+<p>When installing <code>uppy</code> and Plugins from npm, you had to include their styles. Prior to this release, you only had to include the Plugin&#x2019;s CSS, say, for <code>@uppy/webcam</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">import</span> Uppy <span class="token keyword">from</span> <span class="token string">'@uppy/core'</span>
 <span class="token keyword">import</span> Webcam <span class="token keyword">from</span> <span class="token string">'@uppy/webcam'</span>
 <span class="token keyword">import</span> <span class="token string">'@uppy/webcam/dist/style.css'</span>
 </pre></td></tr></table></figure>
-<p>Each plugin’s file contained the Core styles. If you added multiple plugins, the core styles ended up being duplicated. This bloated file sizes and could even break styles entirely because of CSS’s precedence rules.</p>
-<p>Now, you have to include “general” styles from <code>@uppy/core</code> as well:</p>
+<p>Each plugin&#x2019;s file contained the Core styles. If you added multiple plugins, the core styles ended up being duplicated. This bloated file sizes and could even break styles entirely because of CSS&#x2019;s precedence rules.</p>
+<p>Now, you have to include &#x201C;general&#x201D; styles from <code>@uppy/core</code> as well:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">import</span> Uppy <span class="token keyword">from</span> <span class="token string">'@uppy/core'</span>
 <span class="token keyword">import</span> Webcam <span class="token keyword">from</span> <span class="token string">'@uppy/webcam'</span>
 <span class="token keyword">import</span> <span class="token string">'@uppy/core/dist/style.css'</span> <span class="token comment">// &lt;-- add this separately and one time only</span>
 <span class="token keyword">import</span> <span class="token string">'@uppy/webcam/dist/style.css'</span>
 </pre></td></tr></table></figure>
 <p>Thus, the Core styles are only included once. <code>@uppy/core</code> styles must be included before Plugin styles.</p>
-<p>Please see the <a href="https://uppy.io/docs/plugins/">documentation</a> for the Plugin you are using to find out whether it requires a CSS file to work. Generally speaking, UI plugins, such as the Dashboard, Webcam and Status Bar, need a CSS file, while utility plugins, such as Tus or XHR Upload, don’t.</p>
-<p>⚠️ Important things to remember:</p>
+<p>Please see the <a href="https://uppy.io/docs/plugins/">documentation</a> for the Plugin you are using to find out whether it requires a CSS file to work. Generally speaking, UI plugins, such as the Dashboard, Webcam and Status Bar, need a CSS file, while utility plugins, such as Tus or XHR Upload, don&#x2019;t.</p>
+<p>&#x26A0;&#xFE0F; Important things to remember:</p>
 <ol>
 <li>Dashboard is a universal UI that comes with the Status Bar and Informer Plugins built in, and as such, Dashboard styles already come with the Informer and Status Bar styles.</li>
-<li>Dashboard also ships with “Remote Provider” styles — you don’t need to include anything besides <code>@uppy/dashboard/dist/style.css</code> for Google Drive, Instagram and Dropbox to work. However, the Url and Webcam plugins still have to be included manually. Here’s an example:</li>
+<li>Dashboard also ships with &#x201C;Remote Provider&#x201D; styles &#x2014; you don&#x2019;t need to include anything besides <code>@uppy/dashboard/dist/style.css</code> for Google Drive, Instagram and Dropbox to work. However, the Url and Webcam plugins still have to be included manually. Here&#x2019;s an example:</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">import</span> Uppy <span class="token keyword">from</span> <span class="token string">'@uppy/core'</span>
 <span class="token keyword">import</span> Dashboard <span class="token keyword">from</span> <span class="token string">'@uppy/webcam'</span>
@@ -195,7 +191,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <span class="token keyword">import</span> <span class="token string">'@uppy/webcam/dist/style.css'</span>
 <span class="token keyword">import</span> <span class="token string">'@uppy/url/dist/style.css'</span>
 </pre></td></tr></table></figure>
-<h2 id="Using-File-Sizes-For-Progress-Calculation"><a href="#Using-File-Sizes-For-Progress-Calculation" class="headerlink" title="Using File Sizes For Progress Calculation"></a>Using File Sizes For Progress Calculation</h2><p>When possible, file sizes are now used for calculating the total progress. Before, we’ve used uploaded percentage for each file. Meaning that if you were uploading four files — and three small were already uploaded, while one very large file was still in progress — Uppy might still display progress as being 90%. Long story short, Uppy now has a more accurate progress bar 🚀</p>
+<h2 id="Using-File-Sizes-For-Progress-Calculation"><a href="#Using-File-Sizes-For-Progress-Calculation" class="headerlink" title="Using File Sizes For Progress Calculation"></a>Using File Sizes For Progress Calculation</h2><p>When possible, file sizes are now used for calculating the total progress. Before, we&#x2019;ve used uploaded percentage for each file. Meaning that if you were uploading four files &#x2014; and three small were already uploaded, while one very large file was still in progress &#x2014; Uppy might still display progress as being 90%. Long story short, Uppy now has a more accurate progress bar &#x1F680;</p>
 <p>Some internal details, if you are interested:</p>
 <ol>
 <li>If there are files without sizes, the average size of all other files is assumed for the unsized files.</li>
@@ -203,20 +199,38 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </ol>
 <p><img src="/images/blog/0.29/progress-size-calculation.jpg"></p>
 <h2 id="responseType-For-XHR-Upload"><a href="#responseType-For-XHR-Upload" class="headerlink" title="responseType For XHR Upload"></a><code>responseType</code> For XHR Upload</h2><p>When using XHR Upload, you can now configure the XMLHttpRequest <code>.responseType</code> value. This allows the S3 Plugin to tell Firefox not to log XML errors when getting empty responses, so it finally fixes the spurious warnings that were caused by this, see <a href="https://github.com/transloadit/uppy/issues/518" target="_blank" rel="noopener">#518</a>.</p>
-<p>Because AwsS3 now sets <code>responseType</code>: <code>&#39;text&#39;</code>, we can no longer use the <code>responseXML</code> property. We already did text based parsing for successful responses, and will now do the same for error responses.</p>
+<p>Because AwsS3 now sets <code>responseType</code>: <code>&apos;text&apos;</code>, we can no longer use the <code>responseXML</code> property. We already did text based parsing for successful responses, and will now do the same for error responses.</p>
 <h2 id="Misc-Changes"><a href="#Misc-Changes" class="headerlink" title="Misc Changes"></a>Misc Changes</h2><ul>
-<li>@uppy/core: Don’t pass removed file IDs to next upload step, fixes (#1148 / @goto-bus-stop)</li>
+<li>@uppy/core: Don&#x2019;t pass removed file IDs to next upload step, fixes (#1148 / @goto-bus-stop)</li>
 <li>@uppy/core: Fixed getFileType() when passed a file with an uppercase extension (#1169 / @jderrough)</li>
 <li>@uppy/companion: Use <code>createCipheriv</code> instead of deprecated <code>createCipher</code> (#1149 / @goto-bus-stop)</li>
 <li>@uppy/companion: Store Provider instances on <code>this.provider</code> instead of <code>this[this.id]</code> (@goto-bus-stop / #1174)</li>
 <li>@uppy/companion: Pin grant to known stable version (@ifedapoolarewaju / #1165)</li>
-<li>@uppy/companion: Fix — socket does not handle server.path option (#1142 / @tranvansang)</li>
+<li>@uppy/companion: Fix &#x2014; socket does not handle server.path option (#1142 / @tranvansang)</li>
 <li>@uppy/webcam: Fix a bug with Webcam video overflowing its container (68730f8a1bf731898d46883e00fed937d3ab54ab / @arturi)</li>
 <li>docs: Add <code>triggerUploadOnSubmit</code> to Form docs, add docs about options of hiding upload/pause/resume/cancel buttons; talk about bundler-less polyfill use (@goto-bus-stop, @arturi)</li>
 <li>@uppy/react: Allow Dashboard props width and height to accept a string for 100% (#1129 / craigcbrunner)</li>
 </ul>
 <p>See the <a href="https://github.com/transloadit/uppy/blob/master/CHANGELOG.md#0290" target="_blank" rel="noopener">full changelog (0.29)</a> for more details.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

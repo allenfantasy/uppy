@@ -73,10 +73,7 @@
           
 <div class="Content js-Content ">
     <h1></h1>
-    <!-- Basic Uppy styles -->
-<link rel="stylesheet" href="/uppy/uppy.min.css">
-
-<div class="DashboardOptions">
+    <div class="DashboardOptions">
   <ul>
     <li><label for="opts-DashboardInline"><input type="checkbox" id="opts-DashboardInline" checked> Display inline</label></li>
     <li><label for="opts-autoProceed"><input type="checkbox" id="opts-autoProceed" checked> Autoproceed</label></li>
@@ -86,7 +83,7 @@
   <ul>
     <li><label for="opts-Webcam"><input type="checkbox" id="opts-Webcam" checked> Webcam</label></li>
     <li><label for="opts-GoogleDrive"><input type="checkbox" id="opts-GoogleDrive" checked> Google Drive</label></li>
-    <li><label for="opts-Dropbox"><input type="checkbox" id="opts-Dropbox" checked> Dropbox</label></li>
+    <li><label for="opts-Dropbox"><input type="checkbox" id="opts-Dropbox" checked>&#xA0;Dropbox</label></li>
     <li><label for="opts-Instagram"><input type="checkbox" id="opts-Instagram" checked> Instagram</label></li>
     <li><label for="opts-Url"><input type="checkbox" id="opts-Url" checked> Url</label></li>
   </ul>
@@ -163,7 +160,25 @@
 
   toggleModalBtn()
 </script>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/examples/dashboard/app.html" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

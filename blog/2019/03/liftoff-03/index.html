@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link current">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link current">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -157,20 +153,21 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>30 Days to Liftoff: Day 3</h1>
   <h4>Thursday Mar 28, 2019</h4>
     
-    <p>↬ In this series: [ <a href="/blog/2019/03/liftoff-01/" class="postseries-link">Day 1</a> | <a href="/blog/2019/03/liftoff-02/" class="postseries-link">Day 2</a> | <a href="/blog/2019/03/liftoff-03/" class="postseries-link current">Day 3</a> ] of 30</p>
+    <p>↬ In this series: [ <a href="/blog/2019/03/liftoff-01/" class="postseries-link">Day 1</a> | <a href="/blog/2019/03/liftoff-02/" class="postseries-link">Day 2</a> | <a href="/blog/2019/03/liftoff-03/" class="postseries-link current">Day 3</a> | <a href="/blog/2019/03/liftoff-04/" class="postseries-link">Day 4</a> ] of 30</p>
     
-    <p>Two days ago, we announced the <strong>upcoming launch of Uppy 1.0 on April 25</strong>, kicking off our thirty-day blog post challenge to keep you updated on everything that is going on. Here’s day three for you!</p>
+    <p>Two days ago, we announced the <strong>upcoming launch of Uppy 1.0 on April 25</strong>, kicking off our thirty-day blog post challenge to keep you updated on everything that is going on. Here&#x2019;s day three for you!</p>
 <a id="more"></a>
-<p>We’re still mostly busy tying up any remaining loose ends before April 1, when we’ll really start our coding speedrun towards 1.0:</p>
+<p>We&#x2019;re still mostly busy tying up any remaining loose ends before April 1, when we&#x2019;ll really start our coding speedrun towards 1.0:</p>
 <center><img width="400" src="/images/blog/30daystoliftoff/day3.jpg"><br></center>
 
-<h2 id="In-Progress"><a href="#In-Progress" class="headerlink" title="In Progress"></a>In Progress</h2><p>Renée is working hard to fix outdated warnings in our examples. Other than that, the team has been dealing with a Companion issue that invalid access tokens are given out when you select a provider to receive your file from. The aim is to return 401 for invalid access tokens, so that the <code>/authorized</code> endpoint can be deprecated. You can track the progress of this issue in its <a href="https://github.com/transloadit/uppy/pull/1298" target="_blank" rel="noopener">pull request</a>.</p>
+<h2 id="Done"><a href="#Done" class="headerlink" title="Done"></a>Done</h2><p><a href="https://github.com/arturi" target="_blank" rel="noopener">Artur</a> merged two pull requests from <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Ren&#xE9;e</a>. The <a href="https://github.com/transloadit/uppy/pull/1375" target="_blank" rel="noopener">first</a> one aims to use Transloadit Templates and demo keys for the <code>transloadit-textarea</code> example, and the <a href="https://github.com/transloadit/uppy/pull/1374" target="_blank" rel="noopener">second</a> one makes error reporting across different locales more flexible.</p>
+<p>Artur also added a <a href="/examples/markdown-snippets/">GitHub-comment-inspired demo</a>. Add a file attachment to your markdown, and it will be uploaded and converted to a thumbnail that&#x2019;s displayed inside your post, no matter the media type (audio turns into artwork, images are resized, videos thumbnailed, etc.). </p>
+<p><a href="https://github.com/ifedapoolarewaju" target="_blank" rel="noopener">Ife</a> reviewed and merged this <a href="https://github.com/transloadit/uppy/pull/1366" target="_blank" rel="noopener">pull request</a>, which updates the callback URIs to reflect their correct location in Companion. Thanks to <a href="https://github.com/HughbertD" target="_blank" rel="noopener">HughbertD</a> for that one!</p>
+<p>We also celebrated Evgenia submitting her first two PRs: <a href="https://github.com/transloadit/uppy/pull/1382" target="_blank" rel="noopener">one</a> to make sure that tooltips can no longer overflow inside the Uppy container, and <a href="https://github.com/transloadit/uppy/pull/1383" target="_blank" rel="noopener">another</a> that removes the jumpiness when Uppy loads.</p>
+<h2 id="In-Progress"><a href="#In-Progress" class="headerlink" title="In Progress"></a>In Progress</h2><p>Ren&#xE9;e is working hard to fix outdated warnings in our examples. Other than that, the team has been dealing with a Companion issue that invalid access tokens are given out when you select a provider to receive your file from. The aim is to return 401 for invalid access tokens, so that the <code>/authorized</code> endpoint can be deprecated. You can track the progress of this issue in its <a href="https://github.com/transloadit/uppy/pull/1298" target="_blank" rel="noopener">pull request</a>.</p>
 <center><img src="/images/blog/30daystoliftoff/2019-03-27-board02.png"></center>
 
-<h2 id="Done"><a href="#Done" class="headerlink" title="Done"></a>Done</h2><p><a href="https://github.com/arturi" target="_blank" rel="noopener">Artur</a> started out by merging two pull requests from <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Renée</a>. The <a href="https://github.com/transloadit/uppy/pull/1375" target="_blank" rel="noopener">first</a> one aims to use Transloadit Templates and demo keys for the <code>transloadit-textarea</code> example, and the <a href="https://github.com/transloadit/uppy/pull/1374" target="_blank" rel="noopener">second</a> one makes error reporting across different locales more flexible.</p>
-<p>Artur also added a <a href="/examples/markdown-snippets/">GitHub-comment-inspired demo</a>. Add a file attachment to your markdown, and it will be uploaded and converted to a thumbnail that’s displayed inside your post, no matter the media type (audio turns into artwork, images are resized, videos thumbnailed, etc.). </p>
-<p>Lastly, <a href="https://github.com/ifedapoolarewaju" target="_blank" rel="noopener">Ife</a> reviewed and merged this <a href="https://github.com/transloadit/uppy/pull/1366" target="_blank" rel="noopener">pull request</a>, which updates the callback URIs to reflect their correct location in Companion. Thanks to <a href="https://github.com/HughbertD" target="_blank" rel="noopener">HughbertD</a> for that one!</p>
-<p>The biggest update that will be part of Uppy 1.0 is support for React Native. Yesterday, Renée, Artur, Ife, <a href="https://github.com/lakesare" target="_blank" rel="noopener">Evgenia</a> and <a href="https://github.com/kvz" target="_blank" rel="noopener">Kevin</a> had a call and talked extensively about what would be needed to have a minimum viable product. They settled on the following six subtasks, which I’m copying directly from their notes: :)</p>
+<h2 id="To-Do"><a href="#To-Do" class="headerlink" title="To Do"></a>To Do</h2><p>The biggest update that will be part of Uppy 1.0 is support for React Native. Yesterday, Ren&#xE9;e, Artur, Ife, <a href="https://github.com/lakesare" target="_blank" rel="noopener">Evgenia</a> and <a href="https://github.com/kvz" target="_blank" rel="noopener">Kevin</a> had a call and talked extensively about what would be needed to have a minimum viable product. They settled on the following six subtasks, which I&#x2019;m copying directly from their notes: :)</p>
 <figure class="highlight md"><table><tr><td class="code"><pre>MVP for React Native support should:
 
 - [ ] get a link provider example to work, including showing Companion progress and resumability
@@ -180,10 +177,27 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 - [ ] have resumability support within 20 min (easily tested by disabling WiFi on your workstation while uploading to master.tus.io)
 - [ ] have an example with basic file previews (Uppy RN itself likely does not offer previews)
 </pre></td></tr></table></figure>
-<p>We also celebrated Evgenia submitting her first two PRs: <a href="https://github.com/transloadit/uppy/pull/1382" target="_blank" rel="noopener">one</a> to make sure that tooltips can no longer overflow inside the Uppy container, and <a href="https://github.com/transloadit/uppy/pull/1383" target="_blank" rel="noopener">another</a> that removes the jumpiness when Uppy loads.</p>
-<p>That’s all the updates I have for you today. See you tomorrow for Day 4 of our 30 Days to Liftoff!</p>
-<p>P.S. If you don’t want to miss an update, consider <a href="https://uppy.io/atom.xml">good ol’ RSS</a> :)</p>
-
+<p>That&#x2019;s all the updates I have for you today. See you tomorrow for Day 4 of our 30 Days to Liftoff!</p>
+<p>P.S. If you don&#x2019;t want to miss an update, consider <a href="https://uppy.io/atom.xml">good ol&#x2019; RSS</a> :)</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#samuel">

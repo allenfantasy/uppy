@@ -549,8 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Contributing</h1>
-    <!-- WARNING! This file was injected. Please edit in ".github/CONTRIBUTING.md" instead and run "update.js" -->
-<h2 id="Uppy-development"><a href="#Uppy-development" class="headerlink" title="Uppy development"></a>Uppy development</h2><p>Fork the repository into your own account first. See the <a href="https://help.github.com/articles/fork-a-repo/" target="_blank" rel="noopener">GitHub Help</a> article for instructions.</p>
+    <h2 id="Uppy-development"><a href="#Uppy-development" class="headerlink" title="Uppy development"></a>Uppy development</h2><p>Fork the repository into your own account first. See the <a href="https://help.github.com/articles/fork-a-repo/" target="_blank" rel="noopener">GitHub Help</a> article for instructions.</p>
 <p>After you have successfully forked the repo, clone and install the project:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">git</span> clone git@github.com:YOUR_USERNAME/uppy.git
 <span class="token function">cd</span> uppy
@@ -558,7 +557,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <span class="token function">npm</span> run bootstrap
 </pre></td></tr></table></figure>
 <p>We use lerna to manage the many plugin packages Uppy has. You should always do <code>npm run bootstrap</code> after an <code>npm install</code> to make sure lerna has installed the dependencies of each package and that the <code>package-lock.json</code> in the repository root is up to date.</p>
-<p>Our website’s examples section is also our playground, please read the <a href="#Local-Previews">Local Previews</a> section to get up and running.</p>
+<p>Our website&#x2019;s examples section is also our playground, please read the <a href="#Local-Previews">Local Previews</a> section to get up and running.</p>
 <h2 id="Tests"><a href="#Tests" class="headerlink" title="Tests"></a>Tests</h2><p>Unit tests are using Jest and can be run with:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> run test:unit
 </pre></td></tr></table></figure>
@@ -581,7 +580,7 @@ selenium-standalone <span class="token function">install</span>
 <p>You can run in multiple browsers by passing multiple <code>-b</code> flags:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> run test:acceptance:local -- -b chrome -b firefox
 </pre></td></tr></table></figure>
-<p>When trying to get a specific integration test to pass, it’s not that helpful to continuously run <em>all</em> tests. You can use the <code>--suite</code> flag to run tests from a single <code>./test/endtoend</code> folder. For example, <code>--suite thumbnails</code> will only run the tests from <code>./test/endtoend/thumbnails</code>. Of course, it can also be combined with one or more <code>-b</code> flags.</p>
+<p>When trying to get a specific integration test to pass, it&#x2019;s not that helpful to continuously run <em>all</em> tests. You can use the <code>--suite</code> flag to run tests from a single <code>./test/endtoend</code> folder. For example, <code>--suite thumbnails</code> will only run the tests from <code>./test/endtoend/thumbnails</code>. Of course, it can also be combined with one or more <code>-b</code> flags.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> run test:acceptance:local -- -b chrome --suite thumbnails
 </pre></td></tr></table></figure>
 <p>These tests are also run automatically on Travis builds with <a href="https://saucelabs.com/" target="_blank" rel="noopener">SauceLabs</a> cloud service using different OSes.</p>
@@ -597,7 +596,7 @@ selenium-standalone <span class="token function">install</span>
 <p>Releases are managed by <a href="https://github.com/lerna/lerna/tree/2.x" target="_blank" rel="noopener">Lerna</a>. We do some cleanup and compile work around releases too. Use the npm release script:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> run release
 </pre></td></tr></table></figure>
-<p>If you have two factor authentication enabled on your npm account, you will need to temporarily disable it when doing an uppy release. Lerna doesn’t support 2FA, and while there are workarounds, they don’t reliably work for us. (In particular, using the <code>npm_config_otp</code> environment variable will fail because the token expires by the time the release script starts publishing anything.)</p>
+<p>If you have two factor authentication enabled on your npm account, you will need to temporarily disable it when doing an uppy release. Lerna doesn&#x2019;t support 2FA, and while there are workarounds, they don&#x2019;t reliably work for us. (In particular, using the <code>npm_config_otp</code> environment variable will fail because the token expires by the time the release script starts publishing anything.)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> profile disable-2fa
 <span class="token function">npm</span> run release
 <span class="token function">npm</span> profile enable-2fa auth-only
@@ -612,9 +611,9 @@ selenium-standalone <span class="token function">install</span>
 <li>the demos in the demo section work (try one that uses an import robot, and one that you need to upload to)</li>
 <li>the demos on the homepage work and can import from GDrive, Insta, Dropbox</li>
 </ul>
-<p>If you don’t have access to the transloadit.com source code ping @arturi or @goto-bus-stop and we’ll pick it up. :sparkles:</p>
-<h2 id="Website-development"><a href="#Website-development" class="headerlink" title="Website development"></a>Website development</h2><p>We keep the <a href="http://uppy.io">uppy.io</a> website in <code>./website</code>, so it’s easy to keep docs and code in sync as we are still iterating at high velocity.</p>
-<p>The site is built with <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a>, and Travis automatically deploys this onto GitHub Pages (it overwrites the <code>gh-pages</code> branch with Hexo’s build at every change to <code>master</code>). The content is written in Markdown and located in <code>./website/src</code>. Feel free to fork &amp; hack!</p>
+<p>If you don&#x2019;t have access to the transloadit.com source code ping @arturi or @goto-bus-stop and we&#x2019;ll pick it up. <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2728.png?v8">&#x2728;</span></p>
+<h2 id="Website-development"><a href="#Website-development" class="headerlink" title="Website development"></a>Website development</h2><p>We keep the <a href="http://uppy.io">uppy.io</a> website in <code>./website</code>, so it&#x2019;s easy to keep docs and code in sync as we are still iterating at high velocity.</p>
+<p>The site is built with <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo</a>, and Travis automatically deploys this onto GitHub Pages (it overwrites the <code>gh-pages</code> branch with Hexo&#x2019;s build at every change to <code>master</code>). The content is written in Markdown and located in <code>./website/src</code>. Feel free to fork &amp; hack!</p>
 <p>Even though bundled in this repo, the website is regarded as a separate project. As such, it has its own <code>package.json</code> and we aim to keep the surface where the two projects interface as small as possible. <code>./website/update.js</code> is called during website builds to inject the Uppy knowledge into the site.</p>
 <h3 id="Local-previews"><a href="#Local-previews" class="headerlink" title="Local previews"></a>Local previews</h3><p>It is recommended to exclude <code>./website/public/</code> from your editor if you want efficient searches.</p>
 <p>To install the required node modules, type:</p>
@@ -631,7 +630,7 @@ selenium-standalone <span class="token function">install</span>
   website/src/examples/xhrupload/app.es6
 </pre></td></tr></table></figure>
 <p>And open <a href="http://localhost:4000/examples/xhrupload/" target="_blank" rel="noopener">http://localhost:4000/examples/xhrupload/</a> in your web browser.</p>
-<h2 id="CSS-guidelines"><a href="#CSS-guidelines" class="headerlink" title="CSS guidelines"></a>CSS guidelines</h2><p>The CSS standards followed in this project closely resemble those from <a href="https://gist.github.com/fat/a47b882eb5f84293c4ed" target="_blank" rel="noopener">Medium’s CSS Guidelines</a>. If something is not mentioned here, follow their guidelines.</p>
+<h2 id="CSS-guidelines"><a href="#CSS-guidelines" class="headerlink" title="CSS guidelines"></a>CSS guidelines</h2><p>The CSS standards followed in this project closely resemble those from <a href="https://gist.github.com/fat/a47b882eb5f84293c4ed" target="_blank" rel="noopener">Medium&#x2019;s CSS Guidelines</a>. If something is not mentioned here, follow their guidelines.</p>
 <h3 id="Naming-conventions"><a href="#Naming-conventions" class="headerlink" title="Naming conventions"></a>Naming conventions</h3><p>This project uses naming conventions adopted from the SUIT CSS framework.<br><a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md" target="_blank" rel="noopener">Read about them here</a>.</p>
 <p>To quickly summarize:</p>
 <h4 id="Utilities"><a href="#Utilities" class="headerlink" title="Utilities"></a>Utilities</h4><p>Syntax: u-[sm-|md-|lg-]<utilityname></utilityname></p>
@@ -639,7 +638,7 @@ selenium-standalone <span class="token function">install</span>
 .u-floatLeft
 .u-lg-col6
 </pre></td></tr></table></figure>
-<h4 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h4><p>Syntax: [<namespace>-]<componentname>[-descendentName][–modifierName]</componentname></namespace></p>
+<h4 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h4><p>Syntax: [<namespace>-]<componentname>[-descendentName][&#x2013;modifierName]</componentname></namespace></p>
 <figure class="highlight css"><table><tr><td class="code"><pre>.twt-Button <span class="token comment">/* Namespaced component */</span>
 .MyComponent <span class="token comment">/* Components pascal cased */</span>
 .Button--default <span class="token comment">/* Modified button style */</span>
@@ -705,7 +704,25 @@ selenium-standalone <span class="token function">install</span>
 <span class="token property-line">  <span class="token property">width</span><span class="token punctuation">:</span> 940px;</span>
 <span class="token selector">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/contributing.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -549,7 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>File Input</h1>
-    <p><code>@uppy/file-input</code> is the most barebones UI for selecting files — it shows a single button that, when clicked, opens up the browser’s file selector.</p>
+    <p><code>@uppy/file-input</code> is the most barebones UI for selecting files &#x2014; it shows a single button that, when clicked, opens up the browser&#x2019;s file selector.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> FileInput <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/file-input'</span><span class="token punctuation">)</span>
 
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>FileInput<span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -580,18 +580,36 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <blockquote>
-<p>Note that certain <a href="/docs/uppy#restrictions">restrictions set in Uppy’s main options</a>, namely <code>maxNumberOfFiles</code> and <code>allowedFileTypes</code>, affect the system file picker dialog. If <code>maxNumberOfFiles: 1</code>, users will only be able to select one file, and <code>allowedFileTypes: [&#39;video/*&#39;, &#39;.gif&#39;]</code> means only videos or gifs (files with <code>.gif</code> extension) will be selectable.</p>
+<p>Note that certain <a href="/docs/uppy#restrictions">restrictions set in Uppy&#x2019;s main options</a>, namely <code>maxNumberOfFiles</code> and <code>allowedFileTypes</code>, affect the system file picker dialog. If <code>maxNumberOfFiles: 1</code>, users will only be able to select one file, and <code>allowedFileTypes: [&apos;video/*&apos;, &apos;.gif&apos;]</code> means only videos or gifs (files with <code>.gif</code> extension) will be selectable.</p>
 </blockquote>
-<h3 id="id-39-FileInput-39"><a href="#id-39-FileInput-39" class="headerlink" title="id: &#39;FileInput&#39;"></a><code>id: &#39;FileInput&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;FileInput&#39;</code>. Use this if you need to add multiple FileInput instances.</p>
+<h3 id="id-39-FileInput-39"><a href="#id-39-FileInput-39" class="headerlink" title="id: &apos;FileInput&apos;"></a><code>id: &apos;FileInput&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;FileInput&apos;</code>. Use this if you need to add multiple FileInput instances.</p>
 <h3 id="target-null"><a href="#target-null" class="headerlink" title="target: null"></a><code>target: null</code></h3><p>DOM element, CSS selector, or plugin to mount the file input into.</p>
 <h3 id="pretty-true"><a href="#pretty-true" class="headerlink" title="pretty: true"></a><code>pretty: true</code></h3><p>When true, display a styled button (see <a href="/examples/xhrupload">example</a>) that, when clicked, opens the file selector UI. When false, a plain old browser <code>&lt;input type=&quot;file&quot;&gt;</code> element is shown.</p>
-<h3 id="inputName-39-files-39"><a href="#inputName-39-files-39" class="headerlink" title="inputName: &#39;files[]&#39;"></a><code>inputName: &#39;files[]&#39;</code></h3><p>The <code>name</code> attribute for the <code>&lt;input type=&quot;file&quot;&gt;</code> element.</p>
+<h3 id="inputName-39-files-39"><a href="#inputName-39-files-39" class="headerlink" title="inputName: &apos;files[]&apos;"></a><code>inputName: &apos;files[]&apos;</code></h3><p>The <code>name</code> attribute for the <code>&lt;input type=&quot;file&quot;&gt;</code> element.</p>
 <h3 id="locale"><a href="#locale" class="headerlink" title="locale: {}"></a><code>locale: {}</code></h3><p>When <code>pretty</code> is set, specify a custom label for the button.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>strings<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   chooseFiles<span class="token punctuation">:</span> <span class="token string">'Choose files'</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/fileinput.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -549,7 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>AWS S3 Multipart</h1>
-    <p>The <code>@uppy/aws-s3-multipart</code> plugin can be used to upload files directly to an S3 bucket using S3’s Multipart upload strategy. With this strategy, files are chopped up in parts of 5MB+ each, so they can be uploaded concurrently. It is also very reliable: if a single part fails to upload, only that 5MB chunk has to be retried.</p>
+    <p>The <code>@uppy/aws-s3-multipart</code> plugin can be used to upload files directly to an S3 bucket using S3&#x2019;s Multipart upload strategy. With this strategy, files are chopped up in parts of 5MB+ each, so they can be uploaded concurrently. It is also very reliable: if a single part fails to upload, only that 5MB chunk has to be retried.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> AwsS3Multipart <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/aws-s3-multipart'</span><span class="token punctuation">)</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>AwsS3Multipart<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   limit<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
@@ -566,14 +566,14 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>The <code>@uppy/aws-s3-multipart</code> plugin has the following configurable options:</p>
 <h3 id="limit-0"><a href="#limit-0" class="headerlink" title="limit: 0"></a>limit: 0</h3><p>The maximum amount of chunks to upload simultaneously. Set to <code>0</code> to disable limiting.</p>
 <h3 id="serverUrl-null"><a href="#serverUrl-null" class="headerlink" title="serverUrl: null"></a>serverUrl: null</h3><p>The Companion URL to use for proxying calls to the S3 Multipart API.</p>
-<h3 id="createMultipartUpload-file"><a href="#createMultipartUpload-file" class="headerlink" title="createMultipartUpload(file)"></a>createMultipartUpload(file)</h3><p>A function that calls the S3 Multipart API to create a new upload. <code>file</code> is the file object from Uppy’s state. The most relevant keys are <code>file.name</code> and <code>file.type</code>.</p>
+<h3 id="createMultipartUpload-file"><a href="#createMultipartUpload-file" class="headerlink" title="createMultipartUpload(file)"></a>createMultipartUpload(file)</h3><p>A function that calls the S3 Multipart API to create a new upload. <code>file</code> is the file object from Uppy&#x2019;s state. The most relevant keys are <code>file.name</code> and <code>file.type</code>.</p>
 <p>Return a Promise for an object with keys:</p>
 <ul>
 <li><code>uploadId</code> - The UploadID returned by S3.</li>
 <li><code>key</code> - The object key for the file. This needs to be returned to allow it to be different from the <code>file.name</code>.</li>
 </ul>
-<p>The default implementation calls out to Companion’s S3 signing endpoints.</p>
-<h3 id="listParts-file-uploadId-key"><a href="#listParts-file-uploadId-key" class="headerlink" title="listParts(file, { uploadId, key })"></a>listParts(file, { uploadId, key })</h3><p>A function that calls the S3 Multipart API to list the parts of a file that have already been uploaded. Receives the <code>file</code> object from Uppy’s state, and an object with keys:</p>
+<p>The default implementation calls out to Companion&#x2019;s S3 signing endpoints.</p>
+<h3 id="listParts-file-uploadId-key"><a href="#listParts-file-uploadId-key" class="headerlink" title="listParts(file, { uploadId, key })"></a>listParts(file, { uploadId, key })</h3><p>A function that calls the S3 Multipart API to list the parts of a file that have already been uploaded. Receives the <code>file</code> object from Uppy&#x2019;s state, and an object with keys:</p>
 <ul>
 <li><code>uploadId</code> - The UploadID of this Multipart upload.</li>
 <li><code>key</code> - The object key of this Multipart upload.</li>
@@ -584,12 +584,12 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <li><code>Size</code> - The size of the part in bytes.</li>
 <li><code>ETag</code> - The ETag of the part, used to identify it when completing the multipart upload and combining all parts into a single file.</li>
 </ul>
-<p>The default implementation calls out to Companion’s S3 signing endpoints.</p>
-<h3 id="prepareUploadPart-file-partData"><a href="#prepareUploadPart-file-partData" class="headerlink" title="prepareUploadPart(file, partData)"></a>prepareUploadPart(file, partData)</h3><p>A function that generates a signed URL to upload a single part. Receives the <code>file</code> object from Uppy’s state. The <code>partData</code> argument is an object with keys:</p>
+<p>The default implementation calls out to Companion&#x2019;s S3 signing endpoints.</p>
+<h3 id="prepareUploadPart-file-partData"><a href="#prepareUploadPart-file-partData" class="headerlink" title="prepareUploadPart(file, partData)"></a>prepareUploadPart(file, partData)</h3><p>A function that generates a signed URL to upload a single part. Receives the <code>file</code> object from Uppy&#x2019;s state. The <code>partData</code> argument is an object with keys:</p>
 <ul>
 <li><code>uploadId</code> - The UploadID of this Multipart upload.</li>
 <li><code>key</code> - The object key in the S3 bucket.</li>
-<li><code>body</code> - A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" rel="noopener"><code>Blob</code></a> of this part’s contents.</li>
+<li><code>body</code> - A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" rel="noopener"><code>Blob</code></a> of this part&#x2019;s contents.</li>
 <li><code>number</code> - The index of this part in the file (<code>PartNumber</code> in S3 terminology).</li>
 </ul>
 <p>Return a Promise for an object with keys:</p>
@@ -606,24 +606,24 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 </pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="abortMultipartUpload-file-uploadId-key"><a href="#abortMultipartUpload-file-uploadId-key" class="headerlink" title="abortMultipartUpload(file, { uploadId, key })"></a>abortMultipartUpload(file, { uploadId, key })</h3><p>A function that calls the S3 Multipart API to abort a Multipart upload, and delete all parts that have been uploaded so far. Receives the <code>file</code> object from Uppy’s state, and an object with keys:</p>
+<h3 id="abortMultipartUpload-file-uploadId-key"><a href="#abortMultipartUpload-file-uploadId-key" class="headerlink" title="abortMultipartUpload(file, { uploadId, key })"></a>abortMultipartUpload(file, { uploadId, key })</h3><p>A function that calls the S3 Multipart API to abort a Multipart upload, and delete all parts that have been uploaded so far. Receives the <code>file</code> object from Uppy&#x2019;s state, and an object with keys:</p>
 <ul>
 <li><code>uploadId</code> - The UploadID of this Multipart upload.</li>
 <li><code>key</code> - The object key of this Multipart upload.</li>
 </ul>
 <p>This is typically called when the user cancels an upload. Cancellation cannot fail in Uppy, so the result of this function is ignored.</p>
-<p>The default implementation calls out to Companion’s S3 signing endpoints.</p>
-<h3 id="completeMultipartUpload-file-uploadId-key-parts"><a href="#completeMultipartUpload-file-uploadId-key-parts" class="headerlink" title="completeMultipartUpload(file, { uploadId, key, parts })"></a>completeMultipartUpload(file, { uploadId, key, parts })</h3><p>A function that calls the S3 Multipart API to complete a Multipart upload, combining all parts into a single object in the S3 bucket. Receives the <code>file</code> object from Uppy’s state, and an object with keys:</p>
+<p>The default implementation calls out to Companion&#x2019;s S3 signing endpoints.</p>
+<h3 id="completeMultipartUpload-file-uploadId-key-parts"><a href="#completeMultipartUpload-file-uploadId-key-parts" class="headerlink" title="completeMultipartUpload(file, { uploadId, key, parts })"></a>completeMultipartUpload(file, { uploadId, key, parts })</h3><p>A function that calls the S3 Multipart API to complete a Multipart upload, combining all parts into a single object in the S3 bucket. Receives the <code>file</code> object from Uppy&#x2019;s state, and an object with keys:</p>
 <ul>
 <li><code>uploadId</code> - The UploadID of this Multipart upload.</li>
 <li><code>key</code> - The object key of this Multipart upload.</li>
-<li><code>parts</code> - S3-style list of parts, an array of objects with <code>ETag</code> and <code>PartNumber</code> properties. This can be passed straight to S3’s Multipart API.</li>
+<li><code>parts</code> - S3-style list of parts, an array of objects with <code>ETag</code> and <code>PartNumber</code> properties. This can be passed straight to S3&#x2019;s Multipart API.</li>
 </ul>
 <p>Return a Promise for an object with properties:</p>
 <ul>
 <li><code>location</code> - <strong>(Optional)</strong> A publically accessible URL to the object in the S3 bucket.</li>
 </ul>
-<p>The default implementation calls out to Companion’s S3 signing endpoints.</p>
+<p>The default implementation calls out to Companion&#x2019;s S3 signing endpoints.</p>
 <h2 id="S3-Bucket-Configuration"><a href="#S3-Bucket-Configuration" class="headerlink" title="S3 Bucket Configuration"></a>S3 Bucket Configuration</h2><p>S3 buckets do not allow public uploads by default.  In order to allow Uppy to upload to a bucket directly, its CORS permissions need to be configured.</p>
 <p>This process is described in the <a href="/docs/aws-s3/#S3-Bucket-configuration">AwsS3 documentation</a>.</p>
 <p>On top of the configuration mentioned there, the <code>ETag</code> header must also be whitelisted:</p>
@@ -635,7 +635,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ExposeHeader</span><span class="token punctuation">></span></span>ETag<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ExposeHeader</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>CORSRule</span><span class="token punctuation">></span></span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/aws-s3-multipart.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

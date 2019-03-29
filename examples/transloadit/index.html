@@ -193,17 +193,16 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <div class="Content js-Content examples with-sidebar">
   <h1>Transloadit Example</h1>
 
-  
-<blockquote><p>Transloadit is the inventor of <a href="https://tus.io" rel="noreferrer noopener" target="_blank">tus.io</a> and Uppy. Besides a robust encoding platform, Transloadit offers hosted versions of tusd and Companion. This means you can enjoy video encoding, watermarking, face detection, resumable file uploads, fetching from Instagram, etc — all without running a single server yourself.</p>
-<p>This example demonstrates how to unlock Transloadit’s features within Uppy.</p>
+  <blockquote><p>Transloadit is the inventor of <a href="https://tus.io" rel="noreferrer noopener" target="_blank">tus.io</a> and Uppy. Besides a robust encoding platform, Transloadit offers hosted versions of tusd and Companion. This means you can enjoy video encoding, watermarking, face detection, resumable file uploads, fetching from Instagram, etc &#x2014; all without running a single server yourself.</p>
+<p>This example demonstrates how to unlock Transloadit&#x2019;s features within Uppy.</p>
 </blockquote>
 
 <p>
-  In this particular example we take your images (from Instagram), resize them to 250px and add the copyright caption text: <code>© 2018 Transloadit.com</code> at the bottom right corner.
+  In this particular example we take your images (from Instagram), resize them to 250px and add the copyright caption text: <code>&#xA9; 2018 Transloadit.com</code> at the bottom right corner.
 </p>
 
 <p>
-  For this demo to work you'll need a (free) Transloadit account. To get one:
+  For this demo to work you&apos;ll need a (free) Transloadit account. To get one:
 </p>
 <ol>
   <li>
@@ -266,12 +265,12 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <hr>
 
-<p>On this page we're using the following JavaScript:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> Uppy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/core'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Dashboard <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/transloadit'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Webcam <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/webcam'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Transloadit <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/transloadit'</span><span class="token punctuation">)</span>
-<span class="token keyword">const</span> Instagram <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/instagram'</span><span class="token punctuation">)</span>
+<p>On this page we&apos;re using the following JavaScript:</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre><span class="token keyword">const</span> Uppy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@uppy/core&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Dashboard <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@uppy/transloadit&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Webcam <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@uppy/webcam&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Transloadit <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@uppy/transloadit&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> Instagram <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@uppy/instagram&apos;</span><span class="token punctuation">)</span>
 
 <span class="token keyword">const</span> uppy <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   debug<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
@@ -280,7 +279,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     maxFileSize<span class="token punctuation">:</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">,</span>
     maxNumberOfFiles<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
     minNumberOfFiles<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    allowedFileTypes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'image/*'</span><span class="token punctuation">]</span>
+    allowedFileTypes<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;image/*&apos;</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
@@ -290,22 +289,22 @@ uppy
       auth<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         key<span class="token punctuation">:</span> <span class="token constant">YOUR_TRANSLOADIT_API_KEY</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token comment">// It's more secure to use a template_id and enable</span>
+      <span class="token comment">// It&apos;s more secure to use a template_id and enable</span>
       <span class="token operator">/</span><span class="token operator">/</span> Signature Authentication
       steps<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         resize<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          robot<span class="token punctuation">:</span> <span class="token string">'/image/resize'</span><span class="token punctuation">,</span>
+          robot<span class="token punctuation">:</span> <span class="token string">&apos;/image/resize&apos;</span><span class="token punctuation">,</span>
           width<span class="token punctuation">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
           height<span class="token punctuation">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
-          resize_strategy<span class="token punctuation">:</span> <span class="token string">'fit'</span><span class="token punctuation">,</span>
+          resize_strategy<span class="token punctuation">:</span> <span class="token string">&apos;fit&apos;</span><span class="token punctuation">,</span>
           text<span class="token punctuation">:</span> <span class="token punctuation">[</span>
             <span class="token punctuation">{</span>
-              text<span class="token punctuation">:</span> <span class="token string">'© 2018 Transloadit.com'</span><span class="token punctuation">,</span>
+              text<span class="token punctuation">:</span> <span class="token string">&apos;&#xA9; 2018 Transloadit.com&apos;</span><span class="token punctuation">,</span>
               size<span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
-              font<span class="token punctuation">:</span> <span class="token string">'Ubuntu'</span><span class="token punctuation">,</span>
-              color<span class="token punctuation">:</span> <span class="token string">'#eeeeee'</span><span class="token punctuation">,</span>
-              valign<span class="token punctuation">:</span> <span class="token string">'bottom'</span><span class="token punctuation">,</span>
-              align<span class="token punctuation">:</span> <span class="token string">'right'</span><span class="token punctuation">,</span>
+              font<span class="token punctuation">:</span> <span class="token string">&apos;Ubuntu&apos;</span><span class="token punctuation">,</span>
+              color<span class="token punctuation">:</span> <span class="token string">&apos;#eeeeee&apos;</span><span class="token punctuation">,</span>
+              valign<span class="token punctuation">:</span> <span class="token string">&apos;bottom&apos;</span><span class="token punctuation">,</span>
+              align<span class="token punctuation">:</span> <span class="token string">&apos;right&apos;</span><span class="token punctuation">,</span>
               x_offset<span class="token punctuation">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
               y_offset<span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">10</span>
             <span class="token punctuation">}</span>
@@ -315,29 +314,47 @@ uppy
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     waitForEncoding<span class="token punctuation">:</span> <span class="token boolean">true</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Instagram<span class="token punctuation">,</span> <span class="token punctuation">{</span> target<span class="token punctuation">:</span> Dashboard<span class="token punctuation">,</span> serverUrl<span class="token punctuation">:</span> <span class="token string">'https://api2.transloadit.com/companion'</span><span class="token punctuation">,</span> serverPattern<span class="token punctuation">:</span> <span class="token regex">/\.transloadit\.com$/</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Instagram<span class="token punctuation">,</span> <span class="token punctuation">{</span> target<span class="token punctuation">:</span> Dashboard<span class="token punctuation">,</span> serverUrl<span class="token punctuation">:</span> <span class="token string">&apos;https://api2.transloadit.com/companion&apos;</span><span class="token punctuation">,</span> serverPattern<span class="token punctuation">:</span> <span class="token regex">/\.transloadit\.com$/</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Dashboard<span class="token punctuation">,</span> <span class="token punctuation">{</span>
     inline<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     maxHeight<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span>
-    target<span class="token punctuation">:</span> <span class="token string">'#uppy-dashboard-container'</span><span class="token punctuation">,</span>
-    note<span class="token punctuation">:</span> <span class="token string">'Images and video only, 1–2 files, up to 1 MB'</span>
+    target<span class="token punctuation">:</span> <span class="token string">&apos;#uppy-dashboard-container&apos;</span><span class="token punctuation">,</span>
+    note<span class="token punctuation">:</span> <span class="token string">&apos;Images and video only, 1&#x2013;2 files, up to 1 MB&apos;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Webcam<span class="token punctuation">,</span> <span class="token punctuation">{</span> target<span class="token punctuation">:</span> Dashboard <span class="token punctuation">}</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'transloadit:result'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>stepName<span class="token punctuation">,</span> result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;transloadit:result&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>stepName<span class="token punctuation">,</span> result<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> file <span class="token operator">=</span> uppy<span class="token punctuation">.</span><span class="token function">getFile</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>localId<span class="token punctuation">)</span>
-    <span class="token keyword">var</span> resultContainer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span>
+    <span class="token keyword">var</span> resultContainer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&apos;div&apos;</span><span class="token punctuation">)</span>
     resultContainer<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token template-string"><span class="token string">`
-      &lt;div>
-        &lt;h3>Name: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h3>
-        &lt;img src="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">.</span>ssl_url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" /> &lt;br />
-        &lt;a href="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">.</span>ssl_url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">">View&lt;/a>
-      &lt;/div>
+      &lt;div&gt;
+        &lt;h3&gt;Name: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/h3&gt;
+        &lt;img src=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">.</span>ssl_url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; /&gt; &lt;br /&gt;
+        &lt;a href=&quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>result<span class="token punctuation">.</span>ssl_url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;&gt;View&lt;/a&gt;
+      &lt;/div&gt;
     `</span></span>
     document
-      <span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'uppy-transloadit-result'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&apos;uppy-transloadit-result&apos;</span><span class="token punctuation">)</span>
       <span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>resultContainer<span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></td></tr></table></figure>
-
+  <span class="token punctuation">}</span><span class="token punctuation">)</span></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
 
   <p>Please see <a href="/docs/">documentation</a> for details.</p>
 

@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link current">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -160,44 +156,44 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     <p>Uppy 0.25 comes with a couple of new features, like drag-and-dropping URLs and images with the Url plugin, Dashboard modal animation and interactive components in i18n strings, as well as a ton of under the hood fixes and improvements.</p>
 <a id="more"></a>
 <h2 id="Select-In-Providers"><a href="#Select-In-Providers" class="headerlink" title="Select In Providers"></a>Select In Providers</h2><p><img src="/images/blog/0.25/new-select-provider.jpg"></p>
-<p>Selecting files doesn’t add files to Uppy immediately anymore. Instead a “Select” button appears (with a counter), and pressing that adds all the files with checked checkboxes and closes the Instagram or Google Drive overlay. Cancel discards the selection and also closes the overlay.</p>
-<p>This addresses an undesirable case where <code>autoProceed: true</code> would begin uploading files the moment you ticked a checkbox, and you couldn’t see what was going on because the provider overlay was still open.</p>
+<p>Selecting files doesn&#x2019;t add files to Uppy immediately anymore. Instead a &#x201C;Select&#x201D; button appears (with a counter), and pressing that adds all the files with checked checkboxes and closes the Instagram or Google Drive overlay. Cancel discards the selection and also closes the overlay.</p>
+<p>This addresses an undesirable case where <code>autoProceed: true</code> would begin uploading files the moment you ticked a checkbox, and you couldn&#x2019;t see what was going on because the provider overlay was still open.</p>
 <h2 id="Drag-amp-Drop-or-Paste-Links-And-Images-with-the-Url-Plugin"><a href="#Drag-amp-Drop-or-Paste-Links-And-Images-with-the-Url-Plugin" class="headerlink" title="Drag &amp; Drop or Paste Links And Images with the Url Plugin"></a>Drag &amp; Drop or Paste Links And Images with the Url Plugin</h2><p>If you use the <a href="/docs/url/">Url plugin</a> with the <a href="/docs/dashboard">Dashboard</a>, you can now drop or paste URLs into the main Dashboard area. They will automatically be imported by the Url plugin:</p>
 <figure class="wide"><video alt="Demo video showing Uppy with Url plugin that accepts drag and dropped urls" autoplay loop muted playsinline=""><source src="/images/blog/0.25/link-drop-demo.mp4" type="video/mp4">Your browser does not support the video tag, you can <a href="/images/blog/0.25/link-drop-demo.mp4">download the video</a> to watch it.</video></figure>
 
-<h2 id="i18n-Strings-with-Interactive-Components"><a href="#i18n-Strings-with-Interactive-Components" class="headerlink" title="i18n Strings with Interactive Components"></a>i18n Strings with Interactive Components</h2><p>⚠️ <strong>breaking</strong></p>
-<p>We’ve changed how i18n strings work with interactive components. We now use a placeholder for e.g. buttons, so it works nicely in languages that have different word order than English. Example:</p>
+<h2 id="i18n-Strings-with-Interactive-Components"><a href="#i18n-Strings-with-Interactive-Components" class="headerlink" title="i18n Strings with Interactive Components"></a>i18n Strings with Interactive Components</h2><p>&#x26A0;&#xFE0F; <strong>breaking</strong></p>
+<p>We&#x2019;ve changed how i18n strings work with interactive components. We now use a placeholder for e.g. buttons, so it works nicely in languages that have different word order than English. Example:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>dropPasteImport<span class="token punctuation">:</span> <span class="token string">'Drop files here, paste, import from one of the locations above or %{browse}'</span>
 browse<span class="token punctuation">:</span> <span class="token string">'browse'</span>
 </pre></td></tr></table></figure>
 <p><code>%{browse}</code> will be replaced with a button/link. Previously, these two strings were concatenated in the view layer, so the <code>browse</code> text would always be last.</p>
-<p>Here’s a list of strings that were changed in this release, please update those in your locales:</p>
+<p>Here&#x2019;s a list of strings that were changed in this release, please update those in your locales:</p>
 <ul>
 <li>core: <code>failedToUpload</code> needs to contain <code>%{file}</code>, substituted by the name of the file that failed</li>
-<li>dashboard: <code>dropPaste</code> and <code>dropPasteImport</code> need to contain <code>%{browse}</code>, substituted by the “browse” text button</li>
+<li>dashboard: <code>dropPaste</code> and <code>dropPasteImport</code> need to contain <code>%{browse}</code>, substituted by the &#x201C;browse&#x201D; text button</li>
 <li>dashboard: <code>editing</code> needs to contain <code>%{file}</code>, substituted by the name of the file being edited</li>
 <li>dashboard: <code>fileSource</code> and <code>importFrom</code> need to contain <code>%{name}</code>, substituted by the name of the provider</li>
-<li>dragdrop: <code>dropHereOr</code> needs to contain <code>%{browse}</code>, substituted by the “browse” text button</li>
+<li>dragdrop: <code>dropHereOr</code> needs to contain <code>%{browse}</code>, substituted by the &#x201C;browse&#x201D; text button</li>
 </ul>
 <p>The full list of available locale strings for each plugin is now documented in the <a href="/docs/">Uppy Docs</a>.</p>
 <h2 id="React-Documentation"><a href="#React-Documentation" class="headerlink" title="React Documentation"></a>React Documentation</h2><p>React docs have been improved: we now have a <a href="/docs/react/">separate page</a> for each Uppy React wrapper component that we offer.</p>
 <p>Other improvements in docs:</p>
 <ul>
-<li>The <code>id</code> option is now listed on each plugin’s documentation page.</li>
+<li>The <code>id</code> option is now listed on each plugin&#x2019;s documentation page.</li>
 <li>The <code>replaceTargetContent</code> option is listed on UI plugin documentation pages.</li>
 <li>The <code>locale</code> option is described on each plugin documentation page, and includes a short description for each string.</li>
 </ul>
 <h2 id="Typescript-Definitions"><a href="#Typescript-Definitions" class="headerlink" title="Typescript Definitions"></a>Typescript Definitions</h2><p><a href="https://github.com/taoqf" target="_blank" rel="noopener">@taoqf</a> went ahead and added a lot of type definitions to Uppy in <a href="https://github.com/transloadit/uppy/pull/834" target="_blank" rel="noopener">#834</a>. So if you are using TypeScript (and even if not, your code editor / linting tool likely supports type definitions), you are in for a treat!</p>
-<h2 id="No-need-to-run"><a href="#No-need-to-run" class="headerlink" title="No need to .run()"></a>No need to <code>.run()</code></h2><p>⚠️<strong>breaking</strong></p>
+<h2 id="No-need-to-run"><a href="#No-need-to-run" class="headerlink" title="No need to .run()"></a>No need to <code>.run()</code></h2><p>&#x26A0;&#xFE0F;<strong>breaking</strong></p>
 <p>We removed the need to type <code>uppy.run()</code> in <a href="https://github.com/transloadit/uppy/pull/793" target="_blank" rel="noopener">#793</a>. You now only have to call <code>.use()</code> for the plugins that you need (as usual), and everything is then run automatically. It comes with a few tradeoffs but we were getting a big amount of support tickets where people forgot to conclude with <code>.run()</code>, and we saw a chance to reduce boilerplate, so we decided to go ahead and pave the cowpath.</p>
-<h2 id="Authorisation-tokens-in-Local-Storage"><a href="#Authorisation-tokens-in-Local-Storage" class="headerlink" title="Authorisation tokens in Local Storage"></a>Authorisation tokens in Local Storage</h2><p>⚠️<strong>breaking</strong></p>
+<h2 id="Authorisation-tokens-in-Local-Storage"><a href="#Authorisation-tokens-in-Local-Storage" class="headerlink" title="Authorisation tokens in Local Storage"></a>Authorisation tokens in Local Storage</h2><p>&#x26A0;&#xFE0F;<strong>breaking</strong></p>
 <p>Authorisation tokens from Uppy Server are now stored in local storage as opposed to cookies. Two primary reasons for this decision are:</p>
 <ol>
 <li>It avoids CSRF issues which are present when using cookies.</li>
 <li>It allows for less stringent <a href="https://github.com/transloadit/uppy/issues/803#issuecomment-386257515" target="_blank" rel="noopener">CORS policies enforced by browsers</a>, since we are no longer sending cookie credentials via Ajax requests.</li>
 </ol>
 <p>This is a breaking change because it requires that the Uppy Server version should also be updated to <strong>0.13.x</strong> otherwise there could be unexpected behaviour.</p>
-<p>What’s more about the Authorisation tokens is that they are now encrypted on the server before being sent down to the client. Subsequent requests from the client will then send the token to the server via headers (not via cookies anymore).</p>
+<p>What&#x2019;s more about the Authorisation tokens is that they are now encrypted on the server before being sent down to the client. Subsequent requests from the client will then send the token to the server via headers (not via cookies anymore).</p>
 <h2 id="Other-Cool-Changes"><a href="#Other-Cool-Changes" class="headerlink" title="Other Cool Changes"></a>Other Cool Changes</h2><ul>
 <li>Fix: Debounce render calls again, fixes #669 (#796)</li>
 <li>Fix: XHRUpload canceled uploads progress events (#864)</li>
@@ -211,11 +207,29 @@ browse<span class="token punctuation">:</span> <span class="token string">'brows
 <li>Server: Allow custom headers to be set for remote multipart uploads</li>
 <li>Server: Add type to metadata as <code>filetype</code></li>
 </ul>
-<p>⚠️<strong>heads up</strong></p>
+<p>&#x26A0;&#xFE0F;<strong>heads up</strong></p>
 <p>In the next release we are planning a <a href="https://github.com/transloadit/uppy/pull/906" target="_blank" rel="noopener">Lerna conversion</a>, meaning that each Uppy plugin / module will get its own NPM package. Pretty excited about that one! (but also please refrain from sending us big PRs in the meantime :)</p>
 <p>See you in the next one!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

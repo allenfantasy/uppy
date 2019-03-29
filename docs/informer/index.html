@@ -573,9 +573,9 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token keyword">import</span> <span class="token string">'@uppy/informer/dist/style.css'</span>
 </pre></td></tr></table></figure>
 <p>Import general Core styles from <code>@uppy/core/dist/style.css</code> first, then add the Informer styles from <code>@uppy/informer/dist/style.css</code>. A minified version is also available as <code>style.min.css</code> at the same path. The way to do import depends on your build system.</p>
-<p>⚠️ If you use the <a href="/docs/dashboard"><code>@uppy/dashboard</code></a> plugin, you do not need to include the styles for the Progress Bar, because the Dashboard already includes it.</p>
+<p>&#x26A0;&#xFE0F; If you use the <a href="/docs/dashboard"><code>@uppy/dashboard</code></a> plugin, you do not need to include the styles for the Progress Bar, because the Dashboard already includes it.</p>
 <h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>The <code>@uppy/informer</code> plugin has the following configurable options:</p>
-<h3 id="id-39-Informer-39"><a href="#id-39-Informer-39" class="headerlink" title="id: &#39;Informer&#39;"></a><code>id: &#39;Informer&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;Informer&#39;</code>. Use this if you need multiple Informer instances.</p>
+<h3 id="id-39-Informer-39"><a href="#id-39-Informer-39" class="headerlink" title="id: &apos;Informer&apos;"></a><code>id: &apos;Informer&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;Informer&apos;</code>. Use this if you need multiple Informer instances.</p>
 <h3 id="target-null"><a href="#target-null" class="headerlink" title="target: null"></a><code>target: null</code></h3><p>DOM element, CSS selector, or plugin to mount the Informer into.</p>
 <h3 id="typeColors"><a href="#typeColors" class="headerlink" title="typeColors: {}"></a><code>typeColors: {}</code></h3><p>Customize the background and foreground colors for different types of notifications. Supported types are <code>info</code>, <code>warning</code>, <code>error</code>, and <code>success</code>. To customize colors, pass an object containing <code>{ bg, text }</code> color pairs for each type of notification:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Informer<span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -588,7 +588,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="replaceTargetContent-false"><a href="#replaceTargetContent-false" class="headerlink" title="replaceTargetContent: false"></a><code>replaceTargetContent: false</code></h3><p>Remove all children of the <code>target</code> element before mounting the Informer. By default, Uppy will append any UI to the <code>target</code> DOM element. This is the least dangerous option. However, you may have some fallback HTML inside the <code>target</code> element in case JavaScript or Uppy is not available. In that case, you can set <code>replaceTargetContent: true</code> to clear the <code>target</code> before appending.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/informer.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

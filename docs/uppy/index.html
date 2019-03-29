@@ -579,26 +579,26 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   store<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">DefaultStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="id-39-uppy-39"><a href="#id-39-uppy-39" class="headerlink" title="id: &#39;uppy&#39;"></a><code>id: &#39;uppy&#39;</code></h3><p>A site-wide unique ID for the instance.</p>
+<h3 id="id-39-uppy-39"><a href="#id-39-uppy-39" class="headerlink" title="id: &apos;uppy&apos;"></a><code>id: &apos;uppy&apos;</code></h3><p>A site-wide unique ID for the instance.</p>
 <p>If multiple Uppy instances are being used, for instance, on two different pages, an <code>id</code> should be specified. This allows Uppy to store information in <code>localStorage</code> without colliding with other Uppy instances.</p>
-<p>Note that this ID should be persistent across page reloads and navigation—it shouldn’t be a random number that is different every time Uppy is loaded.<br>For example, if one Uppy instance is used to upload user avatars, and another to add photos to a blog post, you might use:</p>
+<p>Note that this ID should be persistent across page reloads and navigation&#x2014;it shouldn&#x2019;t be a random number that is different every time Uppy is loaded.<br>For example, if one Uppy instance is used to upload user avatars, and another to add photos to a blog post, you might use:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> avatarUploader <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token string">'avatar'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> photoUploader <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token string">'post'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="autoProceed-false"><a href="#autoProceed-false" class="headerlink" title="autoProceed: false"></a><code>autoProceed: false</code></h3><p>By default Uppy will wait for an upload button to be pressed in the UI, or an <code>.upload()</code> method to be called, before starting an upload. Setting this to <code>autoProceed: true</code> will start uploading automatically after the first file is selected.</p>
 <h3 id="allowMultipleUploads-true"><a href="#allowMultipleUploads-true" class="headerlink" title="allowMultipleUploads: true"></a><code>allowMultipleUploads: true</code></h3><p>Whether to allow multiple upload batches. This means multiple calls to <code>.upload()</code>, or a user adding more files after already uploading some. An upload batch is made up of the files that were added since the previous <code>.upload()</code> call.</p>
 <p>With this option set to <code>true</code>, users can upload some files, and then add <em>more</em> files and upload those as well. A model use case for this is uploading images to a gallery or adding attachments to an email.</p>
-<p>With this option set to <code>false</code>, users can upload some files, and you can listen for the <a href="/docs/uppy/#complete">‘complete’</a> event to continue to the next step in your app’s upload flow. A typical use case for this is uploading a new profile picture. If you are integrating with an existing HTML form, this option gives the closest behaviour to a bare <code>&lt;input type=&quot;file&quot;&gt;</code>.</p>
+<p>With this option set to <code>false</code>, users can upload some files, and you can listen for the <a href="/docs/uppy/#complete">&#x2018;complete&#x2019;</a> event to continue to the next step in your app&#x2019;s upload flow. A typical use case for this is uploading a new profile picture. If you are integrating with an existing HTML form, this option gives the closest behaviour to a bare <code>&lt;input type=&quot;file&quot;&gt;</code>.</p>
 <h3 id="restrictions"><a href="#restrictions" class="headerlink" title="restrictions: {}"></a><code>restrictions: {}</code></h3><p>Optionally, provide rules and conditions to limit the type and/or number of files that can be selected.</p>
 <p><strong>Parameters</strong></p>
 <ul>
-<li><code>maxFileSize</code> <em>null | number</em> — maximum file size in bytes for each individual file (total max size <a href="https://github.com/transloadit/uppy/issues/514" target="_blank" rel="noopener">has been requested, and is planned</a>)</li>
-<li><code>maxNumberOfFiles</code> <em>null | number</em> — total number of files that can be selected</li>
-<li><code>minNumberOfFiles</code> <em>null | number</em> — minimum number of files that must be selected before the upload</li>
-<li><code>allowedFileTypes</code> <em>null | array</em> of wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&#39;image/*&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.png&#39;, &#39;.gif&#39;]</code></li>
+<li><code>maxFileSize</code> <em>null | number</em> &#x2014; maximum file size in bytes for each individual file (total max size <a href="https://github.com/transloadit/uppy/issues/514" target="_blank" rel="noopener">has been requested, and is planned</a>)</li>
+<li><code>maxNumberOfFiles</code> <em>null | number</em> &#x2014; total number of files that can be selected</li>
+<li><code>minNumberOfFiles</code> <em>null | number</em> &#x2014; minimum number of files that must be selected before the upload</li>
+<li><code>allowedFileTypes</code> <em>null | array</em> of wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&apos;image/*&apos;, &apos;.jpg&apos;, &apos;.jpeg&apos;, &apos;.png&apos;, &apos;.gif&apos;]</code></li>
 </ul>
 <p><code>maxNumberOfFiles</code> also affects the number of files a user is able to select via the system file dialog in UI plugins like <code>DragDrop</code>, <code>FileInput</code> and <code>Dashboard</code>: when set to <code>1</code>, they will only be able to select a single file. When <code>null</code> or another number is provided, they will be able to select multiple files.</p>
-<p><code>allowedFileTypes</code> gets passed to the system file dialog via <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types" target="_blank" rel="noopener"><code>&lt;input&gt;</code></a>’s accept attribute, so only files matching these types will be selectable.</p>
+<p><code>allowedFileTypes</code> gets passed to the system file dialog via <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types" target="_blank" rel="noopener"><code>&lt;input&gt;</code></a>&#x2019;s accept attribute, so only files matching these types will be selectable.</p>
 <h3 id="meta"><a href="#meta" class="headerlink" title="meta: {}"></a><code>meta: {}</code></h3><p>Metadata object, used for passing things like public keys, usernames, tags and so on:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   username<span class="token punctuation">:</span> <span class="token string">'John'</span>
@@ -606,8 +606,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </pre></td></tr></table></figure>
 <p>This global metadata is added to each file in Uppy. It can be modified by two methods:</p>
 <ol>
-<li><a href="/docs/uppy/#uppy-setMeta-data"><code>uppy.setMeta({ username: &#39;Peter&#39; })</code></a> — set or update meta for all files.</li>
-<li><a href="/docs/uppy/#uppy-setFileMeta-fileID-data"><code>uppy.setFileMeta(&#39;myfileID&#39;, { resize: 1500 })</code></a> — set or update meta for specific file.</li>
+<li><a href="/docs/uppy/#uppy-setMeta-data"><code>uppy.setMeta({ username: &apos;Peter&apos; })</code></a> &#x2014; set or update meta for all files.</li>
+<li><a href="/docs/uppy/#uppy-setFileMeta-fileID-data"><code>uppy.setFileMeta(&apos;myfileID&apos;, { resize: 1500 })</code></a> &#x2014; set or update meta for specific file.</li>
 </ol>
 <p>Metadata from each file is then attached to uploads in <a href="/docs/tus/">Tus</a> and <a href="/docs/xhrupload/">XHRUpload</a> plugins.</p>
 <p>Metadata can also be added from a <code>&lt;form&gt;</code> element on your page, through the <a href="/docs/form/">Form</a> plugin or through the UI if you are using Dashboard with the <a href="/docs/dashboard/#metaFields"><code>metaFields</code></a> option.</p>
@@ -705,7 +705,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <h3 id="uppy-removePlugin-instance"><a href="#uppy-removePlugin-instance" class="headerlink" title="uppy.removePlugin(instance)"></a><code>uppy.removePlugin(instance)</code></h3><p>Uninstall and remove a plugin.</p>
 <h3 id="uppy-getPlugin-id"><a href="#uppy-getPlugin-id" class="headerlink" title="uppy.getPlugin(id)"></a><code>uppy.getPlugin(id)</code></h3><p>Get a plugin by its <a href="/docs/plugins/#id"><code>id</code></a> to access its methods.</p>
 <h3 id="uppy-getID"><a href="#uppy-getID" class="headerlink" title="uppy.getID()"></a><code>uppy.getID()</code></h3><p>Get the Uppy instance ID, see the <a href="#id-39-uppy-39"><code>id</code> option</a>.</p>
-<h3 id="uppy-addFile-fileObject"><a href="#uppy-addFile-fileObject" class="headerlink" title="uppy.addFile(fileObject)"></a><code>uppy.addFile(fileObject)</code></h3><p>Add a new file to Uppy’s internal state.</p>
+<h3 id="uppy-addFile-fileObject"><a href="#uppy-addFile-fileObject" class="headerlink" title="uppy.addFile(fileObject)"></a><code>uppy.addFile(fileObject)</code></h3><p>Add a new file to Uppy&#x2019;s internal state.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">addFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   name<span class="token punctuation">:</span> <span class="token string">'my-file.jpg'</span><span class="token punctuation">,</span> <span class="token comment">// file name</span>
   type<span class="token punctuation">:</span> <span class="token string">'image/jpeg'</span><span class="token punctuation">,</span> <span class="token comment">// file type</span>
@@ -764,8 +764,8 @@ document<span class="token punctuation">.</span><span class="token function">que
 <h3 id="uppy-retryUpload-fileID"><a href="#uppy-retryUpload-fileID" class="headerlink" title="uppy.retryUpload(fileID)"></a><code>uppy.retryUpload(fileID)</code></h3><p>Retry an upload (after an error, for example).</p>
 <h3 id="uppy-retryAll"><a href="#uppy-retryAll" class="headerlink" title="uppy.retryAll()"></a><code>uppy.retryAll()</code></h3><p>Retry all uploads (after an error, for example).</p>
 <h3 id="uppy-cancelAll"><a href="#uppy-cancelAll" class="headerlink" title="uppy.cancelAll()"></a><code>uppy.cancelAll()</code></h3><p>Cancel all uploads, reset progress and remove all files.</p>
-<h3 id="uppy-setState-patch"><a href="#uppy-setState-patch" class="headerlink" title="uppy.setState(patch)"></a><code>uppy.setState(patch)</code></h3><p>Update Uppy’s internal state. Usually, this method is called internally, but in some cases it might be useful to alter something directly, especially when implementing your own plugins.</p>
-<p>Uppy’s default state on initialization:</p>
+<h3 id="uppy-setState-patch"><a href="#uppy-setState-patch" class="headerlink" title="uppy.setState(patch)"></a><code>uppy.setState(patch)</code></h3><p>Update Uppy&#x2019;s internal state. Usually, this method is called internally, but in some cases it might be useful to alter something directly, especially when implementing your own plugins.</p>
+<p>Uppy&#x2019;s default state on initialization:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token punctuation">{</span>
   plugins<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
   files<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -803,7 +803,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 </pre></td></tr></table></figure>
 <h3 id="uppy-getState"><a href="#uppy-getState" class="headerlink" title="uppy.getState()"></a><code>uppy.getState()</code></h3><p>Returns the current state from the <a href="#store-defaultStore">Store</a>.</p>
 <h3 id="uppy-setFileState-fileID-state"><a href="#uppy-setFileState-fileID-state" class="headerlink" title="uppy.setFileState(fileID, state)"></a><code>uppy.setFileState(fileID, state)</code></h3><p>Update the state for a single file. This is mostly useful for plugins that may want to store data on file objects, or that need to pass file-specific configurations to other plugins that support it.</p>
-<p><code>fileID</code> is the string file ID. <code>state</code> is an object that will be merged into the file’s state object.</p>
+<p><code>fileID</code> is the string file ID. <code>state</code> is an object that will be merged into the file&#x2019;s state object.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">getPlugin</span><span class="token punctuation">(</span><span class="token string">'Url'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addFile</span><span class="token punctuation">(</span><span class="token string">'path/to/remote-file.jpg'</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="uppy-setMeta-data"><a href="#uppy-setMeta-data" class="headerlink" title="uppy.setMeta(data)"></a><code>uppy.setMeta(data)</code></h3><p>Alters global <code>meta</code> object in state, the one that can be set in Uppy options and gets merged with all newly added files. Calling <code>setMeta</code> will also merge newly added meta data with previously selected files.</p>
@@ -822,9 +822,9 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'[Dashboard] adding files...'</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="uppy-info"><a href="#uppy-info" class="headerlink" title="uppy.info()"></a><code>uppy.info()</code></h3><h4 id="Parameters-1"><a href="#Parameters-1" class="headerlink" title="Parameters"></a>Parameters</h4><ul>
-<li><strong>message</strong> <em>{(string|object)}</em> — <code>&#39;info message&#39;</code> or <code>{ message: &#39;Oh no!&#39;, details: &#39;File couldn’t be uploaded&#39; }</code></li>
-<li><strong>type</strong> <em>{string} [type=’info’]</em> — <code>info</code>, <code>warning</code>, <code>success</code> or <code>error</code></li>
-<li><strong>duration</strong> <em>{number} [duration = 3000]</em> — in milliseconds</li>
+<li><strong>message</strong> <em>{(string|object)}</em> &#x2014; <code>&apos;info message&apos;</code> or <code>{ message: &apos;Oh no!&apos;, details: &apos;File couldn&#x2019;t be uploaded&apos; }</code></li>
+<li><strong>type</strong> <em>{string} [type=&#x2019;info&#x2019;]</em> &#x2014; <code>info</code>, <code>warning</code>, <code>success</code> or <code>error</code></li>
+<li><strong>duration</strong> <em>{number} [duration = 3000]</em> &#x2014; in milliseconds</li>
 </ul>
 <p>Sets a message in state, with optional details, that can be shown by notification UI plugins. Currently, that means just the <a href="/docs/informer/">Informer</a> plugin, included by default in Dashboard.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Oh my, something good happened!'</span><span class="token punctuation">,</span> <span class="token string">'success'</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span>
@@ -835,8 +835,8 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p><code>info-visible</code> and <code>info-hidden</code> events are emitted when this info message should be visible or hidden.</p>
-<h3 id="uppy-on-39-event-39-action"><a href="#uppy-on-39-event-39-action" class="headerlink" title="uppy.on(&#39;event&#39;, action)"></a><code>uppy.on(&#39;event&#39;, action)</code></h3><p>Subscribe to an uppy-event. See below for the full list of events.</p>
-<h3 id="uppy-off-39-event-39-action"><a href="#uppy-off-39-event-39-action" class="headerlink" title="uppy.off(&#39;event&#39;, action)"></a><code>uppy.off(&#39;event&#39;, action)</code></h3><p>Unsubscribe to an uppy-event. See below for the full list of events.</p>
+<h3 id="uppy-on-39-event-39-action"><a href="#uppy-on-39-event-39-action" class="headerlink" title="uppy.on(&apos;event&apos;, action)"></a><code>uppy.on(&apos;event&apos;, action)</code></h3><p>Subscribe to an uppy-event. See below for the full list of events.</p>
+<h3 id="uppy-off-39-event-39-action"><a href="#uppy-off-39-event-39-action" class="headerlink" title="uppy.off(&apos;event&apos;, action)"></a><code>uppy.off(&apos;event&apos;, action)</code></h3><p>Unsubscribe to an uppy-event. See below for the full list of events.</p>
 <h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>Uppy exposes events that you can subscribe to in your app:</p>
 <h3 id="file-added"><a href="#file-added" class="headerlink" title="file-added"></a><code>file-added</code></h3><p>Fired each time a file is added.</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'file-added'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -881,7 +881,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="complete"><a href="#complete" class="headerlink" title="complete"></a><code>complete</code></h3><p>Fired when all uploads are complete.</p>
-<p>The <code>result</code> parameter is an object with arrays of <code>successful</code> and <code>failed</code> files, just like in <a href="#uppy-upload"><code>uppy.upload()</code></a>’s return value.</p>
+<p>The <code>result</code> parameter is an object with arrays of <code>successful</code> and <code>failed</code> files, just like in <a href="#uppy-upload"><code>uppy.upload()</code></a>&#x2019;s return value.</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'successful files:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>successful<span class="token punctuation">)</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'failed files:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>failed<span class="token punctuation">)</span>
@@ -905,7 +905,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'upload retried:'</span><span class="token punctuation">,</span> fileID<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="info-visible"><a href="#info-visible" class="headerlink" title="info-visible"></a><code>info-visible</code></h3><p>Fired when “info” message should be visible in the UI. By default, <code>Informer</code> plugin is displaying these messages (enabled by default in <code>Dashboard</code> plugin). You can use this event to show messages in your custom UI:</p>
+<h3 id="info-visible"><a href="#info-visible" class="headerlink" title="info-visible"></a><code>info-visible</code></h3><p>Fired when &#x201C;info&#x201D; message should be visible in the UI. By default, <code>Informer</code> plugin is displaying these messages (enabled by default in <code>Dashboard</code> plugin). You can use this event to show messages in your custom UI:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'info-visible'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> info <span class="token operator">=</span> uppy<span class="token punctuation">.</span><span class="token function">getState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>info
   <span class="token comment">// info: {</span>
@@ -917,9 +917,27 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
   <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>info<span class="token punctuation">.</span>message<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>info<span class="token punctuation">.</span>details<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="info-hidden"><a href="#info-hidden" class="headerlink" title="info-hidden"></a><code>info-hidden</code></h3><p>Fired when “info” message should be hidden in the UI. See <a href="#info-visible"><code>info-visible</code></a>.</p>
+<h3 id="info-hidden"><a href="#info-hidden" class="headerlink" title="info-hidden"></a><code>info-hidden</code></h3><p>Fired when &#x201C;info&#x201D; message should be hidden in the UI. See <a href="#info-visible"><code>info-visible</code></a>.</p>
 <h3 id="cancel-all"><a href="#cancel-all" class="headerlink" title="cancel-all"></a><code>cancel-all</code></h3><p>Fired when <a href=""><code>uppy.cancelAll()</code></a> is called, all uploads are canceled, files removed and progress is reset.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/uppy.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

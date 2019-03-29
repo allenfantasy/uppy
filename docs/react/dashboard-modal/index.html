@@ -561,11 +561,11 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <span class="token keyword">import</span> <span class="token string">'@uppy/dashboard/dist/style.css'</span>
 </pre></td></tr></table></figure>
 <p>Import general Core styles from <code>@uppy/core/dist/style.css</code> first, then add the Dashboard styles from <code>@uppy/dashboard/dist/style.css</code>. A minified version is also available as <code>style.min.css</code> at the same path. The way to do import depends on your build system.</p>
-<p>⚠️ The <code>@uppy/dashboard</code> plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as (<a href="/docs/status-bar"><code>@uppy/status-bar</code></a> and <a href="/docs/informer"><code>@uppy/informer</code></a>). If you also use the <code>@uppy/status-bar</code> or <code>@uppy/informer</code> plugin directly, you should not include their CSS files, but instead only use the one from the <code>@uppy/dashboard</code> plugin.</p>
+<p>&#x26A0;&#xFE0F; The <code>@uppy/dashboard</code> plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as (<a href="/docs/status-bar"><code>@uppy/status-bar</code></a> and <a href="/docs/informer"><code>@uppy/informer</code></a>). If you also use the <code>@uppy/status-bar</code> or <code>@uppy/informer</code> plugin directly, you should not include their CSS files, but instead only use the one from the <code>@uppy/dashboard</code> plugin.</p>
 <p>Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as <code>@uppy/url</code> and <code>@uppy/webcam</code>, are not inluded. If you are using those, please see their docs and make sure to include styles for them as well.</p>
-<h2 id="Initializing-Uppy"><a href="#Initializing-Uppy" class="headerlink" title="Initializing Uppy"></a>Initializing Uppy</h2><p>Your Uppy instance must be initialized before passing it to an <code>uppy={}</code> prop, and should be cleaned up using <code>uppy.close()</code> when you are done with it. A simple approach is to initialize it in your React component’s <code>constructor()</code> and destroy it in <code>componentWillUnmount()</code>.</p>
+<h2 id="Initializing-Uppy"><a href="#Initializing-Uppy" class="headerlink" title="Initializing Uppy"></a>Initializing Uppy</h2><p>Your Uppy instance must be initialized before passing it to an <code>uppy={}</code> prop, and should be cleaned up using <code>uppy.close()</code> when you are done with it. A simple approach is to initialize it in your React component&#x2019;s <code>constructor()</code> and destroy it in <code>componentWillUnmount()</code>.</p>
 <blockquote>
-<p>⚠ Uppy instances are stateful, so the same instance must be used across different renders.<br>Do <strong>NOT</strong> initialize Uppy in a <code>render()</code> method!<br>Do <strong>NOT</strong> initialize Uppy in a function component!</p>
+<p>&#x26A0; Uppy instances are stateful, so the same instance must be used across different renders.<br>Do <strong>NOT</strong> initialize Uppy in a <code>render()</code> method!<br>Do <strong>NOT</strong> initialize Uppy in a function component!</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -596,7 +596,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Webcam<span class="token punctuation">)</span> <span class="token comment">// `id` defaults to "Webcam"</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Webcam<span class="token punctuation">,</span> <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token string">'MyWebcam'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// `id` is… "MyWebcam"</span>
 </pre></td></tr></table></figure>
-<p>Then do <code>plugins={[&#39;Webcam&#39;]}</code>.</p>
+<p>Then do <code>plugins={[&apos;Webcam&apos;]}</code>.</p>
 <p>Here is a full example that uses a button to open the modal:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">class</span> <span class="token class-name">MusicUploadButton</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">constructor</span> <span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -638,7 +638,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/react-dashboard-modal.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

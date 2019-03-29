@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,11 +155,11 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     
     <p>Spring is in the air and Uppy is feeling particularly full of life. In this post about Uppy 0.15, we have some exciting stories about <code>babel-plugin-yo-yoify</code>, progress event throttling, and new friends.</p>
 <a id="more"></a>
-<h2 id="Yo-yoify-for-NPM-installed-Uppy"><a href="#Yo-yoify-for-NPM-installed-Uppy" class="headerlink" title="Yo-yoify for NPM-installed Uppy"></a>Yo-yoify for NPM-installed Uppy</h2><p>In <a href="http://localhost:4000/blog/2017/02/0.14/" target="_blank" rel="noopener"><code>0.14</code></a>, we added <code>yo-yoify</code> transform to give Uppy some extra speed and eliminate <code>Function.caller</code> issues. As it turned out, we <a href="https://github.com/transloadit/uppy/issues/158" target="_blank" rel="noopener">forgot</a> about our Babel-transpiled <code>lib</code> version of Uppy that gets published to NPM 🙀. We then spent some time creating a standalone version of <code>yo-yoify</code> that would be able to parse <code>yo-yo</code> template strings before Babel-transpilation, only to discover that there already is a <a href="https://www.npmjs.com/package/babel-plugin-yo-yoify" target="_blank" rel="noopener"><code>babel-plugin-yo-yoify</code></a> that not only does precisely that, but also frees us from jumping through a lot of unnecessary hoops. It did <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/issues/9" target="_blank" rel="noopener">have</a> <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/pull/8" target="_blank" rel="noopener">a few</a> <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/issues/11" target="_blank" rel="noopener">issues</a> at first, but luckily our friend <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Renée</a> was available to colaborate with us on this. Renée has also agreed to join Uppy for a while to help us with other pressing issues. So, silver linings — bugs can sometimes lead to new friends and wonderful beginnings. We are very excited about what this all means for Uppy in the months to come.</p>
+<h2 id="Yo-yoify-for-NPM-installed-Uppy"><a href="#Yo-yoify-for-NPM-installed-Uppy" class="headerlink" title="Yo-yoify for NPM-installed Uppy"></a>Yo-yoify for NPM-installed Uppy</h2><p>In <a href="http://localhost:4000/blog/2017/02/0.14/" target="_blank" rel="noopener"><code>0.14</code></a>, we added <code>yo-yoify</code> transform to give Uppy some extra speed and eliminate <code>Function.caller</code> issues. As it turned out, we <a href="https://github.com/transloadit/uppy/issues/158" target="_blank" rel="noopener">forgot</a> about our Babel-transpiled <code>lib</code> version of Uppy that gets published to NPM &#x1F640;. We then spent some time creating a standalone version of <code>yo-yoify</code> that would be able to parse <code>yo-yo</code> template strings before Babel-transpilation, only to discover that there already is a <a href="https://www.npmjs.com/package/babel-plugin-yo-yoify" target="_blank" rel="noopener"><code>babel-plugin-yo-yoify</code></a> that not only does precisely that, but also frees us from jumping through a lot of unnecessary hoops. It did <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/issues/9" target="_blank" rel="noopener">have</a> <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/pull/8" target="_blank" rel="noopener">a few</a> <a href="https://github.com/goto-bus-stop/babel-plugin-yo-yoify/issues/11" target="_blank" rel="noopener">issues</a> at first, but luckily our friend <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Ren&#xE9;e</a> was available to colaborate with us on this. Ren&#xE9;e has also agreed to join Uppy for a while to help us with other pressing issues. So, silver linings &#x2014; bugs can sometimes lead to new friends and wonderful beginnings. We are very excited about what this all means for Uppy in the months to come.</p>
 <p>Uppy from NPM is now good to go and the issue has been completely resolved. You can update at: <a href="https://www.npmjs.com/package/uppy" target="_blank" rel="noopener">https://www.npmjs.com/package/uppy</a>. And yeah, if you use <code>yo-yo</code>, give <a href="https://www.npmjs.com/package/babel-plugin-yo-yoify" target="_blank" rel="noopener"><code>babel-plugin-yo-yoify</code></a> a try.</p>
-<h2 id="Pause-amp-Resume-Remote-Uploads"><a href="#Pause-amp-Resume-Remote-Uploads" class="headerlink" title="Pause &amp; Resume Remote Uploads"></a>Pause &amp; Resume Remote Uploads</h2><p>Just like with “local” uploads, Uppy can now pause and resume remote uploads from Google Drive or Dropbox (handled on the backend by <code>uppy-server</code> + <code>tus</code>). 🎉</p>
-<h2 id="Progress-Throttling"><a href="#Progress-Throttling" class="headerlink" title="Progress Throttling"></a>Progress Throttling</h2><p>While working on pausing remote uploads with <code>uppy-server</code>, Ife discovered a strange bug: uppy-client would hang during the upload, after which the progress would immediately jump to 100%. After some solid Sherlock Holmesing, we found what was causing it: uploads were happening too fast. This was leading to progress events being sent very, very often (like 300 / second), which trashed the interface rendering loop. We have solved this by <a href="https://github.com/tus/tus-js-client/commit/9940f27b2361fd7e10ba58b09b60d82422183bbb" target="_blank" rel="noopener">adding throttling in tus-js-client</a> (thanks Marius!) and <a href="https://github.com/transloadit/uppy-server/commit/936ad48e92631c45d123664900b9aabcf7a190fa" target="_blank" rel="noopener">uppy-server</a> (thanks Ife!). I would also very much like to take this opportunity to thank myself for <a href="https://github.com/transloadit/uppy/commit/1d5f4404546420442deabc94df84bd3ec0677eec" target="_blank" rel="noopener">fixing</a> <a href="https://github.com/transloadit/uppy/commit/db32c6f4fd85420532f27f04920dbaf6d126ea9b" target="_blank" rel="noopener">it</a> in uppy-client too! :innocent:</p>
-<p>To prevent “jumping” progress, numbers and text in StatusBar are now only updated once a second. Plus, we have switched to <a href="https://www.npmjs.com/package/prettier-bytes" target="_blank" rel="noopener"><code>prettier-bytes</code></a>, which adds some nice number rounding. Smooth as butter!</p>
+<h2 id="Pause-amp-Resume-Remote-Uploads"><a href="#Pause-amp-Resume-Remote-Uploads" class="headerlink" title="Pause &amp; Resume Remote Uploads"></a>Pause &amp; Resume Remote Uploads</h2><p>Just like with &#x201C;local&#x201D; uploads, Uppy can now pause and resume remote uploads from Google Drive or Dropbox (handled on the backend by <code>uppy-server</code> + <code>tus</code>). &#x1F389;</p>
+<h2 id="Progress-Throttling"><a href="#Progress-Throttling" class="headerlink" title="Progress Throttling"></a>Progress Throttling</h2><p>While working on pausing remote uploads with <code>uppy-server</code>, Ife discovered a strange bug: uppy-client would hang during the upload, after which the progress would immediately jump to 100%. After some solid Sherlock Holmesing, we found what was causing it: uploads were happening too fast. This was leading to progress events being sent very, very often (like 300 / second), which trashed the interface rendering loop. We have solved this by <a href="https://github.com/tus/tus-js-client/commit/9940f27b2361fd7e10ba58b09b60d82422183bbb" target="_blank" rel="noopener">adding throttling in tus-js-client</a> (thanks Marius!) and <a href="https://github.com/transloadit/uppy-server/commit/936ad48e92631c45d123664900b9aabcf7a190fa" target="_blank" rel="noopener">uppy-server</a> (thanks Ife!). I would also very much like to take this opportunity to thank myself for <a href="https://github.com/transloadit/uppy/commit/1d5f4404546420442deabc94df84bd3ec0677eec" target="_blank" rel="noopener">fixing</a> <a href="https://github.com/transloadit/uppy/commit/db32c6f4fd85420532f27f04920dbaf6d126ea9b" target="_blank" rel="noopener">it</a> in uppy-client too! <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f607.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f607.png?v8">&#x1F607;</span></p>
+<p>To prevent &#x201C;jumping&#x201D; progress, numbers and text in StatusBar are now only updated once a second. Plus, we have switched to <a href="https://www.npmjs.com/package/prettier-bytes" target="_blank" rel="noopener"><code>prettier-bytes</code></a>, which adds some nice number rounding. Smooth as butter!</p>
 <p>TL;DR Uppy was simply too fast at uploading, so we had to shorten the leash a bit!</p>
 <h2 id="Informer-coming-at-you-in-full-color-mode"><a href="#Informer-coming-at-you-in-full-color-mode" class="headerlink" title="Informer coming at you in full-color mode"></a>Informer coming at you in full-color mode</h2><p>Informer will now be able to change the way it looks depending on the <code>type</code> argument:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// (`'informer'`, `text`, `type`, `duration`)</span>
@@ -179,7 +175,7 @@ uppy<span class="token punctuation">.</span><span class="token function">emit</s
 </ul>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.15:</p>
 <ul>
-<li>build: update dependencies and eslint-plugin-standard, nodemon –&gt; onchange, because simpler and better options (@arturi)</li>
+<li>build: update dependencies and eslint-plugin-standard, nodemon &#x2013;&gt; onchange, because simpler and better options (@arturi)</li>
 <li>build: fix <code>Function.caller</code> issue in <code>lib</code> which gets published to NPM package, add babel-plugin-yo-yoify (@arturi #158 #163)</li>
 <li>provider: show error view for things like not being able to connect to uppy server, should this be happening when uppy-server is unavailable <a href="http://i.imgur.com/cYJakc9.png" target="_blank" rel="noopener">http://i.imgur.com/cYJakc9.png</a> (@arturi, @ifedapoolarewaju)</li>
 <li>provider: loading indicator while files from GoogleDrive / Dropbox are loading (@arturi, @ifedapoolarewaju)</li>
@@ -200,12 +196,30 @@ uppy<span class="token punctuation">.</span><span class="token function">emit</s
 <li>dashboard: throttle StatusBar numbers, so they update only once a second (@arturi, @acconut)</li>
 <li>dashboard: add titles to pause/resume/cancel in StatusBar (@arturi)</li>
 <li>dashboard: precise <code>circleLength</code> and <code>stroke-dasharray/stroke-dashoffset</code> calculation for progress circles on FileItem (@arturi)</li>
-<li>dashboard: don’t show per-file detailed progress by default — too much noise (@arturi)</li>
+<li>dashboard: don&#x2019;t show per-file detailed progress by default &#x2014; too much noise (@arturi)</li>
 <li>website: blog post and images cleanup (@arturi)</li>
 </ul>
 <p>Enjoy!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

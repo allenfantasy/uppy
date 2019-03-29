@@ -577,8 +577,8 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   locale<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="id-39-Url-39"><a href="#id-39-Url-39" class="headerlink" title="id: &#39;Url&#39;"></a><code>id: &#39;Url&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;Url&#39;</code>.</p>
-<h3 id="title-39-Link-39"><a href="#title-39-Link-39" class="headerlink" title="title: &#39;Link&#39;"></a><code>title: &#39;Link&#39;</code></h3><p>Configures the title / name shown in the UI, for instance, on Dashboard tabs. It defaults to <code>&#39;Link&#39;</code>.</p>
+<h3 id="id-39-Url-39"><a href="#id-39-Url-39" class="headerlink" title="id: &apos;Url&apos;"></a><code>id: &apos;Url&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;Url&apos;</code>.</p>
+<h3 id="title-39-Link-39"><a href="#title-39-Link-39" class="headerlink" title="title: &apos;Link&apos;"></a><code>title: &apos;Link&apos;</code></h3><p>Configures the title / name shown in the UI, for instance, on Dashboard tabs. It defaults to <code>&apos;Link&apos;</code>.</p>
 <h3 id="target-null"><a href="#target-null" class="headerlink" title="target: null"></a><code>target: null</code></h3><p>DOM element, CSS selector, or plugin to mount the URL provider into. This should normally be the Dashboard.</p>
 <h3 id="serverUrl-null"><a href="#serverUrl-null" class="headerlink" title="serverUrl: null"></a><code>serverUrl: null</code></h3><p>URL to an Companion instance.</p>
 <h3 id="locale"><a href="#locale" class="headerlink" title="locale: {}"></a><code>locale: {}</code></h3><p>Localize text that is shown to the user.</p>
@@ -594,7 +594,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   enterCorrectUrl<span class="token punctuation">:</span> <span class="token string">'Incorrect URL: Please make sure you are entering a direct link to a file'</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/url.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

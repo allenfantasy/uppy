@@ -98,7 +98,7 @@ Including Meta DataWhile fetching your files, Uppy is now also able to supply so
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Including Meta DataWhile fetching your files, Uppy is now also able to supply so
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,7 +155,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy version 0.8 released: The Webcam Edition and Meta Data</h1>
   <h4>Wednesday Aug 17, 2016</h4>
     
-    <p>We have just released Uppy 0.8.0 and we can’t wait to tell you more about it. Along with various under-the-hood improvements, this release also contains some very visible upgrades. You can read below for further details.</p>
+    <p>We have just released Uppy 0.8.0 and we can&#x2019;t wait to tell you more about it. Along with various under-the-hood improvements, this release also contains some very visible upgrades. You can read below for further details.</p>
 <h2 id="Including-Meta-Data"><a href="#Including-Meta-Data" class="headerlink" title="Including Meta Data"></a>Including Meta Data</h2><p>While fetching your files, Uppy is now also able to supply some custom metadata to go along with them. So far, there are three components in place for that: Core API (<code>core:update-meta</code> event), <code>MetaData</code> plugin, and a new panel in Dashboard UI called File Card, which looks like this:</p>
 <p><img alt="metadata dashboard UI, editing file name, future size and adding description" src="/images/blog/0.8/metadata-dashboard.jpg" class="border"></p>
 <a id="more"></a>
@@ -181,7 +177,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>Having proper file types also means that we need the right corresponding file icons for the Dashboard UI. We have already added a few and we will soon supply more icons for audio, video, text, PDF and other common file types.</p>
 <h2 id="Previously-on-Uppy-File-Previews-Remote-File-Handling-Accessibility-and-Acceptance-Tests-Stats"><a href="#Previously-on-Uppy-File-Previews-Remote-File-Handling-Accessibility-and-Acceptance-Tests-Stats" class="headerlink" title="Previously on Uppy: File Previews, Remote File Handling, Accessibility and Acceptance Tests Stats"></a>Previously on Uppy: File Previews, Remote File Handling, Accessibility and Acceptance Tests Stats</h2><p>We thought it might be worth taking a moment to list a few highlights from the previous versions as well:</p>
 <ul>
-<li>If a file you selected is an image, its preview thumbnail data URL will be generated and added to <code>file.preview</code> in Uppy’s state. This URL can be used later to render a preview with any plugin. Currently, this is done by the mighty Dashboard.</li>
+<li>If a file you selected is an image, its preview thumbnail data URL will be generated and added to <code>file.preview</code> in Uppy&#x2019;s state. This URL can be used later to render a preview with any plugin. Currently, this is done by the mighty Dashboard.</li>
 <li>It is now also possible to select remote files in Uppy. Simply double-click a file from, for instance, Google Drive, and Uppy will then show it in a preview area.</li>
 <li>We have been doing some more work on accessibility: from now on, when you switch tabs in Modal, it will focus on the first input in that tab. We have also added proper labels and titles, and are doing more research in this area.</li>
 <li>Everybody likes to see stats. That is why, on our website, you can now <a href="http://uppy.io/stats">view stats</a> that show how acceptance tests are performing in various browsers. If a test is successful, that means Uppy will likely be able to load and upload files in that particular browser.</li>
@@ -200,18 +196,36 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>progress: better icons, styles (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>core: better mime/type detection (via mime + extension) (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>core: add deep-freeze to getState so that we are sure we are not mutating state accidentally (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>meta: release “Uppy Begins” post (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a> <a href="https://github.com/kvz" target="_blank" rel="noopener">@kvz</a>)</li>
+<li>meta: release &#x201C;Uppy Begins&#x201D; post (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a> <a href="https://github.com/kvz" target="_blank" rel="noopener">@kvz</a>)</li>
 <li>meta: better readme on GitHub and NPM (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>test: add pre-commit &amp; lint-staged (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>test: add next-update <a href="https://www.npmjs.com/package/next-update" target="_blank" rel="noopener">https://www.npmjs.com/package/next-update</a> to check if packages we use can be safely updated (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>website: blog polish — add post authors and their gravatars (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>website: blog polish &#x2014; add post authors and their gravatars (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>dashboard: UI revamp, more prototypes, background image, make dashboard nicer (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>dashboard: try a workflow where import from external service slides over and takes up the whole dashboard screen (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>modal: merge modal and dashboard (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 </ul>
 <p>We hope you will enjoy this latest release. Uppy is still improving every day and we hope to bring you more news about our progress soon!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

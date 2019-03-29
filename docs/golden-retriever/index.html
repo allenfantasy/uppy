@@ -550,7 +550,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <div class="Content js-Content docs with-sidebar">
     <h1>Golden Retriever</h1>
     <p>The <code>@uppy/golden-retriever</code> plugin saves selected files in your browser cache, so that if the browser crashes, Uppy can restore everything and continue uploading as if nothing happened. You can read more about it <a href="https://uppy.io/blog/2017/07/golden-retriever/">on our blog</a>.</p>
-<p>The Golden Retriever uses LocalStorage to store file metadata and Uppy state, and IndexedDB for small files. It also uses a Service Worker for <em>all</em> files because, unlike IndexedDB, a Service Worker can keep very large files. Service Worker storage is <em>very</em> temporary though, and doesn’t persist across browser crashes or restarts. It works very well, however, for accidental refreshes or closed tabs.</p>
+<p>The Golden Retriever uses LocalStorage to store file metadata and Uppy state, and IndexedDB for small files. It also uses a Service Worker for <em>all</em> files because, unlike IndexedDB, a Service Worker can keep very large files. Service Worker storage is <em>very</em> temporary though, and doesn&#x2019;t persist across browser crashes or restarts. It works very well, however, for accidental refreshes or closed tabs.</p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>This plugin is published as the <code>@uppy/golden-retriever</code> package.</p>
 <p>Install from NPM:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> @uppy/golden-retriever
@@ -558,7 +558,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>In the <a href="/docs/#With-a-script-tag">CDN package</a>, it is available on the <code>Uppy</code> global object:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> GoldenRetriever <span class="token operator">=</span> Uppy<span class="token punctuation">.</span>GoldenRetriever
 </pre></td></tr></table></figure>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>1. Bundle your own service worker <code>sw.js</code> file with Uppy GoldenRetriever’s service worker. If you are using Browserify, just bundle it separately. For Webpack, there is a plugin <a href="https://github.com/oliviertassinari/serviceworker-webpack-plugin" target="_blank" rel="noopener">serviceworker-webpack-plugin</a>.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>1. Bundle your own service worker <code>sw.js</code> file with Uppy GoldenRetriever&#x2019;s service worker. If you are using Browserify, just bundle it separately. For Webpack, there is a plugin <a href="https://github.com/oliviertassinari/serviceworker-webpack-plugin" target="_blank" rel="noopener">serviceworker-webpack-plugin</a>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// sw.js</span>
 
 <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/golden-retriever/lib/ServiceWorker'</span><span class="token punctuation">)</span>
@@ -580,8 +580,26 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<p>Voilà, that’s it. Happy retrieving!</p>
-
+<p>Voil&#xE0;, that&#x2019;s it. Happy retrieving!</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/golden-retriever.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -549,7 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Robodog: Upload API</h1>
-    <p>Upload files straight to Transloadit from your own custom UI. Give us an array of files, and we’ll give you an array of results!</p>
+    <p>Upload files straight to Transloadit from your own custom UI. Give us an array of files, and we&#x2019;ll give you an array of results!</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> resultPromise <span class="token operator">=</span> transloadit<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span>files<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     auth<span class="token punctuation">:</span> <span class="token punctuation">{</span> key<span class="token punctuation">:</span> <span class="token string">''</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -566,7 +566,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <h2 id="files"><a href="#files" class="headerlink" title="files"></a><code>files</code></h2><p>An array of <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank" rel="noopener">File</a> objects, obtained from an <code>&lt;input type=&quot;file&quot;&gt;</code> or elsewhere.</p>
 <p>These can also be <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" target="_blank" rel="noopener">Blob</a>s with a <code>.name</code> property. That way you can upload files that were created using JavaScript.</p>
 <h2 id="Transloadit"><a href="#Transloadit" class="headerlink" title="Transloadit"></a>Transloadit</h2><p>All the options to the <a href="/docs/transloadit#options">Transloadit</a> plugin are supported.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/robodog-upload.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

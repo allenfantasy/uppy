@@ -549,7 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Robodog: Form API</h1>
-    <p>Add resumable uploads and Transloadit’s processing to your existing HTML upload forms. Selected files will be uploaded to Transloadit, and the Assembly information will be submitted to your form endpoint.</p>
+    <p>Add resumable uploads and Transloadit&#x2019;s processing to your existing HTML upload forms. Selected files will be uploaded to Transloadit, and the Assembly information will be submitted to your form endpoint.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myForm<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>POST<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/upload<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>file<span class="token punctuation">"</span></span> <span class="token attr-name">multiple</span><span class="token punctuation">></span></span>
   ...
@@ -567,13 +567,13 @@ transloadit<span class="token punctuation">.</span><span class="token function">
 <p>When the user submits the form, we intercept it and send the files to Transloadit instead. This creates one or more Assemblies depending on configuration. Then, we put the status JSON object(s) in a hidden input field named <code>transloadit</code>.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hidden<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>transloadit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>[{<span class="token punctuation">"</span>ok<span class="token punctuation">"</span>: <span class="token punctuation">"</span>ASSEMBLY_EXECUTING<span class="token punctuation">"</span>,...}]<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>
 </pre></td></tr></table></figure>
-<p>Finally, we <em>really</em> submit the form—without files, but with those Assembly status objects. You can then handle that in your backend.</p>
+<p>Finally, we <em>really</em> submit the form&#x2014;without files, but with those Assembly status objects. You can then handle that in your backend.</p>
 <h2 id="Transloadit"><a href="#Transloadit" class="headerlink" title="Transloadit"></a>Transloadit</h2><p>All the options to the [Transloadit][transloadit] plugin are supported.</p>
 <h2 id="Restrictions"><a href="#Restrictions" class="headerlink" title="Restrictions"></a>Restrictions</h2><p>Set rules and conditions to limit the type and/or number of files that can be selected. Restrictions are configured by the <code>restrictions</code> option.</p>
 <h3 id="restrictions-maxFileSize"><a href="#restrictions-maxFileSize" class="headerlink" title="restrictions.maxFileSize"></a><code>restrictions.maxFileSize</code></h3><p>Maximum file size in bytes for each individual file.</p>
 <h3 id="restrictions-maxNumberOfFiles"><a href="#restrictions-maxNumberOfFiles" class="headerlink" title="restrictions.maxNumberOfFiles"></a><code>restrictions.maxNumberOfFiles</code></h3><p>The total number of files that can be selected. If this is larger than 1, the <code>multiple</code> attribute will be added to <code>&lt;input type=&quot;file&quot;&gt;</code> fields.</p>
 <h3 id="restrictions-minNumberOfFiles"><a href="#restrictions-minNumberOfFiles" class="headerlink" title="restrictions.minNumberOfFiles"></a><code>restrictions.minNumberOfFiles</code></h3><p>The minimum number of files that must be selected before the upload. The upload will fail and the form will not be submitted if fewer files were selected.</p>
-<h3 id="restrictions-allowedFileTypes"><a href="#restrictions-allowedFileTypes" class="headerlink" title="restrictions.allowedFileTypes"></a><code>restrictions.allowedFileTypes</code></h3><p>Array of mime type wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&#39;image/*&#39;, &#39;.jpg&#39;, &#39;.jpeg&#39;, &#39;.png&#39;, &#39;.gif&#39;]</code>.</p>
+<h3 id="restrictions-allowedFileTypes"><a href="#restrictions-allowedFileTypes" class="headerlink" title="restrictions.allowedFileTypes"></a><code>restrictions.allowedFileTypes</code></h3><p>Array of mime type wildcards <code>image/*</code>, exact mime types <code>image/jpeg</code>, or file extensions <code>.jpg</code>: <code>[&apos;image/*&apos;, &apos;.jpg&apos;, &apos;.jpeg&apos;, &apos;.png&apos;, &apos;.gif&apos;]</code>.</p>
 <p>If provided, the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#Limiting_accepted_file_types" target="_blank" rel="noopener"><code>&lt;input accept&gt;</code></a> attribute will be added to <code>&lt;input type=&quot;file&quot;&gt;</code> fields, so only acceptable files can be selected in the system file dialog.</p>
 <h2 id="Progress-Reporting"><a href="#Progress-Reporting" class="headerlink" title="Progress Reporting"></a>Progress Reporting</h2><p>Uploads using HTML forms have no builtin progress reporting. With the Robodog, you can use the <code>statusBar</code> option to show an <a href="/docs/status-bar">@uppy/status-bar</a>: an element styled like a progress bar, reporting both upload and Assembly execution progress.</p>
 <p>Point it to an element or a CSS selector:</p>
@@ -679,21 +679,21 @@ transloadit<span class="token punctuation">.</span><span class="token function">
 </tr>
 <tr>
 <td><code>fields</code></td>
-<td><code>fields</code>. The CSS selector format is no longer supported. Instead, specify an array of form field names. <code>[&#39;field1&#39;]</code> instead of <code>&#39;input[name=field1]</code>.</td>
+<td><code>fields</code>. The CSS selector format is no longer supported. Instead, specify an array of form field names. <code>[&apos;field1&apos;]</code> instead of <code>&apos;input[name=field1]</code>.</td>
 </tr>
 <tr>
 <td><code>debug</code></td>
-<td>Obsolete, as Transloadit’s backend has improved error reporting.</td>
+<td>Obsolete, as Transloadit&#x2019;s backend has improved error reporting.</td>
 </tr>
 </tbody>
 </table>
 <p>As for the options that are unavailable:</p>
 <ul>
 <li><code>modal</code> will be added in the future.</li>
-<li><code>exclude</code> is intended to exclude certain <code>&lt;input type=&quot;file&quot;&gt;</code> inputs from Transloadit processing. It will likely not be added, but we’ll perhaps have a <code>include</code> CSS selector option instead.</li>
+<li><code>exclude</code> is intended to exclude certain <code>&lt;input type=&quot;file&quot;&gt;</code> inputs from Transloadit processing. It will likely not be added, but we&#x2019;ll perhaps have a <code>include</code> CSS selector option instead.</li>
 <li><code>debug</code> will not be added.</li>
 </ul>
-<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>The <code>transloadit.form()</code> method returns an Uppy object, so you can listen to events there. There are no <code>on*()</code> <em>options</em> anymore, but an <code>.on(&#39;*&#39;)</code> method is provided instead.</p>
+<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><p>The <code>transloadit.form()</code> method returns an Uppy object, so you can listen to events there. There are no <code>on*()</code> <em>options</em> anymore, but an <code>.on(&apos;*&apos;)</code> method is provided instead.</p>
 <table>
 <thead>
 <tr>
@@ -748,7 +748,25 @@ transloadit<span class="token punctuation">.</span><span class="token function">
 </tr>
 </tbody>
 </table>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/robodog-form.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -102,7 +102,7 @@ The ">
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -127,10 +127,6 @@ The ">
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -163,15 +159,15 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.18: Dogumentation and The GoldenRetriever</h1>
   <h4>Friday Sep 15, 2017</h4>
     
-    <p>Hi! Another month — a new Uppy release 🎉</p>
+    <p>Hi! Another month &#x2014; a new Uppy release &#x1F389;</p>
 <p><em>Note: current latest release is actually <code>0.19</code>, but this post got delayed, so we are publishing it first. <code>0.19</code> post is coming next.</em></p>
-<h2 id="New-documentation"><a href="#New-documentation" class="headerlink" title="New documentation"></a>New documentation</h2><p>Documentation for Uppy has been re-written, and now features chapters on Uppy’s settings and API, using various plugins, and running Uppy Server. Check it out: <a href="https://uppy.io/docs/">https://uppy.io/docs/</a>. More chapters to come!</p>
+<h2 id="New-documentation"><a href="#New-documentation" class="headerlink" title="New documentation"></a>New documentation</h2><p>Documentation for Uppy has been re-written, and now features chapters on Uppy&#x2019;s settings and API, using various plugins, and running Uppy Server. Check it out: <a href="https://uppy.io/docs/">https://uppy.io/docs/</a>. More chapters to come!</p>
 <h2 id="The-GoldenRetriever"><a href="#The-GoldenRetriever" class="headerlink" title="The GoldenRetriever"></a>The GoldenRetriever</h2><p>The GoldenRetriever has been released as a public beta. For details, please refer to the previous post, <a href="https://uppy.io/blog/2017/07/golden-retriever/">The GoldenRetriever: Making uploads survive browser crashes</a>, but the gist is: when enabled, this plugin will save uppy-state to localStorage on every change, and then if your browser crashes, or you accidentaly navigate away from a tab,later when you return, your uploads will resume like nothing happened. Spoiler: it uses Service Workers and IndexedDB.</p>
 <p><img class="border" src="/images/blog/0.18/golden-retriever.jpg"></p>
 <a id="more"></a>
 <h2 id="Multipart-uploader-is-now-XHRUpload"><a href="#Multipart-uploader-is-now-XHRUpload" class="headerlink" title="Multipart uploader is now XHRUpload"></a>Multipart uploader is now XHRUpload</h2><p><code>Multipart</code> has been replaced by a more flexible <code>XHRUpload</code>, so that other plugins, like <code>AwsS3</code>, can depend on it.</p>
 <h2 id="AwsS3"><a href="#AwsS3" class="headerlink" title="AwsS3"></a>AwsS3</h2><p>The <code>AwsS3</code> plugin can be used to upload files directly to an S3 bucket.</p>
-<p>As of now, the AwsS3 plugin “decorates” the <code>XHRUpload</code> plugin. To upload files directly to S3, both the <code>XHRUpload</code> and <code>AwsS3</code> plugins must be used:</p>
+<p>As of now, the AwsS3 plugin &#x201C;decorates&#x201D; the <code>XHRUpload</code> plugin. To upload files directly to S3, both the <code>XHRUpload</code> and <code>AwsS3</code> plugins must be used:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// No options have to be provided to the XHRUpload plugin,</span>
 <span class="token comment">// the S3 plugin will configure it.</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>XHRUpload<span class="token punctuation">)</span>
@@ -180,10 +176,10 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>Please find <a href="https://uppy.io/docs/aws-s3/">more info and examples</a> in the docs.</p>
-<h2 id="Transloadit-getAssemblyOptions"><a href="#Transloadit-getAssemblyOptions" class="headerlink" title="Transloadit getAssemblyOptions"></a>Transloadit <code>getAssemblyOptions</code></h2><p>We’ve added a <code>getAssemblyOptions</code> function option to the <code>Transloadit</code> plugin. This option can return an object or a Promise for an object to configure the Transloadit assembly. The returned object can contain params, a signature, and fields.</p>
+<h2 id="Transloadit-getAssemblyOptions"><a href="#Transloadit-getAssemblyOptions" class="headerlink" title="Transloadit getAssemblyOptions"></a>Transloadit <code>getAssemblyOptions</code></h2><p>We&#x2019;ve added a <code>getAssemblyOptions</code> function option to the <code>Transloadit</code> plugin. This option can return an object or a Promise for an object to configure the Transloadit assembly. The returned object can contain params, a signature, and fields.</p>
 <p><code>getAssemblyOptions</code> is called on each file, so each file can return a different set of options. Files that returned the same options are bundled together and run through a single assembly. Files that return different options will be run through different assemblies.</p>
-<p>This means that it is now possible to make assembly parameters depend on user input from eg. the <code>MetaData</code> plugin, and have different parameters for different files. It’s now also possible to generate very short-lived signatures on the server when an upload starts, by calling fetch inside the <code>getAssemblyOptions</code> hook.</p>
-<h2 id="Webcam-1-2-3-smile"><a href="#Webcam-1-2-3-smile" class="headerlink" title="Webcam: 1, 2, 3 smile!"></a>Webcam: 1, 2, 3 smile!</h2><p>Webcam plugin now has a new exciting feature — ⏱ <code>countdown</code>. If you set it to 3 seconds, for example, then after pressing the capture button, Uppy will count to 3 before actually taking your selfie, so you’ll have the time to fix your hair:</p>
+<p>This means that it is now possible to make assembly parameters depend on user input from eg. the <code>MetaData</code> plugin, and have different parameters for different files. It&#x2019;s now also possible to generate very short-lived signatures on the server when an upload starts, by calling fetch inside the <code>getAssemblyOptions</code> hook.</p>
+<h2 id="Webcam-1-2-3-smile"><a href="#Webcam-1-2-3-smile" class="headerlink" title="Webcam: 1, 2, 3 smile!"></a>Webcam: 1, 2, 3 smile!</h2><p>Webcam plugin now has a new exciting feature &#x2014; &#x23F1; <code>countdown</code>. If you set it to 3 seconds, for example, then after pressing the capture button, Uppy will count to 3 before actually taking your selfie, so you&#x2019;ll have the time to fix your hair:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Webcam<span class="token punctuation">,</span> <span class="token punctuation">{</span> countdown<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h2 id="Tons-of-Uppy-Server-improvements"><a href="#Tons-of-Uppy-Server-improvements" class="headerlink" title="Tons of Uppy Server improvements"></a>Tons of Uppy Server improvements</h2><ul>
@@ -202,9 +198,9 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <ul>
 <li>goldenretriver: use Service Woker first, then IndexedDB, add file limits for IndexedDB, figure out what restores from where, add throttling for localStorage state sync (@goto-bus-stop @arturi)</li>
 <li>dashboard: flag to hide the upload button, for cases when you want to manually stat the upload (@arturi)</li>
-<li>dashboard: place close btn inside the Dashboard, don’t close on click outside, place source icon near the file size (@arturi)</li>
-<li>core: informer becomes a core API, <code>uppy.info(&#39;Smile! 📸&#39;, &#39;warning&#39;, 5000)</code> so its more concise with <code>uppy.log(&#39;my msg&#39;)</code> and supports different UI implementations (@arturi, #271)</li>
-<li>docs: first stage — on using plugins, all options, list of plugins, i18n, uppy-server (@arturi, @goto-bus-stop, @ifedapoolarewaju)</li>
+<li>dashboard: place close btn inside the Dashboard, don&#x2019;t close on click outside, place source icon near the file size (@arturi)</li>
+<li>core: informer becomes a core API, <code>uppy.info(&apos;Smile! &#x1F4F8;&apos;, &apos;warning&apos;, 5000)</code> so its more concise with <code>uppy.log(&apos;my msg&apos;)</code> and supports different UI implementations (@arturi, #271)</li>
+<li>docs: first stage &#x2014; on using plugins, all options, list of plugins, i18n, uppy-server (@arturi, @goto-bus-stop, @ifedapoolarewaju)</li>
 <li>provider: file size sorting (@ifedapoolarewaju)</li>
 <li>provider: show loading screen when checking auth too (@arturi)</li>
 <li>uploaders: add direct-to-s3 upload plugin (@goto-bus-stop)</li>
@@ -230,10 +226,28 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <li>tus: return immediately if no files are selected (@goto-bus-stop #245)</li>
 <li>uppy-server: add uppy-server metrics to Librato (@ifedapoolarewaju @kiloreux)</li>
 <li>webcam: add 1, 2, 3, smile! to webcam, onBeforeSnapshothook (@arturi, #187, #248)</li>
-<li>website: live example on the homepage, “try me” button, improve /examples (@arturi)</li>
+<li>website: live example on the homepage, &#x201C;try me&#x201D; button, improve /examples (@arturi)</li>
 </ul>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

@@ -98,7 +98,7 @@ Robodog: easy to assemble">
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Robodog: easy to assemble">
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,23 +155,23 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.30: Introducing Robodog</h1>
   <h4>Wednesday Mar 6, 2019</h4>
     
-    <p>In <code>0.30</code>, we are introducing a new friend for Uppy — the Robodog.</p>
+    <p>In <code>0.30</code>, we are introducing a new friend for Uppy &#x2014; the Robodog.</p>
 <p><img src="/images/blog/0.30/robodog-assemble.jpg"><br><small>Robodog: easy to assemble</small></p>
 <a id="more"></a>
-<h2 id="Robodog"><a href="#Robodog" class="headerlink" title="Robodog"></a>Robodog</h2><p>Uppy is developed by <a href="https://transloadit.com" target="_blank" rel="noopener">Transloadit</a>. Transloadit is the Swiss Army Knife for your files: importing, resizing, cropping and watermarking images, making GIFs, transcoding videos, extracting thumbnails, generating audio waveforms, and so much more — all in a single service. Uppy has a similarly large feature set in dozens of plugins, but because of that it can be complicated to wire everything up for the best experience.</p>
+<h2 id="Robodog"><a href="#Robodog" class="headerlink" title="Robodog"></a>Robodog</h2><p>Uppy is developed by <a href="https://transloadit.com" target="_blank" rel="noopener">Transloadit</a>. Transloadit is the Swiss Army Knife for your files: importing, resizing, cropping and watermarking images, making GIFs, transcoding videos, extracting thumbnails, generating audio waveforms, and so much more &#x2014; all in a single service. Uppy has a similarly large feature set in dozens of plugins, but because of that it can be complicated to wire everything up for the best experience.</p>
 <p><a href="https://uppy.io/docs/robodog/">Robodog</a> is a new Uppy-based library that has been trained to work with Transloadit. It includes three components:</p>
 <ol>
 <li><a href="https://uppy.io/docs/robodog/picker/">File picker</a>, using the Dashboard plugin you know and love for the modal UI, with support for imports from third-party services.</li>
 <li><a href="https://uppy.io/docs/robodog/form/">Form</a>: integration with your existing HTML forms. Files will be uploaded to Transloadit, and the form will submit JSON information about the files and encoding results.</li>
-<li><a href="https://uppy.io/docs/robodog/upload/">Upload</a>: one-line programmatic uploads — call <code>transloadit.upload(files, opts)</code> and get an array of results back.</li>
+<li><a href="https://uppy.io/docs/robodog/upload/">Upload</a>: one-line programmatic uploads &#x2014; call <code>transloadit.upload(files, opts)</code> and get an array of results back.</li>
 </ol>
 <center><img src="https://media.giphy.com/media/Eq7T3GwDAlggE/giphy.gif"></center>
 
-<p>Here’s a demo:</p>
+<p>Here&#x2019;s a demo:</p>
 <figure class="wide"><br>  <p class="codepen" data-height="600" data-theme-id="light" data-border-color="#EB2177" data-default-tab="js,result" data-user="uppy" data-slug-hash="gEgPav" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Robodog: resizing and optimizing your avatar"><br>    <span>See the Pen <a href="https://codepen.io/uppy/pen/gEgPav/" target="_blank" rel="noopener"><br>    Robodog: resizing and optimizing your avatar</a> by Uppy File Uploader (<a href="https://codepen.io/uppy" target="_blank" rel="noopener">@uppy</a>)<br>    on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</span><br>  </p><br>  <script async src="https://static.codepen.io/assets/embed/ei.js"></script><br></figure>
 
 <p>You can install Robodog from NPM:</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre>npm install @uppy/robodog --save
+<figure class="highlight sh"><table><tr><td class="code"><pre>npm install @uppy/robodog --save 
 </pre></td></tr></table></figure>
 <p>Or import it by using an HTML script tag:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://transloadit.edgly.net/releases/uppy/v0.30.3/robodog.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -183,11 +179,11 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </pre></td></tr></table></figure>
 <center><img src="https://media.giphy.com/media/MqGA1Za9ar6lG/giphy.gif"></center>
 
-<h2 id="Dashboard-Improvements"><a href="#Dashboard-Improvements" class="headerlink" title="Dashboard Improvements"></a>Dashboard Improvements</h2><p>As usual, we are making constant iterations and improvements to the Dashboard plugin. Accessibility has been improved, we’ve updated and fixed some icons, breadcrumbs in remote providers, and the issue with <code>browserBackButton</code> and multiple modals.</p>
-<h2 id="Progress-or-no-progress"><a href="#Progress-or-no-progress" class="headerlink" title="Progress or no progress"></a>Progress or no progress</h2><p>We’ve improved how the StatusBar behaves when no progress reporting is available (which is <a href="https://github.com/transloadit/uppy/pull/1184" target="_blank" rel="noopener">the case for MS Edge</a>):</p>
+<h2 id="Dashboard-Improvements"><a href="#Dashboard-Improvements" class="headerlink" title="Dashboard Improvements"></a>Dashboard Improvements</h2><p>As usual, we are making constant iterations and improvements to the Dashboard plugin. Accessibility has been improved, we&#x2019;ve updated and fixed some icons, breadcrumbs in remote providers, and the issue with <code>browserBackButton</code> and multiple modals.</p>
+<h2 id="Progress-or-no-progress"><a href="#Progress-or-no-progress" class="headerlink" title="Progress or no progress"></a>Progress or no progress</h2><p>We&#x2019;ve improved how the StatusBar behaves when no progress reporting is available (which is <a href="https://github.com/transloadit/uppy/pull/1184" target="_blank" rel="noopener">the case for MS Edge</a>):</p>
 <p><img src="/images/blog/0.30/unknown-progress.gif"></p>
-<h2 id="Upload-Success"><a href="#Upload-Success" class="headerlink" title="Upload Success"></a>Upload Success</h2><p>⚠️ Breaking</p>
-<p>We’ve changed <a href="https://uppy.io/docs/uppy/#upload-success"><code>upload-success</code></a> and <a href="https://uppy.io/docs/uppy/#upload-error"><code>upload-error</code></a> signatures.</p>
+<h2 id="Upload-Success"><a href="#Upload-Success" class="headerlink" title="Upload Success"></a>Upload Success</h2><p>&#x26A0;&#xFE0F; Breaking</p>
+<p>We&#x2019;ve changed <a href="https://uppy.io/docs/uppy/#upload-success"><code>upload-success</code></a> and <a href="https://uppy.io/docs/uppy/#upload-error"><code>upload-error</code></a> signatures.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-success'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> responseObject<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// (depending on the uploader plugin used, it might contain</span>
   <span class="token comment">// less info, the example is for @uppy/xhr-upload)</span>
@@ -207,11 +203,11 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </pre></td></tr></table></figure>
 <p><a href="https://uppy.io/docs/uppy/">See the docs</a> and <a href="https://github.com/transloadit/uppy/pull/1138" target="_blank" rel="noopener">PR #1138</a> for more details.</p>
 <h2 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h2><ul>
-<li>@uppy/robodog: 📣⚠️ Add Robodog — Transloadit browser SDK (#1135 / @goto-bus-stop)</li>
+<li>@uppy/robodog: &#x1F4E3;&#x26A0;&#xFE0F; Add Robodog &#x2014; Transloadit browser SDK (#1135 / @goto-bus-stop)</li>
 <li>@uppy/dashboard: fixed issue with <code>browserBackButton</code> history and multiple modals (#1258 / @goto-bus-stop, @arturi)</li>
 <li>@uppy/core: Set response in Core rather than in upload plugins (#1138 / @arturi)</li>
-<li>@uppy/core: Don’t emit a complete event if an upload has been canceled (#1271 / @arturi)</li>
-<li>@uppy/companion: Support Redis option (auth_pass, etc…) (#1215 / @tranvansang)</li>
+<li>@uppy/core: Don&#x2019;t emit a complete event if an upload has been canceled (#1271 / @arturi)</li>
+<li>@uppy/companion: Support Redis option (auth_pass, etc&#x2026;) (#1215 / @tranvansang)</li>
 <li>@uppy/companion: Sanitize text before adding to html (f77a102 / @ifedapoolarewaju)</li>
 <li>@uppy/dashboard: Update pause-resume-cancel icons (#1241 / @arturi, @nqst)</li>
 <li>@uppy/dashboard: Fix issues with multiple modals (#1258 / @goto-bus-stop, @arturi)</li>
@@ -220,10 +216,28 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>@uppy/react: Allow changing instance in <code>uppy</code> prop (#1247 / @goto-bus-stop)</li>
 <li>@uppy/react: Typescript: Make DashboardModal.target prop optional (#1254 / @mattes3)</li>
 <li>@uppy/aws-s3: Use user-provided filename / type for uploaded object, fixes #1238 (#1257 / @goto-bus-stop)</li>
-<li>@uppy/tus: Update to tus-js-client@1.6.0 with React Native support (#1250 / @arturi)</li>
-<li>build: Improve dev npm script: use Parcel for bundled example, re-build lib automatically, don’t open browser and no ghosts mode, start companion when developing (but there’s optional npm run dev:no-companion) (#1280 / @arturi)</li>
+<li>@uppy/tus: Update to <a href="mailto:tus-js-client@1.6.0" target="_blank" rel="noopener">tus-js-client@1.6.0</a> with React Native support (#1250 / @arturi)</li>
+<li>build: Improve dev npm script: use Parcel for bundled example, re-build lib automatically, don&#x2019;t open browser and no ghosts mode, start companion when developing (but there&#x2019;s optional npm run dev:no-companion) (#1280 / @arturi)</li>
 </ul>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#renee">

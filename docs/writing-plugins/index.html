@@ -555,7 +555,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>Do the actual uploading, e.g., <a href="/docs/xhrupload">XHRUpload</a> or <a href="/docs/tus">Tus</a>.</li>
 <li>Interact with a third-party service to process uploads correctly, e.g., <a href="/docs/transloadit">Transloadit</a> or <a href="/docs/aws-s3">AwsS3</a>.</li>
 </ul>
-<h2 id="Creating-A-Plugin"><a href="#Creating-A-Plugin" class="headerlink" title="Creating A Plugin"></a>Creating A Plugin</h2><p>Plugins are classes that extend from Uppy’s <code>Plugin</code> class. Each plugin has an <code>id</code> and a <code>type</code>. <code>id</code>s are used to uniquely identify plugins. A <code>type</code> can be anything—some plugins use <code>type</code>s to determine whether to do something to some other plugin. For example, when targeting plugins at the built-in <code>Dashboard</code> plugin, the Dashboard uses the <code>type</code> to figure out where to mount different UI elements. <code>&#39;acquirer&#39;</code>-type plugins are mounted into the tab bar, while <code>&#39;progressindicator&#39;</code>-type plugins are mounted into the progress bar area.</p>
+<h2 id="Creating-A-Plugin"><a href="#Creating-A-Plugin" class="headerlink" title="Creating A Plugin"></a>Creating A Plugin</h2><p>Plugins are classes that extend from Uppy&#x2019;s <code>Plugin</code> class. Each plugin has an <code>id</code> and a <code>type</code>. <code>id</code>s are used to uniquely identify plugins. A <code>type</code> can be anything&#x2014;some plugins use <code>type</code>s to determine whether to do something to some other plugin. For example, when targeting plugins at the built-in <code>Dashboard</code> plugin, the Dashboard uses the <code>type</code> to figure out where to mount different UI elements. <code>&apos;acquirer&apos;</code>-type plugins are mounted into the tab bar, while <code>&apos;progressindicator&apos;</code>-type plugins are mounted into the progress bar area.</p>
 <p>The plugin constructor receives the Uppy instance in the first parameter, and any options passed to <code>uppy.use()</code> in the second parameter.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> <span class="token punctuation">{</span> Plugin <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/core'</span><span class="token punctuation">)</span>
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">MyPlugin</span> <span class="token keyword">extends</span> <span class="token class-name">Plugin</span> <span class="token punctuation">{</span>
@@ -582,7 +582,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </pre></td></tr></table></figure>
 <h3 id="update-state"><a href="#update-state" class="headerlink" title="update(state)"></a><code>update(state)</code></h3><p>Called on each state update. You will rarely need to use this, it is mostly handy if you want to build a UI plugin using something other than Preact.</p>
 <h2 id="Upload-Hooks"><a href="#Upload-Hooks" class="headerlink" title="Upload Hooks"></a>Upload Hooks</h2><p>When creating an upload, Uppy runs files through an upload pipeline. The pipeline consists of three parts, each of which can be hooked into: Preprocessing, Uploading, and Postprocessing. Preprocessors can be used to configure uploader plugins, encrypt files, resize images, etc., before uploading them. Uploaders do the actual uploading work, such as creating an XMLHttpRequest object and sending the file. Postprocessors do their work after files have been uploaded completely. This could be anything from waiting for a file to propagate across a CDN, to sending another request to relate some metadata to the file.</p>
-<p>Each hook is a function that receives an array containing the file IDs that are being uploaded, and returns a Promise to signal completion. Hooks are added and removed through <code>Uppy</code> methods: <code>addPreProcessor</code>, <code>addUploader</code>, <code>addPostProcessor</code>, and their <code>remove*</code> counterparts. Normally, hooks should be added during the plugin’s <code>install()</code> method, and removed during the <code>uninstall()</code> method.</p>
+<p>Each hook is a function that receives an array containing the file IDs that are being uploaded, and returns a Promise to signal completion. Hooks are added and removed through <code>Uppy</code> methods: <code>addPreProcessor</code>, <code>addUploader</code>, <code>addPostProcessor</code>, and their <code>remove*</code> counterparts. Normally, hooks should be added during the plugin&#x2019;s <code>install()</code> method, and removed during the <code>uninstall()</code> method.</p>
 <p>Additionally, upload hooks can fire events to signal progress.</p>
 <p>When adding hooks, make sure to bind the hook <code>fn</code> beforehand! Otherwise, it will be impossible to remove. For example:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">class</span> <span class="token class-name">MyPlugin</span> <span class="token keyword">extends</span> <span class="token class-name">Plugin</span> <span class="token punctuation">{</span>
@@ -607,18 +607,18 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
 <h3 id="addPreProcessor-fn"><a href="#addPreProcessor-fn" class="headerlink" title="addPreProcessor(fn)"></a><code>addPreProcessor(fn)</code></h3><p>Add a preprocessing function. <code>fn</code> gets called with a list of file IDs before an upload starts. <code>fn</code> should return a Promise. Its resolution value is ignored. To change file data and such, use Uppy state updates, for example using <a href="/docs/uppy#uppy-setFileState-fileID-state"><code>setFileState</code></a>.</p>
-<h3 id="addUploader-fn"><a href="#addUploader-fn" class="headerlink" title="addUploader(fn)"></a><code>addUploader(fn)</code></h3><p>Add an uploader function. <code>fn</code> gets called with a list of file IDs when an upload should start. Uploader functions should do the actual uploading work, such as creating and sending an XMLHttpRequest or calling into some upload service’s SDK. <code>fn</code> should return a Promise that resolves once all files have been uploaded.</p>
+<h3 id="addUploader-fn"><a href="#addUploader-fn" class="headerlink" title="addUploader(fn)"></a><code>addUploader(fn)</code></h3><p>Add an uploader function. <code>fn</code> gets called with a list of file IDs when an upload should start. Uploader functions should do the actual uploading work, such as creating and sending an XMLHttpRequest or calling into some upload service&#x2019;s SDK. <code>fn</code> should return a Promise that resolves once all files have been uploaded.</p>
 <p>You may choose to still resolve the Promise if some file uploads fail. This way, any postprocessing will still run on the files that were uploaded successfully, while uploads that failed will be retried when <code>uppy.retryAll</code> is called.</p>
 <h3 id="addPostProcessor-fn"><a href="#addPostProcessor-fn" class="headerlink" title="addPostProcessor(fn)"></a><code>addPostProcessor(fn)</code></h3><p>Add a postprocessing function. <code>fn</code> is called with a list of file IDs when an upload has finished. <code>fn</code> should return a Promise that resolves when the processing work is complete. Again, the resolution value of the Promise is ignored. This hook can be used to do any finishing work. For example, you could wait for file encoding or CDN propagation to complete, or you could do an HTTP API call to create an album containing all images that were just uploaded.</p>
 <h3 id="removePreProcessor-removeUploader-removePostProcessor-fn"><a href="#removePreProcessor-removeUploader-removePostProcessor-fn" class="headerlink" title="removePreProcessor/removeUploader/removePostProcessor(fn)"></a><code>removePreProcessor/removeUploader/removePostProcessor(fn)</code></h3><p>Remove a processor or uploader function that was added previously. Normally, this should be done in the <code>uninstall()</code> method.</p>
 <h2 id="Progress-events"><a href="#Progress-events" class="headerlink" title="Progress events"></a>Progress events</h2><p>Progress events can be fired for individual files to show feedback to the user. For upload progress events, only emitting how many bytes are expected and how many have been uploaded is enough. Uppy will handle calculating progress percentages, upload speed, etc.</p>
-<p>Preprocessing and postprocessing progress events are plugin-dependent and can refer to anything, so Uppy doesn’t try to be smart about them. There are two types of processing progress events: determinate and indeterminate. Some processing does not have meaningful progress beyond “not done” and “done”. For example, sending a request to initialize a server-side resource that will serve as the upload destination. In those situations, indeterminate progress is suitable. Other processing does have meaningful progress. For example, encrypting a large file. In those situations, determinate progress is suitable.</p>
+<p>Preprocessing and postprocessing progress events are plugin-dependent and can refer to anything, so Uppy doesn&#x2019;t try to be smart about them. There are two types of processing progress events: determinate and indeterminate. Some processing does not have meaningful progress beyond &#x201C;not done&#x201D; and &#x201C;done&#x201D;. For example, sending a request to initialize a server-side resource that will serve as the upload destination. In those situations, indeterminate progress is suitable. Other processing does have meaningful progress. For example, encrypting a large file. In those situations, determinate progress is suitable.</p>
 <h3 id="preprocess-progress-fileID-progress"><a href="#preprocess-progress-fileID-progress" class="headerlink" title="preprocess-progress(fileID, progress)"></a><code>preprocess-progress(fileID, progress)</code></h3><p><code>progress</code> is an object with properties:</p>
 <ul>
-<li><code>mode</code> - Either <code>&#39;determinate&#39;</code> or <code>&#39;indeterminate&#39;</code>.</li>
-<li><code>message</code> - A message to show to the user. Something like <code>&#39;Preparing upload...&#39;</code>, but be more specific if possible.</li>
+<li><code>mode</code> - Either <code>&apos;determinate&apos;</code> or <code>&apos;indeterminate&apos;</code>.</li>
+<li><code>message</code> - A message to show to the user. Something like <code>&apos;Preparing upload...&apos;</code>, but be more specific if possible.</li>
 </ul>
-<p>When <code>mode</code> is <code>&#39;determinate&#39;</code>, also add the <code>value</code> property:</p>
+<p>When <code>mode</code> is <code>&apos;determinate&apos;</code>, also add the <code>value</code> property:</p>
 <ul>
 <li><code>value</code> - A progress value between 0 and 1.</li>
 </ul>
@@ -631,19 +631,19 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 </ul>
 <h3 id="postprocess-progress-fileID-progress"><a href="#postprocess-progress-fileID-progress" class="headerlink" title="postprocess-progress(fileID, progress)"></a><code>postprocess-progress(fileID, progress)</code></h3><p><code>progress</code> is an object with properties:</p>
 <ul>
-<li><code>mode</code> - Either <code>&#39;determinate&#39;</code> or <code>&#39;indeterminate&#39;</code>.</li>
-<li><code>message</code> - A message to show to the user. Something like <code>&#39;Preparing upload...&#39;</code>, but be more specific if possible.</li>
+<li><code>mode</code> - Either <code>&apos;determinate&apos;</code> or <code>&apos;indeterminate&apos;</code>.</li>
+<li><code>message</code> - A message to show to the user. Something like <code>&apos;Preparing upload...&apos;</code>, but be more specific if possible.</li>
 </ul>
-<p>When <code>mode</code> is <code>&#39;determinate&#39;</code>, also add the <code>value</code> property:</p>
+<p>When <code>mode</code> is <code>&apos;determinate&apos;</code>, also add the <code>value</code> property:</p>
 <ul>
 <li><code>value</code> - A progress value between 0 and 1.</li>
 </ul>
-<h2 id="UI-Plugins"><a href="#UI-Plugins" class="headerlink" title="UI Plugins"></a>UI Plugins</h2><p>UI Plugins can be used to show a user interface. Uppy plugins use <a href="https://preactjs.com" target="_blank" rel="noopener">preact</a> for rendering. preact is a very small React-like library that works really well with Uppy’s state architecture. Uppy implements preact rendering in the <code>mount(target)</code> and <code>update()</code> plugin methods, so if you want to write a custom UI plugin using some other library, you can override those methods.</p>
+<h2 id="UI-Plugins"><a href="#UI-Plugins" class="headerlink" title="UI Plugins"></a>UI Plugins</h2><p>UI Plugins can be used to show a user interface. Uppy plugins use <a href="https://preactjs.com" target="_blank" rel="noopener">preact</a> for rendering. preact is a very small React-like library that works really well with Uppy&#x2019;s state architecture. Uppy implements preact rendering in the <code>mount(target)</code> and <code>update()</code> plugin methods, so if you want to write a custom UI plugin using some other library, you can override those methods.</p>
 <p>Plugins can implement certain methods to do so, that will be called by Uppy when necessary:</p>
 <h3 id="mount-target"><a href="#mount-target" class="headerlink" title="mount(target)"></a><code>mount(target)</code></h3><p>Mount this plugin to the <code>target</code> element. <code>target</code> can be a CSS query selector, a DOM element, or another Plugin. If <code>target</code> is a Plugin, the source (current) plugin will register with the target plugin, and the latter can decide how and where to render the source plugin.</p>
 <p>This method can be overridden to support for different render engines.</p>
-<h3 id="render"><a href="#render" class="headerlink" title="render()"></a><code>render()</code></h3><p>Render this plugin’s UI. Uppy uses <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a> as its view engine, so <code>render()</code> should return a Preact element.<br><code>render</code> is automatically called by Uppy on each state change.</p>
-<p>Note that we are looking into ways to make Uppy’s render engine agnostic, so that plugins can choose their own favourite library—whether it’s Preact, Choo, jQuery, or anything else. This means that the <code>render()</code> API may change in the future, but we will detail exactly what you need to do on the <a href="https://uppy.io/blog">blog</a> if and when that happens.</p>
+<h3 id="render"><a href="#render" class="headerlink" title="render()"></a><code>render()</code></h3><p>Render this plugin&#x2019;s UI. Uppy uses <a href="https://preactjs.com" target="_blank" rel="noopener">Preact</a> as its view engine, so <code>render()</code> should return a Preact element.<br><code>render</code> is automatically called by Uppy on each state change.</p>
+<p>Note that we are looking into ways to make Uppy&#x2019;s render engine agnostic, so that plugins can choose their own favourite library&#x2014;whether it&#x2019;s Preact, Choo, jQuery, or anything else. This means that the <code>render()</code> API may change in the future, but we will detail exactly what you need to do on the <a href="https://uppy.io/blog">blog</a> if and when that happens.</p>
 <h3 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h3><p>Since Uppy uses Preact and not React, the default Babel configuration for JSX elements does not work. You have to import the Preact <code>h</code> function and tell Babel to use it by adding a <code>/** @jsx h */</code> comment at the top of the file.</p>
 <p>See the Preact <a href="https://preactjs.com/guide/getting-started" target="_blank" rel="noopener">Getting Started Guide</a> for more on Babel and JSX.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">/** @jsx h */</span>
@@ -662,7 +662,25 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/writing-plugins.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

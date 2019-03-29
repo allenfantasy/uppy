@@ -98,7 +98,7 @@ Hi all! It’s New Year and Christmas time, and this year Santa is brining you U
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Hi all! It’s New Year and Christmas time, and this year Santa is brining you U
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,40 +155,40 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.22: Preact, Form, Improved Dashboard, Custom Stores</h1>
   <h4>Saturday Dec 23, 2017</h4>
     
-    <p><strong>Uppy is <a href="https://www.producthunt.com/posts/uppy-io" target="_blank" rel="noopener">featured on Product Hunt</a>! To our fellow hunters: welcome! Quick intro: Uppy is the next open source file uploader for web browsers. We’re very close to launching 1.0 and would love to get your feedback in, leave your thoughts on Product Hunt or start a discussion below.</strong></p>
-<p>Hi all! It’s New Year and Christmas time, and this year Santa is brining you Uppy <code>0.22</code> 🎁 This release packs a lot of neat stuff, but it also breaks things in quite a few places, so please read on.</p>
-<p>And, if you are celebrating, happy holidays from the Uppy Team! 🎄</p>
+    <p><strong>Uppy is <a href="https://www.producthunt.com/posts/uppy-io" target="_blank" rel="noopener">featured on Product Hunt</a>! To our fellow hunters: welcome! Quick intro: Uppy is the next open source file uploader for web browsers. We&#x2019;re very close to launching 1.0 and would love to get your feedback in, leave your thoughts on Product Hunt or start a discussion below.</strong></p>
+<p>Hi all! It&#x2019;s New Year and Christmas time, and this year Santa is brining you Uppy <code>0.22</code> &#x1F381; This release packs a lot of neat stuff, but it also breaks things in quite a few places, so please read on.</p>
+<p>And, if you are celebrating, happy holidays from the Uppy Team! &#x1F384;</p>
 <a id="more"></a>
-<h2 id="Preact-and-JSX"><a href="#Preact-and-JSX" class="headerlink" title="Preact and JSX"></a>Preact and JSX</h2><p>We’ve been happy using <code>yo-yo</code> and <code>hyperx</code> template strings in our views for quite a while, but decided to try something more stable. Preact has most of the great ideas of React, plus smaller file size as well as a few good ideas of its own.</p>
+<h2 id="Preact-and-JSX"><a href="#Preact-and-JSX" class="headerlink" title="Preact and JSX"></a>Preact and JSX</h2><p>We&#x2019;ve been happy using <code>yo-yo</code> and <code>hyperx</code> template strings in our views for quite a while, but decided to try something more stable. Preact has most of the great ideas of React, plus smaller file size as well as a few good ideas of its own.</p>
 <p>All views have been refactored to utilize JSX. We actually liked hyperx a lot, but JSX has better tooling and syntax highlighting support. It also seems to be the standard in the React community.</p>
 <p>See <a href="https://github.com/transloadit/uppy/pull/451" target="_blank" rel="noopener">#451 PR</a> for details on why we switched and discussion around the process.</p>
 <h2 id="Core-and-plugins-refactor"><a href="#Core-and-plugins-refactor" class="headerlink" title="Core and plugins refactor"></a>Core and plugins refactor</h2><ul>
-<li><strong>⚠️ Breaking</strong> We’ve renamed the <code>core</code> object to <code>uppy</code> in plugins. So instead of <code>this.core.state</code> we now use <code>this.uppy.state</code>.</li>
-<li><strong>⚠️ Breaking</strong> Events have been renamed to remove the <code>core:</code> prefix. So <code>core:success</code> becomes just <code>success</code>, and this also results in now having <code>error</code>, <code>upload-started</code> and so on. Prefixed event names are used for plugin-specific event sometimes, like <code>dashboard:file-card</code>.</li>
-<li><strong>⚠️ Breaking</strong> CSS class names have been altered to use the <code>uppy-</code> namespace, so <code>.UppyDashboard-files</code> becomes <code>.uppy-Dashboard-files</code> and so on.</li>
-<li><strong>⚠️ Breaking</strong> <code>getMetaFromForm</code> was removed in favor of the new <code>Form</code> plugin (see below).</li>
-<li><strong>⚠️ Breaking</strong> <code>MetaData</code> plugin was removed in favor of the <code>metaFields</code> option in Dashboard, <a href="https://uppy.io/docs/dashboard/#metaFields">see docs</a> for more details.</li>
+<li><strong>&#x26A0;&#xFE0F; Breaking</strong> We&#x2019;ve renamed the <code>core</code> object to <code>uppy</code> in plugins. So instead of <code>this.core.state</code> we now use <code>this.uppy.state</code>.</li>
+<li><strong>&#x26A0;&#xFE0F; Breaking</strong> Events have been renamed to remove the <code>core:</code> prefix. So <code>core:success</code> becomes just <code>success</code>, and this also results in now having <code>error</code>, <code>upload-started</code> and so on. Prefixed event names are used for plugin-specific event sometimes, like <code>dashboard:file-card</code>.</li>
+<li><strong>&#x26A0;&#xFE0F; Breaking</strong> CSS class names have been altered to use the <code>uppy-</code> namespace, so <code>.UppyDashboard-files</code> becomes <code>.uppy-Dashboard-files</code> and so on.</li>
+<li><strong>&#x26A0;&#xFE0F; Breaking</strong> <code>getMetaFromForm</code> was removed in favor of the new <code>Form</code> plugin (see below).</li>
+<li><strong>&#x26A0;&#xFE0F; Breaking</strong> <code>MetaData</code> plugin was removed in favor of the <code>metaFields</code> option in Dashboard, <a href="https://uppy.io/docs/dashboard/#metaFields">see docs</a> for more details.</li>
 <li>Plugins now use <code>this.el</code> to refer to their UI element instead of <code>this.target</code>.</li>
 <li><code>setPluginState</code> and <code>getPluginState</code> are now used in Providers.</li>
 </ul>
 <h2 id="Refreshed-Dashboard-UI"><a href="#Refreshed-Dashboard-UI" class="headerlink" title="Refreshed Dashboard UI"></a>Refreshed Dashboard UI</h2><p><img src="/images/blog/0.22/uppy-dashboard-updated.jpg" alt="Uppy Dashboard UI with 3 files selected"></p>
 <ul>
-<li>File cards are simpler, we’ve removed the excess white backgrounds, improved the remove icon, reduced paddings, added slight shadows.</li>
-<li>Cicular upload button in the Dashboard has been moved to the StatusBar. It’s also not circular anymore, and there’s no cloud icon. Plain and simple.</li>
-<li>Redesigned “retry” and “add +1 file” buttons.</li>
-<li>Added <code>metaFields</code> option: an array of settings for UI field objects, which previousely lived in a separate <code>MetaData</code> plugin: <code>{ id: &#39;caption&#39;, name: &#39;Caption&#39;, placeholder: &#39;describe what the image is about&#39; }</code>, <a href="https://uppy.io/docs/dashboard/#metaFields">see docs</a> for more details.</li>
+<li>File cards are simpler, we&#x2019;ve removed the excess white backgrounds, improved the remove icon, reduced paddings, added slight shadows.</li>
+<li>Cicular upload button in the Dashboard has been moved to the StatusBar. It&#x2019;s also not circular anymore, and there&#x2019;s no cloud icon. Plain and simple.</li>
+<li>Redesigned &#x201C;retry&#x201D; and &#x201C;add +1 file&#x201D; buttons.</li>
+<li>Added <code>metaFields</code> option: an array of settings for UI field objects, which previousely lived in a separate <code>MetaData</code> plugin: <code>{ id: &apos;caption&apos;, name: &apos;Caption&apos;, placeholder: &apos;describe what the image is about&apos; }</code>, <a href="https://uppy.io/docs/dashboard/#metaFields">see docs</a> for more details.</li>
 </ul>
 <p>See <a href="https://github.com/transloadit/uppy/pull/451" target="_blank" rel="noopener">#434 PR</a> for more screenshots and details.</p>
 <h2 id="Select-multiple-files-in-providers"><a href="#Select-multiple-files-in-providers" class="headerlink" title="Select multiple files in providers"></a>Select multiple files in providers</h2><p>Thanks to <a href="https://github.com/sadovnychyi" target="_blank" rel="noopener">@sadovnychyi</a>, you can now select multiple files from remote providers like Google Drive and Instagram. You can also select folders, and even range of files by holding <code>shift</code> key when clicking on first and last item in range.</p>
 <p><img src="/images/blog/0.22/uppy-dashboard-provider-select.jpg" alt="Uppy Dashboard UI with 3 files selected"></p>
-<p><a href="https://uppy.io/examples/dashboard/">Check it out →</a></p>
-<h2 id="Stores"><a href="#Stores" class="headerlink" title="Stores"></a>Stores</h2><p>As you know, internally Uppy uses its own simple state management system with <code>getState</code> and <code>setState</code> methods. In previous releases we’ve added support for Redux via a plugin called <code>Redux</code>, which mirrors all Uppy state to your Redux application’s state, and a plugin called <code>ReduxDevTools</code> that connects to Redux DevTools and enables all the cool time traveling stuff.</p>
-<p>We are excited to tell you that this release makes state management even more flexible by bringing support for external stores! Here’s a quote from the docs:</p>
+<p><a href="https://uppy.io/examples/dashboard/">Check it out &#x2192;</a></p>
+<h2 id="Stores"><a href="#Stores" class="headerlink" title="Stores"></a>Stores</h2><p>As you know, internally Uppy uses its own simple state management system with <code>getState</code> and <code>setState</code> methods. In previous releases we&#x2019;ve added support for Redux via a plugin called <code>Redux</code>, which mirrors all Uppy state to your Redux application&#x2019;s state, and a plugin called <code>ReduxDevTools</code> that connects to Redux DevTools and enables all the cool time traveling stuff.</p>
+<p>We are excited to tell you that this release makes state management even more flexible by bringing support for external stores! Here&#x2019;s a quote from the docs:</p>
 <blockquote>
 <p>By default, Uppy stores its internal state in an object.</p>
-<p>If your app uses a state management library such as Redux, it can be useful to have Uppy store its state there instead—that way, you could write custom uploader UI components in the same way as the other components in the application.</p>
+<p>If your app uses a state management library such as Redux, it can be useful to have Uppy store its state there instead&#x2014;that way, you could write custom uploader UI components in the same way as the other components in the application.</p>
 </blockquote>
-<p>Here’s how that works:</p>
+<p>Here&#x2019;s how that works:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'redux'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> ReduxStore <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppy/lib/store/ReduxStore'</span><span class="token punctuation">)</span>
 
@@ -209,40 +205,58 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token operator">...</span>
 </pre></td></tr></table></figure>
-<p>Now Uppy will use your app’s Redux store instead of its own, so you have a “single source of truth” 🔮</p>
+<p>Now Uppy will use your app&#x2019;s Redux store instead of its own, so you have a &#x201C;single source of truth&#x201D; &#x1F52E;</p>
 <p>Read <a href="https://uppy.io/docs/stores/">more on stores</a> in docs.</p>
-<h2 id="Form"><a href="#Form" class="headerlink" title="Form"></a>Form</h2><p><code>Form</code> is a new plugin that can be used in conjunction with any other. Here’s what it does: </p>
+<h2 id="Form"><a href="#Form" class="headerlink" title="Form"></a>Form</h2><p><code>Form</code> is a new plugin that can be used in conjunction with any other. Here&#x2019;s what it does: </p>
 <ol>
 <li>Acquires metadata from a <code>&lt;form&gt;</code> element of your choosing before the upload starts in Uppy.</li>
 <li>Injects result array of succesful and failed files back into the form.</li>
 </ol>
-<p><strong>⚠️ Breaking</strong> With this plugin we’ve deprecated <code>getMetaFromForm</code> option that used to be in all acquire plugins like Dashboard and DragDrop. Now you can just use <code>Form</code>.</p>
+<p><strong>&#x26A0;&#xFE0F; Breaking</strong> With this plugin we&#x2019;ve deprecated <code>getMetaFromForm</code> option that used to be in all acquire plugins like Dashboard and DragDrop. Now you can just use <code>Form</code>.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Form<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   target<span class="token punctuation">:</span> <span class="token string">'#my-form'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>Read <a href="https://uppy.io/docs/form/">more about the Form plugin</a> in docs.</p>
 <h2 id="Encoding-support-in-GoldenRetriever"><a href="#Encoding-support-in-GoldenRetriever" class="headerlink" title="Encoding support in GoldenRetriever"></a>Encoding support in GoldenRetriever</h2><p>Our browser crash / page refresh restore plugin <code>GoldenRetriever</code> (read <a href="https://uppy.io/docs/golden-retriever/">more about it</a>) now supports correctly restoring <a href="https://transloadit.com" target="_blank" rel="noopener">Transloadit</a> assemblies!</p>
-<p>Also, we’ve fixed restoring from paused state. Now uploads will remain paused and not get out of sync.</p>
-<h2 id="Type-safe-Server"><a href="#Type-safe-Server" class="headerlink" title="Type-safe Server"></a>Type-safe Server</h2><p>Uppy Server now uses TypeScript to do some type checking at compile time. This helps spot some otherwise easy to miss runtime bugs. While the project’s source is still written in JavaScript, the use of <a href="https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files" target="_blank" rel="noopener">JSDoc specifications is leveraged by TypeScript</a> to detect data types and mistakes with that, within the project.</p>
+<p>Also, we&#x2019;ve fixed restoring from paused state. Now uploads will remain paused and not get out of sync.</p>
+<h2 id="Type-safe-Server"><a href="#Type-safe-Server" class="headerlink" title="Type-safe Server"></a>Type-safe Server</h2><p>Uppy Server now uses TypeScript to do some type checking at compile time. This helps spot some otherwise easy to miss runtime bugs. While the project&#x2019;s source is still written in JavaScript, the use of <a href="https://github.com/Microsoft/TypeScript/wiki/Type-Checking-JavaScript-Files" target="_blank" rel="noopener">JSDoc specifications is leveraged by TypeScript</a> to detect data types and mistakes with that, within the project.</p>
 <p>Thanks to this approach a number of hidden bugs have already been identified and fixed, and it also makes Uppy Server very well documented. :)</p>
-<h2 id="And-there’s-more"><a href="#And-there’s-more" class="headerlink" title="And there’s more"></a>And there’s more</h2><ul>
+<h2 id="And-there&#x2019;s-more"><a href="#And-there&#x2019;s-more" class="headerlink" title="And there&#x2019;s more"></a>And there&#x2019;s more</h2><ul>
 <li>New <code>setFileState</code> method as a nice shorthand to update file-specific state.</li>
 <li>Added more extensions for mimetype detection.</li>
-<li>More plugin documentation 👍</li>
+<li>More plugin documentation &#x1F44D;</li>
 <li>Misc bugs fixes and improvements in Webcam, Dashboard, Provider, so things should be more stable all around.</li>
 <li>Added an option to limit simultaneous uploads in XHRUpload.</li>
 <li>Fixed remote server error handler for uppy-server.</li>
 <li>Added <a href="https://snyk.io/" target="_blank" rel="noopener">Snyk</a> to uppy-server to aid vulnerability detection.</li>
 </ul>
-<h2 id="Full-Changelog"><a href="#Full-Changelog" class="headerlink" title="Full Changelog"></a>Full Changelog</h2><p><a id="changelog-toggle" href="javascript:document.getElementById('changelog').style.display = 'block'; document.getElementById('changelog-toggle').style.display = 'none'; false;" target="_blank" rel="noopener">&raquo; show</a></p>
-<div id="changelog" style="display: none;" markdown="1"><br>Here is the full list of changes for version <code>0.22.0</code> (and patch <code>0.21.1</code>):<br><br>- <strong>⚠️ Breaking</strong> core: rendering engine switched from <code>Yo-Yo</code> to <code>Preact</code>, and all views from <code>html</code> hyperx template strings to <code>JSX</code> (#451 / @arturi)<br>- <strong>⚠️ Breaking</strong> core: large refactor of Core and Plugins: <code>setFileState</code>, merge <code>MetaData</code> plugin into <code>Dashboard</code>, prefix “private” core methods with underscores (@arturi / #438)<br>- <strong>⚠️ Breaking</strong> core: renamed <code>core</code> to <code>uppy</code> in plugins and what not. So instead of <code>this.core.state</code> we now use <code>this.uppy.state</code> (#438 / @arturi)<br>- <strong>⚠️ Breaking</strong> core: renamed events to remove <code>core:</code> prefix, as been suggested already. So: <code>success</code>, <code>error</code>, <code>upload-started</code> and so on, and prefixed event names for plugins sometimes, like <code>dashboard:file-card</code> (#438 / @arturi)<br>- <strong>⚠️ Breaking</strong> core: CSS class names have been altered to use <code>uppy-</code> namespace, so <code>.UppyDashboard-files</code> –&gt; <code>.uppy-Dashboard-files</code> and so on<br>- <strong>⚠️ Breaking</strong> dashboard: added <code>metaFields</code> option, pass an array of settings for UI field objects <code>{ id: &#39;caption&#39;, name: &#39;Caption&#39;, placeholder: &#39;describe what the image is about&#39; }</code> (#438 / @arturi, @goto-bus-stop)<br>- <strong>⚠️ Breaking</strong> core: deprecate <code>getMetaFromForm</code> in favor of new <code>Form</code> plugin (#407 / @arturi)<br>- form: added <code>Form</code>, a new plugin that is used in conjunction with any acquirer, responsible for: 1. acquiring the metadata from <code>&lt;form&gt;</code> when upload starts in Uppy; 2. injecting result array of succesful and failed files back into the form (#407 / @arturi)<br>- core: add more extensions for mimetype detection (#452 / @ifedapoolarewaju)<br>- docs: more docs for plugins (#456 / @goto-bus-stop)<br>- core: misc bugs fixes and improvements in Webcam, Dashboard, Provider and others (#451 / @arturi)<br>- dashboard: improved Dashboard UI (@arturi)<br>- uppy-server: remove pause/resume socket listeners when upload is done (@ifedapoolarewaju)<br>- uppy/uppy-server: remote server error handler (#446 / @ifedapoolarewaju)<br>- provider: fix dropbox thumbnail view (@ifedapoolarewaju)<br>- uppy-server: link uppy-server with <a href="https://snyk.io/" target="_blank" rel="noopener">https://snyk.io/</a> to aid vulnerability spotting (@ifedapoolarewaju)<br>- <strong>⚠️ Breaking</strong> core: Set <code>this.el</code> in <code>Plugin</code> class (#425 / @arturi)<br>- StatusBar, Dashboard and Provider UI improvements place upload button into StatusBar, use Alex’s suggestions for retry button; other UI tweaks (#434 / @arturi)<br>- XHRUpload: fix fields in XHR remote uploader (#424 / @sadovnychyi)<br>- XHRUpload: option to limit simultaneous uploads #360 (#427 / goto-bus-stop)<br>- core: Add <code>isSupported()</code> API for providers (#421 / @goto-bus-stop, @arturi)<br>- core: Add stores. Improve on Redux PR #216 to allow using Redux (or any other solution) for all Uppy state management, instead of proxy-only (#426 / @goto-bus-stop)<br>- core: add ability to disable thumbnail generation (#432 / @richardwillars)<br>- core: allow to select multiple files at once from remote providers (#419 / @sadovnychyi)<br>- core: use <code>setPluginState</code> and <code>getPluginState</code> in Providers (#436 / @arturi)<br>- docs: uppy-server docs for s3 <code>getKey</code> option (#444 / @goto-bus-stop)<br>- goldenretriever: Fix IndexedDB store initialisation when not cleaning up (#430 / @goto-bus-stop)<br>- provider: folder deselection did not remove all files (#439 / @ifedapoolarewaju)<br>- s3: Use Translator for localised strings (420 / @goto-bus-stop )<br>- transloadit: Port old tests from tape (#428 / @goto-bus-stop)<br>- tus: Restore correctly from paused state (#443 / @goto-bus-stop)<br>- uppy-server: use typescript to compile code for a type safe servers (@ifedapoolarewaju)<br><br></div>
+<h2 id="Full-Changelog"><a href="#Full-Changelog" class="headerlink" title="Full Changelog"></a>Full Changelog</h2><p><a id="changelog-toggle" href="javascript:document.getElementById(&apos;changelog&apos;).style.display = &apos;block&apos;; document.getElementById(&apos;changelog-toggle&apos;).style.display = &apos;none&apos;; false;" target="_blank" rel="noopener">&#xBB; show</a></p>
+<div id="changelog" style="display: none;" markdown="1"><br>Here is the full list of changes for version <code>0.22.0</code> (and patch <code>0.21.1</code>):<br><br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: rendering engine switched from <code>Yo-Yo</code> to <code>Preact</code>, and all views from <code>html</code> hyperx template strings to <code>JSX</code> (#451 / @arturi)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: large refactor of Core and Plugins: <code>setFileState</code>, merge <code>MetaData</code> plugin into <code>Dashboard</code>, prefix &#x201C;private&#x201D; core methods with underscores (@arturi / #438)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: renamed <code>core</code> to <code>uppy</code> in plugins and what not. So instead of <code>this.core.state</code> we now use <code>this.uppy.state</code> (#438 / @arturi)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: renamed events to remove <code>core:</code> prefix, as been suggested already. So: <code>success</code>, <code>error</code>, <code>upload-started</code> and so on, and prefixed event names for plugins sometimes, like <code>dashboard:file-card</code> (#438 / @arturi)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: CSS class names have been altered to use <code>uppy-</code> namespace, so <code>.UppyDashboard-files</code> &#x2013;&gt; <code>.uppy-Dashboard-files</code> and so on<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> dashboard: added <code>metaFields</code> option, pass an array of settings for UI field objects <code>{ id: &apos;caption&apos;, name: &apos;Caption&apos;, placeholder: &apos;describe what the image is about&apos; }</code> (#438 / @arturi, @goto-bus-stop)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: deprecate <code>getMetaFromForm</code> in favor of new <code>Form</code> plugin (#407 / @arturi)<br>- form: added <code>Form</code>, a new plugin that is used in conjunction with any acquirer, responsible for: 1. acquiring the metadata from <code>&lt;form&gt;</code> when upload starts in Uppy; 2. injecting result array of succesful and failed files back into the form (#407 / @arturi)<br>- core: add more extensions for mimetype detection (#452 / @ifedapoolarewaju)<br>- docs: more docs for plugins (#456 / @goto-bus-stop)<br>- core: misc bugs fixes and improvements in Webcam, Dashboard, Provider and others (#451 / @arturi)<br>- dashboard: improved Dashboard UI (@arturi)<br>- uppy-server: remove pause/resume socket listeners when upload is done (@ifedapoolarewaju)<br>- uppy/uppy-server: remote server error handler (#446 / @ifedapoolarewaju)<br>- provider: fix dropbox thumbnail view (@ifedapoolarewaju)<br>- uppy-server: link uppy-server with <a href="https://snyk.io/" target="_blank" rel="noopener">https://snyk.io/</a> to aid vulnerability spotting (@ifedapoolarewaju)<br>- <strong>&#x26A0;&#xFE0F; Breaking</strong> core: Set <code>this.el</code> in <code>Plugin</code> class (#425 / @arturi)<br>- StatusBar, Dashboard and Provider UI improvements place upload button into StatusBar, use Alex&#x2019;s suggestions for retry button; other UI tweaks (#434 / @arturi)<br>- XHRUpload: fix fields in XHR remote uploader (#424 / @sadovnychyi)<br>- XHRUpload: option to limit simultaneous uploads #360 (#427 / goto-bus-stop)<br>- core: Add <code>isSupported()</code> API for providers (#421 / @goto-bus-stop, @arturi)<br>- core: Add stores. Improve on Redux PR #216 to allow using Redux (or any other solution) for all Uppy state management, instead of proxy-only (#426 / @goto-bus-stop)<br>- core: add ability to disable thumbnail generation (#432 / @richardwillars)<br>- core: allow to select multiple files at once from remote providers (#419 / @sadovnychyi)<br>- core: use <code>setPluginState</code> and <code>getPluginState</code> in Providers (#436 / @arturi)<br>- docs: uppy-server docs for s3 <code>getKey</code> option (#444 / @goto-bus-stop)<br>- goldenretriever: Fix IndexedDB store initialisation when not cleaning up (#430 / @goto-bus-stop)<br>- provider: folder deselection did not remove all files (#439 / @ifedapoolarewaju)<br>- s3: Use Translator for localised strings (420 / @goto-bus-stop )<br>- transloadit: Port old tests from tape (#428 / @goto-bus-stop)<br>- tus: Restore correctly from paused state (#443 / @goto-bus-stop)<br>- uppy-server: use typescript to compile code for a type safe servers (@ifedapoolarewaju)<br><br></div>
 
 <p>We expect our 1.0 release early next year. Want to impact it? Comment below, in <a href="https://github.com/transloadit/uppy/issues" target="_blank" rel="noopener">GitHub issues</a>, or on <a href="https://www.producthunt.com/posts/uppy-io" target="_blank" rel="noopener">Product Hunt</a>.</p>
 <p>Happy Holidays,</p>
 <p>The Uppy Team</p>
-<center><br>  <iframe src="https://ghbtns.com/github-btn.html?user=transloadit&repo=uppy&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe><br></center>
-
+<center><br>  <iframe src="https://ghbtns.com/github-btn.html?user=transloadit&amp;repo=uppy&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe><br></center>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

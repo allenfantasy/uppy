@@ -551,7 +551,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     <h1>Webcam</h1>
     <p>The <code>@uppy/webcam</code> plugin lets you take photos and record videos with a built-in camera on desktop and mobile devices.</p>
 <blockquote>
-<p>To use the Webcam plugin in Chrome, <a href="https://developers.google.com/web/updates/2015/10/chrome-47-webrtc#public_service_announcements" target="_blank" rel="noopener">your site should be served over https</a>. This restriction does not apply on <code>localhost</code>, so you don’t have to jump through many hoops during development.</p>
+<p>To use the Webcam plugin in Chrome, <a href="https://developers.google.com/web/updates/2015/10/chrome-47-webrtc#public_service_announcements" target="_blank" rel="noopener">your site should be served over https</a>. This restriction does not apply on <code>localhost</code>, so you don&#x2019;t have to jump through many hoops during development.</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> Webcam <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/webcam'</span><span class="token punctuation">)</span>
 
@@ -587,21 +587,21 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   locale<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="id-39-Webcam-39"><a href="#id-39-Webcam-39" class="headerlink" title="id: &#39;Webcam&#39;"></a><code>id: &#39;Webcam&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;Webcam&#39;</code>.</p>
-<h3 id="title-39-Camera-39"><a href="#title-39-Camera-39" class="headerlink" title="title: &#39;Camera&#39;"></a><code>title: &#39;Camera&#39;</code></h3><p>Configures the title / name shown in the UI, for instance, on Dashboard tabs. It defaults to <code>&#39;Camera&#39;</code>.</p>
+<h3 id="id-39-Webcam-39"><a href="#id-39-Webcam-39" class="headerlink" title="id: &apos;Webcam&apos;"></a><code>id: &apos;Webcam&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;Webcam&apos;</code>.</p>
+<h3 id="title-39-Camera-39"><a href="#title-39-Camera-39" class="headerlink" title="title: &apos;Camera&apos;"></a><code>title: &apos;Camera&apos;</code></h3><p>Configures the title / name shown in the UI, for instance, on Dashboard tabs. It defaults to <code>&apos;Camera&apos;</code>.</p>
 <h3 id="target-null"><a href="#target-null" class="headerlink" title="target: null"></a><code>target: null</code></h3><p>DOM element, CSS selector, or plugin to mount Webcam into.</p>
 <h3 id="countdown-false"><a href="#countdown-false" class="headerlink" title="countdown: false"></a><code>countdown: false</code></h3><p>When taking a picture: the amount of seconds to wait before actually taking a snapshot. If set to <code>false</code> or 0, the timeout is disabled entirely. This also shows a <code>Smile!</code> message through the <a href="/docs/informer">Informer</a> before the picture is taken.</p>
 <h3 id="onBeforeSnapshot-gt-Promise-resolve"><a href="#onBeforeSnapshot-gt-Promise-resolve" class="headerlink" title="onBeforeSnapshot: () =&gt; Promise.resolve()"></a><code>onBeforeSnapshot: () =&gt; Promise.resolve()</code></h3><p>A hook function to call before a snapshot is taken. The Webcam plugin will wait for the returned Promise to resolve before taking the snapshot. This can be used to implement variations on the <code>countdown</code> option for example.</p>
 <h3 id="modes"><a href="#modes" class="headerlink" title="modes: []"></a><code>modes: []</code></h3><p>The types of recording modes to allow.</p>
 <ul>
 <li><code>video-audio</code> - Record a video file, capturing both audio and video.</li>
-<li><code>video-only</code> - Record a video file with the webcam, but don’t record audio.</li>
-<li><code>audio-only</code> - Record an audio file with the user’s microphone.</li>
+<li><code>video-only</code> - Record a video file with the webcam, but don&#x2019;t record audio.</li>
+<li><code>audio-only</code> - Record an audio file with the user&#x2019;s microphone.</li>
 <li><code>picture</code> - Take a picture with the webcam.</li>
 </ul>
 <p>By default, all modes are allowed, and the Webcam plugin will show controls for recording video as well as taking pictures.</p>
 <h3 id="mirror-true"><a href="#mirror-true" class="headerlink" title="mirror: true"></a><code>mirror: true</code></h3><p>Configures whether or not to mirror preview image from the camera. This option is useful when taking a selfie with a front camera: when you wave your right hand, you will see your hand on the right on the preview screen, like in the mirror. But when you actually take a picture, it will not be mirrored. This is how smartphone selfie cameras behave.</p>
-<h3 id="facingMode-39-user-39"><a href="#facingMode-39-user-39" class="headerlink" title="facingMode: &#39;user&#39;"></a><code>facingMode: &#39;user&#39;</code></h3><p>Devices sometimes have multiple cameras, front and back, for example. There is a browser API to set which camera will be used, <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode" target="_blank" rel="noopener">facingMode</a>:</p>
+<h3 id="facingMode-39-user-39"><a href="#facingMode-39-user-39" class="headerlink" title="facingMode: &apos;user&apos;"></a><code>facingMode: &apos;user&apos;</code></h3><p>Devices sometimes have multiple cameras, front and back, for example. There is a browser API to set which camera will be used, <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode" target="_blank" rel="noopener">facingMode</a>:</p>
 <ul>
 <li><code>user</code>: The video source is facing toward the user; this includes, for example, the front-facing camera on a smartphone.</li>
 <li><code>environment</code>:  The video source is facing away from the user, thereby viewing their environment. This is the back camera on a smartphone.</li>
@@ -628,7 +628,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   allowAccessDescription<span class="token punctuation">:</span> <span class="token string">'In order to take pictures or record video with your camera, please allow camera access for this site.'</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/webcam.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

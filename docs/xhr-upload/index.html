@@ -565,12 +565,12 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> XHRUpload <span class="token operator">=</span> Uppy<span class="token punctuation">.</span>XHRUpload
 </pre></td></tr></table></figure>
 <h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>The <code>@uppy/xhr-upload</code> plugin has the following configurable options:</p>
-<h3 id="id-39-XHRUpload-39"><a href="#id-39-XHRUpload-39" class="headerlink" title="id: &#39;XHRUpload&#39;"></a><code>id: &#39;XHRUpload&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;XHRUpload&#39;</code>.</p>
-<h3 id="endpoint-39-39"><a href="#endpoint-39-39" class="headerlink" title="endpoint: &#39;&#39;"></a><code>endpoint: &#39;&#39;</code></h3><p>The destination URL for your uploads.</p>
-<h3 id="method-39-post-39"><a href="#method-39-post-39" class="headerlink" title="method: &#39;post&#39;"></a><code>method: &#39;post&#39;</code></h3><p>Configures which HTTP method to use for the upload.</p>
+<h3 id="id-39-XHRUpload-39"><a href="#id-39-XHRUpload-39" class="headerlink" title="id: &apos;XHRUpload&apos;"></a><code>id: &apos;XHRUpload&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;XHRUpload&apos;</code>.</p>
+<h3 id="endpoint-39-39"><a href="#endpoint-39-39" class="headerlink" title="endpoint: &apos;&apos;"></a><code>endpoint: &apos;&apos;</code></h3><p>The destination URL for your uploads.</p>
+<h3 id="method-39-post-39"><a href="#method-39-post-39" class="headerlink" title="method: &apos;post&apos;"></a><code>method: &apos;post&apos;</code></h3><p>Configures which HTTP method to use for the upload.</p>
 <h3 id="formData-true"><a href="#formData-true" class="headerlink" title="formData: true"></a><code>formData: true</code></h3><p>Configures whether or not to use a multipart form upload, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData" target="_blank" rel="noopener">FormData</a>.<br>This works similarly to using a <code>&lt;form&gt;</code> element with an <code>&lt;input type=&quot;file&quot;&gt;</code> for uploads.<br>When set to <code>true</code>, file metadata is also sent to the endpoint as separate form fields.<br>When set to <code>false</code>, only the file contents are sent.</p>
-<h3 id="fieldName-39-files-39"><a href="#fieldName-39-files-39" class="headerlink" title="fieldName: &#39;files[]&#39;"></a><code>fieldName: &#39;files[]&#39;</code></h3><p>When <code>formData</code> is set to true, this is used as the form field name for the file to be uploaded.</p>
-<h3 id="metaFields-null"><a href="#metaFields-null" class="headerlink" title="metaFields: null"></a><code>metaFields: null</code></h3><p>Pass an array of field names to limit the metadata fields that will be sent to the endpoint as form fields.<br>For example, <code>metaFields: [&#39;name&#39;]</code> will only send the <code>name</code> field.<br>Setting this to <code>null</code> (the default) will send <em>all</em> metadata fields.</p>
+<h3 id="fieldName-39-files-39"><a href="#fieldName-39-files-39" class="headerlink" title="fieldName: &apos;files[]&apos;"></a><code>fieldName: &apos;files[]&apos;</code></h3><p>When <code>formData</code> is set to true, this is used as the form field name for the file to be uploaded.</p>
+<h3 id="metaFields-null"><a href="#metaFields-null" class="headerlink" title="metaFields: null"></a><code>metaFields: null</code></h3><p>Pass an array of field names to limit the metadata fields that will be sent to the endpoint as form fields.<br>For example, <code>metaFields: [&apos;name&apos;]</code> will only send the <code>name</code> field.<br>Setting this to <code>null</code> (the default) will send <em>all</em> metadata fields.</p>
 <p>If the <code>formData</code> option is set to false, <code>metaFields</code> has no effect.</p>
 <h3 id="headers"><a href="#headers" class="headerlink" title="headers: {}"></a><code>headers: {}</code></h3><p>An object containing HTTP headers to use for the upload request.<br>Keys are header names, values are header values.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>headers<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -589,7 +589,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setFile
   xhrUpload<span class="token punctuation">:</span> <span class="token punctuation">{</span> fieldName<span class="token punctuation">:</span> <span class="token string">'pic1'</span> <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="getResponseData-responseText-response"><a href="#getResponseData-responseText-response" class="headerlink" title="getResponseData(responseText, response)"></a><code>getResponseData(responseText, response)</code></h3><p>When an upload has completed, Uppy will extract response data from the upload endpoint. This response data will be available on the file’s <code>.response</code> property, and be emitted in the <code>upload-success</code> event:</p>
+<h3 id="getResponseData-responseText-response"><a href="#getResponseData-responseText-response" class="headerlink" title="getResponseData(responseText, response)"></a><code>getResponseData(responseText, response)</code></h3><p>When an upload has completed, Uppy will extract response data from the upload endpoint. This response data will be available on the file&#x2019;s <code>.response</code> property, and be emitted in the <code>upload-success</code> event:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">getFile</span><span class="token punctuation">(</span>fileID<span class="token punctuation">)</span><span class="token punctuation">.</span>response
 <span class="token comment">// { status: HTTP status code,</span>
 <span class="token comment">//   body: extracted response data }</span>
@@ -613,7 +613,7 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<p>The <code>responseText</code> is the XHR endpoint response as a string. For uploads from the user’s device, <code>response</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> object.</p>
+<p>The <code>responseText</code> is the XHR endpoint response as a string. For uploads from the user&#x2019;s device, <code>response</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> object.</p>
 <p>When uploading files from remote providers such as Dropbox or Instagram, Companion sends upload response data to the client. This is made available in the <code>getResponseData()</code> function as well. The <code>response</code> object from Companion contains some properties named after their <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> counterparts:</p>
 <ul>
 <li><code>response.responseText</code> - the XHR endpoint response as a string;</li>
@@ -628,11 +628,11 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
   <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>responseText<span class="token punctuation">)</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<h3 id="responseUrlFieldName-39-url-39"><a href="#responseUrlFieldName-39-url-39" class="headerlink" title="responseUrlFieldName: &#39;url&#39;"></a><code>responseUrlFieldName: &#39;url&#39;</code></h3><p>The field name containing a publically accessible location of the uploaded file in the response data returned by <code>getResponseData(xhr.responseText, xhr)</code>.</p>
+<h3 id="responseUrlFieldName-39-url-39"><a href="#responseUrlFieldName-39-url-39" class="headerlink" title="responseUrlFieldName: &apos;url&apos;"></a><code>responseUrlFieldName: &apos;url&apos;</code></h3><p>The field name containing a publically accessible location of the uploaded file in the response data returned by <code>getResponseData(xhr.responseText, xhr)</code>.</p>
 <h3 id="timeout-30-1000"><a href="#timeout-30-1000" class="headerlink" title="timeout: 30 * 1000"></a><code>timeout: 30 * 1000</code></h3><p>When no upload progress events have been received for this amount of milliseconds, assume the connection has an issue and abort the upload.<br>Note that unlike the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout" target="_blank" rel="noopener"><code>XMLHttpRequest.timeout</code></a> property, this is a timer between progress events: the total upload can take longer than this value.<br>Set to <code>0</code> to disable this check.</p>
 <p>The default for the timeout is 30 seconds.</p>
 <h3 id="limit-0"><a href="#limit-0" class="headerlink" title="limit: 0"></a><code>limit: 0</code></h3><p>Limit the amount of uploads going on at the same time. Setting this to <code>0</code> means there is no limit on concurrent uploads.</p>
-<h3 id="responseType-39-39"><a href="#responseType-39-39" class="headerlink" title="responseType: &#39;&#39;"></a><code>responseType: &#39;&#39;</code></h3><p>The response type expected from the server, determining how the <code>xhr.response</code> property should be filled. The <code>xhr.response</code> property can be accessed in a custom <a href="#getResponseData-responseText-response"><code>getResponseData()</code></a> callback. This option sets the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType" target="_blank" rel="noopener">`XMLHttpRequest.responseType</a> property. Only ‘’, ‘text’, ‘arraybuffer’, ‘blob’ and ‘document’ are widely supported by browsers, so it’s recommended to use one of those. The default is the empty string, which is equivalent to ‘text’ for the <code>xhr.response</code> property.</p>
+<h3 id="responseType-39-39"><a href="#responseType-39-39" class="headerlink" title="responseType: &apos;&apos;"></a><code>responseType: &apos;&apos;</code></h3><p>The response type expected from the server, determining how the <code>xhr.response</code> property should be filled. The <code>xhr.response</code> property can be accessed in a custom <a href="#getResponseData-responseText-response"><code>getResponseData()</code></a> callback. This option sets the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType" target="_blank" rel="noopener">`XMLHttpRequest.responseType</a> property. Only &#x2018;&#x2019;, &#x2018;text&#x2019;, &#x2018;arraybuffer&#x2019;, &#x2018;blob&#x2019; and &#x2018;document&#x2019; are widely supported by browsers, so it&#x2019;s recommended to use one of those. The default is the empty string, which is equivalent to &#x2018;text&#x2019; for the <code>xhr.response</code> property.</p>
 <h3 id="withCredentials-false"><a href="#withCredentials-false" class="headerlink" title="withCredentials: false"></a><code>withCredentials: false</code></h3><p>Indicates whether or not cross-site Access-Control requests should be made using credentials.</p>
 <h3 id="locale"><a href="#locale" class="headerlink" title="locale: {}"></a><code>locale: {}</code></h3><p>Localize text that is shown to the user.</p>
 <p>The default English strings are:</p>
@@ -650,7 +650,7 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>Now, a form field named <code>size</code> will be sent along to the <a href="#endpoint-39-39"><code>endpoint</code></a> once the upload starts.</p>
-<p>By default, all metadata is sent, including Uppy’s default <code>name</code> and <code>type</code> metadata. If you do not want the <code>name</code> and <code>type</code> metadata properties to be sent to your upload endpoint, you can use the <a href="#metaFields-null"><code>metaFields</code></a> option to restrict the field names that should be sent.</p>
+<p>By default, all metadata is sent, including Uppy&#x2019;s default <code>name</code> and <code>type</code> metadata. If you do not want the <code>name</code> and <code>type</code> metadata properties to be sent to your upload endpoint, you can use the <a href="#metaFields-null"><code>metaFields</code></a> option to restrict the field names that should be sent.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>XHRUpload<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token comment">// Only send our own `size` metadata field.</span>
   metaFields<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'size'</span><span class="token punctuation">]</span>
@@ -665,7 +665,7 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <span class="token variable">$file_name</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token single-quoted-string string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// desired name of the file</span>
 <span class="token function">move_uploaded_file</span><span class="token punctuation">(</span><span class="token variable">$file_path</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'./img/'</span> <span class="token punctuation">.</span> <span class="token function">basename</span><span class="token punctuation">(</span><span class="token variable">$file_name</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// save the file in `img/`</span>
 </pre></td></tr></table></figure>
-<p>Note how we are using <code>$_POST[&#39;name&#39;]</code> instead of <code>$my_file[&#39;name&#39;]</code>. <code>$my_file[&#39;name&#39;]</code> contains the original name of the file on the user’s device. <code>$_POST[&#39;name&#39;]</code> contains the <code>name</code> metadata value for the uploaded file, which can be edited by the user using the <a href="/docs/dashboard">Dashboard</a>.</p>
+<p>Note how we are using <code>$_POST[&apos;name&apos;]</code> instead of <code>$my_file[&apos;name&apos;]</code>. <code>$my_file[&apos;name&apos;]</code> contains the original name of the file on the user&#x2019;s device. <code>$_POST[&apos;name&apos;]</code> contains the <code>name</code> metadata value for the uploaded file, which can be edited by the user using the <a href="/docs/dashboard">Dashboard</a>.</p>
 <p>Set a custom <code>fieldName</code> to make working with the <code>$_FILES</code> array a bit less convoluted:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// app.js</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>XHRUpload<span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -680,7 +680,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token variable">$file_name</span> <span class="token operator">=</span> <span class="token global">$_POST</span><span class="token punctuation">[</span><span class="token single-quoted-string string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// desired name of the file</span>
 <span class="token function">move_uploaded_file</span><span class="token punctuation">(</span><span class="token variable">$file_path</span><span class="token punctuation">,</span> <span class="token single-quoted-string string">'./img/'</span> <span class="token punctuation">.</span> <span class="token function">basename</span><span class="token punctuation">(</span><span class="token variable">$file_name</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// save the file at `img/FILE_NAME`</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/xhrupload.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

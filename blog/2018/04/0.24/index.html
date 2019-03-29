@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link current">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,7 +155,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     
     <p>Uppy 0.24.2 brings a refreshed UI in the Dashboard and StatusBar plugins, a synchronous <code>addFile()</code> method, a cancel button, style protections, documentation on writing your own Uppy plugin, revamped XHR response handling and tons of bugfixes.</p>
 <a id="more"></a>
-<h2 id="Refreshed-Dashboard-and-Providers"><a href="#Refreshed-Dashboard-and-Providers" class="headerlink" title="Refreshed Dashboard and Providers"></a>Refreshed Dashboard and Providers</h2><p>As always, we are trying to simplify and improve the UI of Uppy plugins. In this release, Dashboard’s design has been refreshed, check this out:</p>
+<h2 id="Refreshed-Dashboard-and-Providers"><a href="#Refreshed-Dashboard-and-Providers" class="headerlink" title="Refreshed Dashboard and Providers"></a>Refreshed Dashboard and Providers</h2><p>As always, we are trying to simplify and improve the UI of Uppy plugins. In this release, Dashboard&#x2019;s design has been refreshed, check this out:</p>
 <p><img class="border" src="/images/blog/0.24/dashboard-main.jpg"></p>
 <p><img class="border" src="/images/blog/0.24/uppy-screenshot.jpg"></p>
 <p>Meta editing screen:</p>
@@ -171,7 +167,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>And more, check out the <a href="https://uppy.io/examples/dashboard/">Dashboard example page</a>.</p>
 <h2 id="A-Cleaner-StatusBar"><a href="#A-Cleaner-StatusBar" class="headerlink" title="A Cleaner StatusBar"></a>A Cleaner StatusBar</h2><p>The StatusBar plugin used to show a lot of progress details. This has been simplified so that by default it will only show a percentage:</p>
 <p><img src="/images/blog/0.24/statusbar-2.jpg"></p>
-<p>But there’s an option <code>showProgressDetails: true</code> for both the StatusBar and Dashboard (which passes it to StatusBar included in the Dashboard) to bring back this detailed information, spread over two lines:</p>
+<p>But there&#x2019;s an option <code>showProgressDetails: true</code> for both the StatusBar and Dashboard (which passes it to StatusBar included in the Dashboard) to bring back this detailed information, spread over two lines:</p>
 <p><img src="/images/blog/0.24/statusbar-1.jpg"></p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>StatusBar<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token operator">...</span><span class="token punctuation">,</span> showProgressDetails<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
@@ -179,8 +175,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Dashboard<span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token operator">...</span><span class="token punctuation">,</span> showProgressDetails<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>We’ve also added a handy “cancel” button, which will cancel everything in progress regardless of the type of the upload (wether uppy-server or local powered, and wether tus-resumable or old school XHR/form uploads).</p>
-<h2 id="XHR-Response-Handling"><a href="#XHR-Response-Handling" class="headerlink" title="XHR Response Handling"></a>XHR Response Handling</h2><p>When the upload completes (regardless of whether it succeeded), a <code>response</code> key gets added to the file. <code>file.response</code> contains a <code>status</code> and <code>data</code> properties. <code>data</code> is the result of the <code>getResponseData()</code> option. The <code>getResponseData()</code> function’s signature is now:</p>
+<p>We&#x2019;ve also added a handy &#x201C;cancel&#x201D; button, which will cancel everything in progress regardless of the type of the upload (wether uppy-server or local powered, and wether tus-resumable or old school XHR/form uploads).</p>
+<h2 id="XHR-Response-Handling"><a href="#XHR-Response-Handling" class="headerlink" title="XHR Response Handling"></a>XHR Response Handling</h2><p>When the upload completes (regardless of whether it succeeded), a <code>response</code> key gets added to the file. <code>file.response</code> contains a <code>status</code> and <code>data</code> properties. <code>data</code> is the result of the <code>getResponseData()</code> option. The <code>getResponseData()</code> function&#x2019;s signature is now:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token function">getResponseData</span> <span class="token punctuation">(</span>responseText<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
 <p>This is what the default JSON parsing implementation looks like in the <code>XHRUpload</code> plugin, but you can override it with your own:</p>
@@ -195,7 +191,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   <span class="token keyword">return</span> parsedResponse
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<p>The <code>responseText</code> is the XHR endpoint response as a string. For uploads from the user’s device, <code>response</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> object.</p>
+<p>The <code>responseText</code> is the XHR endpoint response as a string. For uploads from the user&#x2019;s device, <code>response</code> is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> object.</p>
 <p>When uploading files from remote providers such as Dropbox or Instagram, Uppy Server sends upload response data to the client. This is made available in the <code>getResponseData()</code> option as well. The <code>response</code> object from Uppy Server contains some properties named after their <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest</a> counterparts:</p>
 <ul>
 <li><code>response.responseText</code> - the XHR endpoint response as a string;</li>
@@ -204,14 +200,14 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <li><code>response.headers</code> - an object mapping lowercase header names to their values.</li>
 </ul>
 <h2 id="Powered-by-Uppy"><a href="#Powered-by-Uppy" class="headerlink" title="Powered by Uppy"></a>Powered by Uppy</h2><p>Uppy is provided free for the world forever. In return, we ask that you consider keeping a tiny tasteful Uppy logo at the bottom of the Dashboard, so that more people can discover and enjoy Uppy. This <em>really helps</em> to grow our community which will result in more issues reported, more contributors, more features requested, more PRs merged, and a better Uppy for you to use tomorrow, for free, forever.</p>
-<p>If you don’t want to do this indefinitely, consider doing this initially, just to help us reach critical mass and get our <em>perpetuum mobile</em> going.</p>
-<p>But, Uppy is also free as in freedom. And so if you can’t help our cause, set <code>proudlyDisplayPoweredByUppy</code> to <code>false</code> to hide te Uppy logo.</p>
+<p>If you don&#x2019;t want to do this indefinitely, consider doing this initially, just to help us reach critical mass and get our <em>perpetuum mobile</em> going.</p>
+<p>But, Uppy is also free as in freedom. And so if you can&#x2019;t help our cause, set <code>proudlyDisplayPoweredByUppy</code> to <code>false</code> to hide te Uppy logo.</p>
 <p><img src="/images/blog/0.24/powered-by-1.jpg"></p>
-<h2 id="Server-News"><a href="#Server-News" class="headerlink" title="Server News"></a>Server News</h2><p>We occasionally get questions about the required servers for Uppy. Uppy does not require special servers. You can use Uppy for free in the browser and let it upload to your existing Apache/Nginx server. Sprinkle a few lines of HTML/JS and that’s it. </p>
-<p><strong>If you want integration with Instagram</strong> Dropbox and friends, you’ll need to run an ‘Uppy Server’ in the datacenter to help with OAuth secrecy and fetching large files and uploading those, bypassing the client. No fun to have several gigabytes pass through your mobile tubes - best let the datacenters sort this out among themselves. That’s what Uppy Server is for.</p>
-<p><strong>If you want resumable uploads</strong>, you’ll need a <a href="https://tus.io/" target="_blank" rel="noopener">https://tus.io/</a> speaking server. </p>
-<p>You can run these optional servers yourself, or use the hosted variants provided by our company <a href="https://transloadit.com/" target="_blank" rel="noopener">Transloadit</a> for 💸. Transloadit also adds a wide range of encoding/processing features.</p>
-<p>Now that that’s sorted out, let’s see what we improved on the Uppy Server side! We tackled a number of security issues:</p>
+<h2 id="Server-News"><a href="#Server-News" class="headerlink" title="Server News"></a>Server News</h2><p>We occasionally get questions about the required servers for Uppy. Uppy does not require special servers. You can use Uppy for free in the browser and let it upload to your existing Apache/Nginx server. Sprinkle a few lines of HTML/JS and that&#x2019;s it. </p>
+<p><strong>If you want integration with Instagram</strong> Dropbox and friends, you&#x2019;ll need to run an &#x2018;Uppy Server&#x2019; in the datacenter to help with OAuth secrecy and fetching large files and uploading those, bypassing the client. No fun to have several gigabytes pass through your mobile tubes - best let the datacenters sort this out among themselves. That&#x2019;s what Uppy Server is for.</p>
+<p><strong>If you want resumable uploads</strong>, you&#x2019;ll need a <a href="https://tus.io/" target="_blank" rel="noopener">https://tus.io/</a> speaking server. </p>
+<p>You can run these optional servers yourself, or use the hosted variants provided by our company <a href="https://transloadit.com/" target="_blank" rel="noopener">Transloadit</a> for &#x1F4B8;. Transloadit also adds a wide range of encoding/processing features.</p>
+<p>Now that that&#x2019;s sorted out, let&#x2019;s see what we improved on the Uppy Server side! We tackled a number of security issues:</p>
 <ul>
 <li>Fixed security vulnerability in transient dependency <a href="https://github.com/transloadit/uppy-server/issues/70" target="_blank" rel="noopener">#70</a></li>
 <li>Auto-generate tmp download file name to avoid Path traversal</li>
@@ -227,25 +223,43 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 </ul>
 <h2 id="Docs"><a href="#Docs" class="headerlink" title="Docs"></a>Docs</h2><ul>
 <li>Uppy Server docs now point to a detailed write-up on how to run Uppy Server on Kubernetes (#706 / @kiloreux)</li>
-<li>An Uppy Server custom provider example has been added, so now it’s easier create your own custom providers.</li>
+<li>An Uppy Server custom provider example has been added, so now it&#x2019;s easier create your own custom providers.</li>
 <li>Added more useful events, i18n strings, fixed typos, and other polish.</li>
 </ul>
 <h2 id="Other-Fixes-amp-Improvements"><a href="#Other-Fixes-amp-Improvements" class="headerlink" title="Other Fixes &amp; Improvements"></a>Other Fixes &amp; Improvements</h2><ul>
-<li>⚠️ <strong>breaking</strong> <code>addFile()</code>, <code>onBeforeFileAdded()</code> and <code>onBeforeUpload()</code> are now synchronous and have to return nothing or file objects to proceed, or false to abort; please check out the update docs for details: <a href="https://uppy.io/docs/uppy/#onBeforeFileAdded">onBeforeFileAdded()</a> and <a href="https://uppy.io/docs/uppy/#onBeforeUpload">onBeforeUpload()</a>.</li>
-<li>⚠️ <strong>breaking</strong> Most events now emit the whole <code>file</code> object instead of a <code>fileId</code>. So you can access <code>file.name</code> right away, for example, so you no longer have to fish for the file using its id.</li>
-<li>⚠️ <strong>breaking</strong> We’ve added <code>postcss-safe-important</code> to our style build step, so now 90% of rules got <code>!important</code> declaration added to them. This is done to prevent page styles (especially global ones like from Bootstrap) from leaking into the Uppy widget. There are other solutions we are looking into, like iFrames and WebComponents, this is an experiment. Keep in mind that to override Uppy styles, you now have to also use <code>!important</code>.</li>
-<li>dashboard: ⚠️ <strong>breaking</strong> <code>maxWidth</code>, <code>maxHeight</code> options have been converted to <code>width</code> and <code>height</code>, because this makes more sense, <code>maxWidth</code> and <code>maxHeight</code> are actually <code>100%</code>.</li>
+<li>&#x26A0;&#xFE0F; <strong>breaking</strong> <code>addFile()</code>, <code>onBeforeFileAdded()</code> and <code>onBeforeUpload()</code> are now synchronous and have to return nothing or file objects to proceed, or false to abort; please check out the update docs for details: <a href="https://uppy.io/docs/uppy/#onBeforeFileAdded">onBeforeFileAdded()</a> and <a href="https://uppy.io/docs/uppy/#onBeforeUpload">onBeforeUpload()</a>.</li>
+<li>&#x26A0;&#xFE0F; <strong>breaking</strong> Most events now emit the whole <code>file</code> object instead of a <code>fileId</code>. So you can access <code>file.name</code> right away, for example, so you no longer have to fish for the file using its id.</li>
+<li>&#x26A0;&#xFE0F; <strong>breaking</strong> We&#x2019;ve added <code>postcss-safe-important</code> to our style build step, so now 90% of rules got <code>!important</code> declaration added to them. This is done to prevent page styles (especially global ones like from Bootstrap) from leaking into the Uppy widget. There are other solutions we are looking into, like iFrames and WebComponents, this is an experiment. Keep in mind that to override Uppy styles, you now have to also use <code>!important</code>.</li>
+<li>dashboard: &#x26A0;&#xFE0F; <strong>breaking</strong> <code>maxWidth</code>, <code>maxHeight</code> options have been converted to <code>width</code> and <code>height</code>, because this makes more sense, <code>maxWidth</code> and <code>maxHeight</code> are actually <code>100%</code>.</li>
 <li>There is now an option <code>showLinkToFileUploadResult: false</code> to disable linking to the upload result in Dashboard UI.</li>
 <li>We are now using the image time and date as a file name in Instagram, instead of a generic file id.</li>
 <li>The URL plugin now checks for HTTP(S) protocol, and adds HTTP by default if no protocol is present.</li>
-<li>It’s now possible to override <code>&lt;DashboardModal /&gt;</code> React component’s target prop.</li>
+<li>It&#x2019;s now possible to override <code>&lt;DashboardModal /&gt;</code> React component&#x2019;s target prop.</li>
 <li>Provider views now have <code>showFilter</code> and <code>showBreadcrumbs</code> options, those are <code>false</code> for the Instagram plugin, for example.</li>
 <li>Uppy Server to Client communication has been refactored into <code>Provider</code> and <code>Request</code> modules. <code>Request</code> can be used when a simple request needs to be made to Uppy Server, like in the URL plugin. <code>Provider</code> is used for more complex implementations shared between Google Drive and Instagram, for example.</li>
 </ul>
-<p>Finally, we’ve added a Transloadit example to the website, <a href="https://uppy.io/examples/transloadit/">check it out</a>.</p>
+<p>Finally, we&#x2019;ve added a Transloadit example to the website, <a href="https://uppy.io/examples/transloadit/">check it out</a>.</p>
 <p>Have fun,</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

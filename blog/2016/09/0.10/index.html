@@ -98,7 +98,7 @@ Thinking about the future 🔮We have been spending quite a lot of time thinking
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Thinking about the future 🔮We have been spending quite a lot of time thinking
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,9 +155,9 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.10: Getting together, the future, Google Drive UI, exposed events</h1>
   <h4>Wednesday Sep 28, 2016</h4>
     
-    <p>Hi! Another month has passed and we have just released a new version of Uppy. Here’s what we’ve been up to.</p>
-<h2 id="Thinking-about-the-future-🔮"><a href="#Thinking-about-the-future-🔮" class="headerlink" title="Thinking about the future 🔮"></a>Thinking about the future 🔮</h2><p>We have been spending quite a lot of time thinking about Uppy’s future and the direction in which we would like to take this project.  Our primary concern is making Uppy as flexible as possible as well as compatible with popular libraries, such as React and React Native.  We also want to make it easy to port Uppy to any environments or ecosystems that are not officially supported.</p>
-<p>We have done a lot of research. We created <a href="https://github.com/hedgerh/uppy-react" target="_blank" rel="noopener">prototypes of Uppy React components</a> and  we also created a new module that we like to call “Uppy Base.” <a href="https://github.com/hedgerh/uppy-base" target="_blank" rel="noopener"><code>uppy-base</code></a> is a thin module containing reusable functionality from some of our plugins that can be used in any ecosystem or environment, without being opinionated about the UI.</p>
+    <p>Hi! Another month has passed and we have just released a new version of Uppy. Here&#x2019;s what we&#x2019;ve been up to.</p>
+<h2 id="Thinking-about-the-future-&#x1F52E;"><a href="#Thinking-about-the-future-&#x1F52E;" class="headerlink" title="Thinking about the future &#x1F52E;"></a>Thinking about the future &#x1F52E;</h2><p>We have been spending quite a lot of time thinking about Uppy&#x2019;s future and the direction in which we would like to take this project.  Our primary concern is making Uppy as flexible as possible as well as compatible with popular libraries, such as React and React Native.  We also want to make it easy to port Uppy to any environments or ecosystems that are not officially supported.</p>
+<p>We have done a lot of research. We created <a href="https://github.com/hedgerh/uppy-react" target="_blank" rel="noopener">prototypes of Uppy React components</a> and  we also created a new module that we like to call &#x201C;Uppy Base.&#x201D; <a href="https://github.com/hedgerh/uppy-base" target="_blank" rel="noopener"><code>uppy-base</code></a> is a thin module containing reusable functionality from some of our plugins that can be used in any ecosystem or environment, without being opinionated about the UI.</p>
 <a id="more"></a>
 <p>Finally, we are also discussing using <a href="https://github.com/reactjs/redux" target="_blank" rel="noopener">Redux</a> as the internal state management store within Uppy.  You can see some drafts under the <a href="https://github.com/transloadit/uppy/tree/master/src/experimental" target="_blank" rel="noopener"><code>src/experimental</code> folder</a>.</p>
 <p>Have a look at the <a href="https://github.com/hedgerh/uppy-base" target="_blank" rel="noopener">Uppy Base repository here</a>.</p>
@@ -171,10 +167,10 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>You are, of course, more than welcome to chime in on other issues or to open new ones!</p>
 <h2 id="Dashboard-refreshed-look-and-new-features"><a href="#Dashboard-refreshed-look-and-new-features" class="headerlink" title="Dashboard: refreshed look and new features"></a>Dashboard: refreshed look and new features</h2><p>In an attempt to be brave and keep things simple, we have removed the dashed border from inside the Dashboard, rewritten its layout with flexbox, and tried out a new <a href="https://cloud.githubusercontent.com/assets/1199054/18763191/35d31ddc-80da-11e6-9a2c-c46388857135.png" target="_blank" rel="noopener">blend-in-with-the-background-and-blur</a> mode.</p>
 <p><img alt="Refreshed Dashboard UI" src="/images/blog/0.10/dashboard-sep-27-2016.jpg"></p>
-<p>Uppy now also has the option to render the Dashboard inline on the page, instead of the default full modal dialog. To try it out, set <code>inline: true</code> in options, like this: <code>uppy.use(Dashboard, {target: &#39;.myContainer&#39;, inline: true})</code>.</p>
-<p>We have also added a circular progress bar that shows total upload progress, combined with a pause all / resume all button, and an info panel that shows speed, ETA and status for all uploads currently in progress. So you’ll have something fun and useful to look at while you are waiting!</p>
-<p><img alt="Dashboard UI with global pause/resume buttons and a status bar — progress speed & ETA" src="/images/blog/0.10/dashboard-pause-resume-sep-27-2016.jpg"></p>
-<p>Be sure not to miss out on the new Copy Link button that appears after a successful upload, right where the edit button usually is. We know, that’s pretty exciting! And it gets even better: when you click on it, the link is copied to your clipboard. Or, in less capable browsers, a window pops up with a text link, so you can copy it yourself. Bananas!</p>
+<p>Uppy now also has the option to render the Dashboard inline on the page, instead of the default full modal dialog. To try it out, set <code>inline: true</code> in options, like this: <code>uppy.use(Dashboard, {target: &apos;.myContainer&apos;, inline: true})</code>.</p>
+<p>We have also added a circular progress bar that shows total upload progress, combined with a pause all / resume all button, and an info panel that shows speed, ETA and status for all uploads currently in progress. So you&#x2019;ll have something fun and useful to look at while you are waiting!</p>
+<p><img alt="Dashboard UI with global pause/resume buttons and a status bar &#x2014; progress speed &amp; ETA" src="/images/blog/0.10/dashboard-pause-resume-sep-27-2016.jpg"></p>
+<p>Be sure not to miss out on the new Copy Link button that appears after a successful upload, right where the edit button usually is. We know, that&#x2019;s pretty exciting! And it gets even better: when you click on it, the link is copied to your clipboard. Or, in less capable browsers, a window pops up with a text link, so you can copy it yourself. Bananas!</p>
 <h2 id="Google-Drive-UI-improved"><a href="#Google-Drive-UI-improved" class="headerlink" title="Google Drive UI improved"></a>Google Drive UI improved</h2><p>The UI for Google Drive has received a fresh new redesign.  Check it out!</p>
 <p><img alt="The redesigned file browser UI for Google Drive" src="/images/blog/0.10/google-drive-ui-sep-27-2016.jpg"></p>
 <h2 id="Listen-to-events"><a href="#Listen-to-events" class="headerlink" title="Listen to events"></a>Listen to events</h2><p>We have finally begun to expose events on the <code>uppy</code> instance, so you can now subscribe to them and use them in your app. For example, in order to display an image in your UI after it has been successfully uploaded:</p>
@@ -186,20 +182,20 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>There is also <code>core:upload-progress</code> to track progress and <code>core:success</code> for when all uploads are complete. The <a href="https://github.com/transloadit/uppy/#api" target="_blank" rel="noopener">event documentation</a> is quite small right now, we’ll be adding more once we sort out the API.</p>
-<h2 id="But-wait-there’s-more"><a href="#But-wait-there’s-more" class="headerlink" title="But wait, there’s more!"></a>But wait, there’s more!</h2><ul>
+<p>There is also <code>core:upload-progress</code> to track progress and <code>core:success</code> for when all uploads are complete. The <a href="https://github.com/transloadit/uppy/#api" target="_blank" rel="noopener">event documentation</a> is quite small right now, we&#x2019;ll be adding more once we sort out the API.</p>
+<h2 id="But-wait-there&#x2019;s-more"><a href="#But-wait-there&#x2019;s-more" class="headerlink" title="But wait, there&#x2019;s more!"></a>But wait, there&#x2019;s more!</h2><ul>
 <li>i18n strings now extend default en_US dictionary: if a certain string is not available in a language, the English string will be displayed.</li>
-<li>Updated readme: improved usage docs and CDN links. Check out <a href="https://github.com/transloadit/uppy/#usage" target="_blank" rel="noopener">the new usage section</a> for yourself. Import, require or script tag? In any case, we’ve got your back.</li>
-<li>Capabilities: we have added <code>capabilities</code> to the state.  For example, if ‘tus’ resumable uploader is used, <code>capabilities.resumable === true</code> is added to the state, so it is easy to check what upload capabilities are available. More to come.</li>
+<li>Updated readme: improved usage docs and CDN links. Check out <a href="https://github.com/transloadit/uppy/#usage" target="_blank" rel="noopener">the new usage section</a> for yourself. Import, require or script tag? In any case, we&#x2019;ve got your back.</li>
+<li>Capabilities: we have added <code>capabilities</code> to the state.  For example, if &#x2018;tus&#x2019; resumable uploader is used, <code>capabilities.resumable === true</code> is added to the state, so it is easy to check what upload capabilities are available. More to come.</li>
 </ul>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.10.0:</p>
 <ul>
-<li>core: expose some events/APIs/callbacks to the user: <code>onFileUploaded</code>, <code>onFileSelected</code>, <code>onAllUploaded</code>, <code>addFile</code> (or <code>parseFile</code>), open modal… (@arturi, @hedgerh)</li>
-<li>core: how would Uppy work without the UI, if one wants to Uppy to just add files and upload, while rendering preview and UI by themselves #116 — discussion Part 1 (@arturi, @hedgerh)</li>
+<li>core: expose some events/APIs/callbacks to the user: <code>onFileUploaded</code>, <code>onFileSelected</code>, <code>onAllUploaded</code>, <code>addFile</code> (or <code>parseFile</code>), open modal&#x2026; (@arturi, @hedgerh)</li>
+<li>core: how would Uppy work without the UI, if one wants to Uppy to just add files and upload, while rendering preview and UI by themselves #116 &#x2014; discussion Part 1 (@arturi, @hedgerh)</li>
 <li>core: refactor towards react compatibility as discussed in <a href="https://github.com/transloadit/uppy/issues/110" target="_blank" rel="noopener">https://github.com/transloadit/uppy/issues/110</a> (@hedgerh)</li>
-<li>core: CSS modules? allow bundling of CSS in JS for simple use in NPM? See #120#issuecomment-242455042, try <a href="https://github.com/rtsao/csjs" target="_blank" rel="noopener">https://github.com/rtsao/csjs</a> — verdict: not yet, try again later (@arturi, @hedgerh)</li>
-<li>core: try Web Workers and FileReaderSync for image resizing again — still slow, probably message payload between webworker and regular thread is huge (@arturi)</li>
-<li>core: i18n strings should extend default en_US dictionary — if a certain string in not available in German, English should be displayed (@arturi)</li>
+<li>core: CSS modules? allow bundling of CSS in JS for simple use in NPM? See #120#issuecomment-242455042, try <a href="https://github.com/rtsao/csjs" target="_blank" rel="noopener">https://github.com/rtsao/csjs</a> &#x2014; verdict: not yet, try again later (@arturi, @hedgerh)</li>
+<li>core: try Web Workers and FileReaderSync for image resizing again &#x2014; still slow, probably message payload between webworker and regular thread is huge (@arturi)</li>
+<li>core: i18n strings should extend default en_US dictionary &#x2014; if a certain string in not available in German, English should be displayed (@arturi)</li>
 <li>dashboard: refactor to smaller components, pass props down (@arturi)</li>
 <li>dashboard: option to render Dashboard inline instead of a modal dialog (@arturi)</li>
 <li>dashboard: global circular progress bar, try out different designs for total upload speed and ETA (@arturi)</li>
@@ -211,13 +207,31 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>google drive: improve UI (@hedgerh)</li>
 <li>tus: add <code>resumable</code> capability flag (@arturi)</li>
 <li>tus: start fixing pause/resume issues and race conditions (@arturi)</li>
-<li>test: working Uppy example on Require Bin — latest version straight from NPM <a href="http://requirebin.com/?gist=54e076cccc929cc567cb0aba38815105" target="_blank" rel="noopener">http://requirebin.com/?gist=54e076cccc929cc567cb0aba38815105</a> (@arturi @account)</li>
+<li>test: working Uppy example on Require Bin &#x2014; latest version straight from NPM <a href="http://requirebin.com/?gist=54e076cccc929cc567cb0aba38815105" target="_blank" rel="noopener">http://requirebin.com/?gist=54e076cccc929cc567cb0aba38815105</a> (@arturi @account)</li>
 <li>meta: update readme docs, add unpkg CDN links (<a href="https://unpkg.com/uppy/dist/uppy.min.css" target="_blank" rel="noopener">https://unpkg.com/uppy/dist/uppy.min.css</a>) (@arturi)</li>
 <li>meta: write 0.10 release blog post (@arturi)</li>
 </ul>
-<p>We’ll see you in about a month!</p>
+<p>We&#x2019;ll see you in about a month!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

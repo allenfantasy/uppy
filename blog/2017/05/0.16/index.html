@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -157,24 +153,24 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.16: Transloadit!</h1>
   <h4>Wednesday May 24, 2017</h4>
     
-    <p>Hello there! Missed us much? :) We’re chomping at the bits, at least, to tell you about our latest release. This one has been in the works longer than usual, but then again, it’s also way cooler than usual, so let’s get right to it.</p>
+    <p>Hello there! Missed us much? :) We&#x2019;re chomping at the bits, at least, to tell you about our latest release. This one has been in the works longer than usual, but then again, it&#x2019;s also way cooler than usual, so let&#x2019;s get right to it.</p>
 <a id="more"></a>
-<h2 id="Transloadit-integration-beta"><a href="#Transloadit-integration-beta" class="headerlink" title="Transloadit integration beta"></a>Transloadit integration beta</h2><p>Yes, you read that right! We now have an easily integrable <a href="https://transloadit.com" target="_blank" rel="noopener">Transloadit</a> plugin. It was a big push indeed and we owe a big debt of thanks to <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Renée</a> for going fully beast mode on this. The plugin is still in beta, but it works - and it’s awesome. That said, of course it is entirely optional: if you don’t use Transloadit, you don’t have to bundle the plugin.</p>
+<h2 id="Transloadit-integration-beta"><a href="#Transloadit-integration-beta" class="headerlink" title="Transloadit integration beta"></a>Transloadit integration beta</h2><p>Yes, you read that right! We now have an easily integrable <a href="https://transloadit.com" target="_blank" rel="noopener">Transloadit</a> plugin. It was a big push indeed and we owe a big debt of thanks to <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">Ren&#xE9;e</a> for going fully beast mode on this. The plugin is still in beta, but it works - and it&#x2019;s awesome. That said, of course it is entirely optional: if you don&#x2019;t use Transloadit, you don&#x2019;t have to bundle the plugin.</p>
 <video alt="Demo video showing the Transloadit upload plugin in action." muted autoplay loop><br>  <source src="/images/blog/0.16/transloadit.webm" type="video/webm"><br>  <source src="/images/blog/0.16/transloadit.mp4" type="video/mp4"><br></video>
 
-<p>The Transloadit plugin for Uppy handles creating an “Assembly” (a file conversion job) before uploading files, and can optionally wait for file conversions to complete before showing the uploads as successful, as shown above. Listen for the <code>core:success</code> event to respond to upload completion, just like you would without the Transloadit plugin.</p>
-<p>We’ll be adding decent documentation to the Uppy website soon, but <a href="https://gist.github.com/kvz/8ae07aa8c063c8e55abbc1580b50c8a4#file-uppy-demo-js-L117-L147" target="_blank" rel="noopener">here</a> is a quick code sample of how a Transloadit plugin integration would look like already.</p>
-<h2 id="More-work-on-high-level-React-components"><a href="#More-work-on-high-level-React-components" class="headerlink" title="More work on high-level React components"></a>More work on high-level React components</h2><p>Since the last release, we’ve been exploring possibilities for an official set of React components. Initially, we’ll be providing component wrappers for the existing Uppy UI plugins, such as the <a href="/examples/dashboard">Dashboard</a> and <a href="/examples/dragdrop">DragDrop</a> plugins. They aren’t ready yet, but if you’d like to follow along with development, check out the work that has been done so far in pull request <a href="https://github.com/transloadit/uppy/pull/170" target="_blank" rel="noopener">#170</a>!</p>
+<p>The Transloadit plugin for Uppy handles creating an &#x201C;Assembly&#x201D; (a file conversion job) before uploading files, and can optionally wait for file conversions to complete before showing the uploads as successful, as shown above. Listen for the <code>core:success</code> event to respond to upload completion, just like you would without the Transloadit plugin.</p>
+<p>We&#x2019;ll be adding decent documentation to the Uppy website soon, but <a href="https://gist.github.com/kvz/8ae07aa8c063c8e55abbc1580b50c8a4#file-uppy-demo-js-L117-L147" target="_blank" rel="noopener">here</a> is a quick code sample of how a Transloadit plugin integration would look like already.</p>
+<h2 id="More-work-on-high-level-React-components"><a href="#More-work-on-high-level-React-components" class="headerlink" title="More work on high-level React components"></a>More work on high-level React components</h2><p>Since the last release, we&#x2019;ve been exploring possibilities for an official set of React components. Initially, we&#x2019;ll be providing component wrappers for the existing Uppy UI plugins, such as the <a href="/examples/dashboard">Dashboard</a> and <a href="/examples/dragdrop">DragDrop</a> plugins. They aren&#x2019;t ready yet, but if you&#x2019;d like to follow along with development, check out the work that has been done so far in pull request <a href="https://github.com/transloadit/uppy/pull/170" target="_blank" rel="noopener">#170</a>!</p>
 <h2 id="DOM-element-in-target-option-uppy-close-for-tearing-down-an-Uppy-instance"><a href="#DOM-element-in-target-option-uppy-close-for-tearing-down-an-Uppy-instance" class="headerlink" title="DOM element in target: option, uppy.close() for tearing down an Uppy instance"></a>DOM element in <code>target:</code> option, <code>uppy.close()</code> for tearing down an Uppy instance</h2><p>While laying the groundwork for the React component integrations, Uppy has also become a bit friendlier towards being integrated with other frameworks and in single-page apps. The <code>target:</code> option in each plugin used to work only with CSS selectors, which was difficult to use if the plugin should be mounted on a dynamically generated element. In 0.16, either a query selector or an actual DOM element can be passed in.</p>
-<p>The new <code>.close()</code> method on the Uppy instance cleans up all of Uppy’s event handlers and DOM elements. Useful when navigating away from a page with an Uppy uploader in a single-page app, or when unmounting a React component that contains an Uppy instance!</p>
+<p>The new <code>.close()</code> method on the Uppy instance cleans up all of Uppy&#x2019;s event handlers and DOM elements. Useful when navigating away from a page with an Uppy uploader in a single-page app, or when unmounting a React component that contains an Uppy instance!</p>
 <h2 id="Server-time"><a href="#Server-time" class="headerlink" title="Server time!"></a>Server time!</h2><p>We got everything covered - front-to-back-end - so you can be sure we also got some things going on the server side.</p>
 <ul>
-<li>parallelizing downloading/uploading remote files: start uploading chunks right away, while still downloading the file on disk. Even though the server may download files relatively faster, it is good to know that you don’t have to wait out the download before the upload begins. </li>
+<li>parallelizing downloading/uploading remote files: start uploading chunks right away, while still downloading the file on disk. Even though the server may download files relatively faster, it is good to know that you don&#x2019;t have to wait out the download before the upload begins. </li>
 <li>Image thumbnails are now also shown for remote files.</li>
 <li>Automated tests have been added using the test library, <a href="https://facebook.github.io/jest/" target="_blank" rel="noopener">jest</a>.</li>
 <li>Remote files are now deleted from local disk immediately after a successful upload.</li>
 </ul>
-<h2 id="And"><a href="#And" class="headerlink" title="And"></a>And</h2><p>Multiple necessary chores (the kind you don’t like to talk about at parties), such as:</p>
+<h2 id="And"><a href="#And" class="headerlink" title="And"></a>And</h2><p>Multiple necessary chores (the kind you don&#x2019;t like to talk about at parties), such as:</p>
 <ul>
 <li>Replacing <code>babel-preset-es2015-loose</code> by the standard es2015 preset with <code>loose</code> option</li>
 <li>Merging the Tus10 plugin options with <code>tus-js-client</code> options</li>
@@ -210,7 +206,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </ul>
 <p>Enjoy!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#ife">

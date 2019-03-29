@@ -577,7 +577,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token keyword">import</span> <span class="token string">'@uppy/dashboard/dist/style.css'</span>
 </pre></td></tr></table></figure>
 <p>Import general Core styles from <code>@uppy/core/dist/style.css</code> first, then add the Dashboard styles from <code>@uppy/dashboard/dist/style.css</code>. A minified version is also available as <code>style.min.css</code> at the same path. The way to do import depends on your build system.</p>
-<p>⚠️ The <code>@uppy/dashboard</code> plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as (<a href="/docs/status-bar"><code>@uppy/status-bar</code></a> and <a href="/docs/informer"><code>@uppy/informer</code></a>). If you also use the <code>@uppy/status-bar</code> or <code>@uppy/informer</code> plugin directly, you should not include their CSS files, but instead only use the one from the <code>@uppy/dashboard</code> plugin.</p>
+<p>&#x26A0;&#xFE0F; The <code>@uppy/dashboard</code> plugin includes CSS for the Dashboard itself, and the various plugins used by the Dashboard, such as (<a href="/docs/status-bar"><code>@uppy/status-bar</code></a> and <a href="/docs/informer"><code>@uppy/informer</code></a>). If you also use the <code>@uppy/status-bar</code> or <code>@uppy/informer</code> plugin directly, you should not include their CSS files, but instead only use the one from the <code>@uppy/dashboard</code> plugin.</p>
 <p>Styles for Provider plugins, like Google Drive and Instagram, are also bundled with Dashboard styles. Styles for other plugins, such as <code>@uppy/url</code> and <code>@uppy/webcam</code>, are not inluded. If you are using those, please see their docs and make sure to include styles for them as well.</p>
 <h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>The Dashboard can be extensively customized by configuring the options below to your liking:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Dashboard<span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -612,11 +612,11 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   browserBackButtonClose<span class="token punctuation">:</span> <span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="id-39-Dashboard-39"><a href="#id-39-Dashboard-39" class="headerlink" title="id: &#39;Dashboard&#39;"></a><code>id: &#39;Dashboard&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;Dashboard&#39;</code>, but you can change this if you need multiple Dashboard instances.<br>Plugins that are added by the Dashboard get unique IDs based on this ID, like <code>&#39;Dashboard:StatusBar&#39;</code> and <code>&#39;Dashboard:Informer&#39;</code>.</p>
-<h3 id="target-39-body-39"><a href="#target-39-body-39" class="headerlink" title="target: &#39;body&#39;"></a><code>target: &#39;body&#39;</code></h3><p>Dashboard is rendered into <code>body</code>, because it is hidden by default and only opened as a modal when <code>trigger</code> is clicked.</p>
+<h3 id="id-39-Dashboard-39"><a href="#id-39-Dashboard-39" class="headerlink" title="id: &apos;Dashboard&apos;"></a><code>id: &apos;Dashboard&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;Dashboard&apos;</code>, but you can change this if you need multiple Dashboard instances.<br>Plugins that are added by the Dashboard get unique IDs based on this ID, like <code>&apos;Dashboard:StatusBar&apos;</code> and <code>&apos;Dashboard:Informer&apos;</code>.</p>
+<h3 id="target-39-body-39"><a href="#target-39-body-39" class="headerlink" title="target: &apos;body&apos;"></a><code>target: &apos;body&apos;</code></h3><p>Dashboard is rendered into <code>body</code>, because it is hidden by default and only opened as a modal when <code>trigger</code> is clicked.</p>
 <h3 id="inline-false"><a href="#inline-false" class="headerlink" title="inline: false"></a><code>inline: false</code></h3><p>By default, Dashboard will be rendered as a modal, which is opened by clicking on <code>trigger</code>. If <code>inline: true</code>, Dashboard will be rendered into <code>target</code> and fit right in.</p>
-<h3 id="trigger-39-uppy-select-files-39"><a href="#trigger-39-uppy-select-files-39" class="headerlink" title="trigger: &#39;#uppy-select-files&#39;"></a><code>trigger: &#39;#uppy-select-files&#39;</code></h3><p>String with a CSS selector for a button that will trigger opening the Dashboard modal. Multiple buttons or links can be used, as long as it is a class selector (<code>.uppy-choose</code>, for example).</p>
-<h3 id="plugins"><a href="#plugins" class="headerlink" title="plugins: []"></a><code>plugins: []</code></h3><p>List of plugin IDs that should be shown in the Dashboard’s top bar. For example, to show the Webcam plugin:</p>
+<h3 id="trigger-39-uppy-select-files-39"><a href="#trigger-39-uppy-select-files-39" class="headerlink" title="trigger: &apos;#uppy-select-files&apos;"></a><code>trigger: &apos;#uppy-select-files&apos;</code></h3><p>String with a CSS selector for a button that will trigger opening the Dashboard modal. Multiple buttons or links can be used, as long as it is a class selector (<code>.uppy-choose</code>, for example).</p>
+<h3 id="plugins"><a href="#plugins" class="headerlink" title="plugins: []"></a><code>plugins: []</code></h3><p>List of plugin IDs that should be shown in the Dashboard&#x2019;s top bar. For example, to show the Webcam plugin:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Webcam<span class="token punctuation">)</span>
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Dashboard<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'Webcam'</span><span class="token punctuation">]</span>
@@ -625,10 +625,10 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <p>Of course, you can also use the <code>target</code> option in the Webcam plugin to achieve this. However, that does not work with the React components. The <code>target</code> option may be changed in the future to only accept DOM elements, so it is recommended to use this <code>plugins</code> array instead.</p>
 <h3 id="width-750"><a href="#width-750" class="headerlink" title="width: 750"></a><code>width: 750</code></h3><p>Width of the Dashboard in pixels. Used when <code>inline: true</code>.</p>
 <h3 id="height-550"><a href="#height-550" class="headerlink" title="height: 550"></a><code>height: 550</code></h3><p>Height of the Dashboard in pixels. Used when <code>inline: true</code>.</p>
-<h3 id="showLinkToFileUploadResult-true"><a href="#showLinkToFileUploadResult-true" class="headerlink" title="showLinkToFileUploadResult: true"></a><code>showLinkToFileUploadResult: true</code></h3><p>By default, when a file upload has completed, the file icon in the Dashboard turns into a link to the uploaded file. If your app does not publicly store uploaded files or if it’s otherwise unwanted, pass <code>showLinkToFileUploadResult: false</code>.</p>
+<h3 id="showLinkToFileUploadResult-true"><a href="#showLinkToFileUploadResult-true" class="headerlink" title="showLinkToFileUploadResult: true"></a><code>showLinkToFileUploadResult: true</code></h3><p>By default, when a file upload has completed, the file icon in the Dashboard turns into a link to the uploaded file. If your app does not publicly store uploaded files or if it&#x2019;s otherwise unwanted, pass <code>showLinkToFileUploadResult: false</code>.</p>
 <h3 id="showProgressDetails-false"><a href="#showProgressDetails-false" class="headerlink" title="showProgressDetails: false"></a><code>showProgressDetails: false</code></h3><p>Passed to the Status Bar plugin used in the Dashboard.</p>
 <p>By default, progress in Status Bar is shown as a simple percentage. If you would like to also display remaining upload size and time, set this to <code>true</code>.</p>
-<p><code>showProgressDetails: false</code>: Uploading: 45%<br><code>showProgressDetails: true</code>: Uploading: 45%・43 MB of 101 MB・8s left</p>
+<p><code>showProgressDetails: false</code>: Uploading: 45%<br><code>showProgressDetails: true</code>: Uploading: 45%&#x30FB;43 MB of 101 MB&#x30FB;8s left</p>
 <h3 id="hideUploadButton-false"><a href="#hideUploadButton-false" class="headerlink" title="hideUploadButton: false"></a><code>hideUploadButton: false</code></h3><p>Passed to the Status Bar plugin used in the Dashboard.</p>
 <p>Hide the upload button. Use this if you are providing a custom upload button somewhere, and using the <code>uppy.upload()</code> API.</p>
 <h3 id="hideRetryButton-false"><a href="#hideRetryButton-false" class="headerlink" title="hideRetryButton: false"></a><code>hideRetryButton: false</code></h3><p>Passed to the Status Bar plugin used in the Dashboard.</p>
@@ -638,10 +638,10 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <h3 id="hideCancelButton-false"><a href="#hideCancelButton-false" class="headerlink" title="hideCancelButton: false"></a><code>hideCancelButton: false</code></h3><p>Passed to the Status Bar plugin used in the Dashboard.</p>
 <p>Hide the cancel button. Use this if you are providing a custom retry button somewhere, and using the <code>uppy.cancelAll()</code> API.</p>
 <h3 id="hideProgressAfterFinish-false"><a href="#hideProgressAfterFinish-false" class="headerlink" title="hideProgressAfterFinish: false"></a><code>hideProgressAfterFinish: false</code></h3><p>Hide Status Bar after the upload has finished.</p>
-<h3 id="showSelectedFiles-true"><a href="#showSelectedFiles-true" class="headerlink" title="showSelectedFiles: true"></a><code>showSelectedFiles: true</code></h3><p>Show the list (grid) of selected files with preview and file name. In case you are showing selected files in your own app’s UI and want the Uppy Dashboard to just be a picker, the list can be hidden with this option.</p>
+<h3 id="showSelectedFiles-true"><a href="#showSelectedFiles-true" class="headerlink" title="showSelectedFiles: true"></a><code>showSelectedFiles: true</code></h3><p>Show the list (grid) of selected files with preview and file name. In case you are showing selected files in your own app&#x2019;s UI and want the Uppy Dashboard to just be a picker, the list can be hidden with this option.</p>
 <p>See also <code>disableStatusBar</code> option, which can hide the progress and upload button.</p>
-<h3 id="note-null"><a href="#note-null" class="headerlink" title="note: null"></a><code>note: null</code></h3><p>Optionally, specify a string of text that explains something about the upload for the user. This is a place to explain any <code>restrictions</code> that are put in place. For example: <code>&#39;Images and video only, 2–3 files, up to 1 MB&#39;</code>.</p>
-<h3 id="metaFields"><a href="#metaFields" class="headerlink" title="metaFields: []"></a><code>metaFields: []</code></h3><p>An array of UI field objects that will be shown when a user clicks the “edit” button on that file. Configuring this enables the “edit” button on file cards. Each object requires:</p>
+<h3 id="note-null"><a href="#note-null" class="headerlink" title="note: null"></a><code>note: null</code></h3><p>Optionally, specify a string of text that explains something about the upload for the user. This is a place to explain any <code>restrictions</code> that are put in place. For example: <code>&apos;Images and video only, 2&#x2013;3 files, up to 1 MB&apos;</code>.</p>
+<h3 id="metaFields"><a href="#metaFields" class="headerlink" title="metaFields: []"></a><code>metaFields: []</code></h3><p>An array of UI field objects that will be shown when a user clicks the &#x201C;edit&#x201D; button on that file. Configuring this enables the &#x201C;edit&#x201D; button on file cards. Each object requires:</p>
 <ul>
 <li><code>id</code>, the name of the meta field.</li>
 <li><code>name</code>, the label shown in the interface.</li>
@@ -656,7 +656,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   <span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>Note that this metadata will only be set on a file object if it is entered by the user. If the user doesn’t edit a file’s metadata, it will not have default values; instead everything will be <code>undefined</code>. If you want to set a certain meta field to each file regardless of user actions, set <a href="/docs/uppy/#meta"><code>meta</code> in the Uppy constructor options</a>.</p>
+<p>Note that this metadata will only be set on a file object if it is entered by the user. If the user doesn&#x2019;t edit a file&#x2019;s metadata, it will not have default values; instead everything will be <code>undefined</code>. If you want to set a certain meta field to each file regardless of user actions, set <a href="/docs/uppy/#meta"><code>meta</code> in the Uppy constructor options</a>.</p>
 <h3 id="closeModalOnClickOutside-false"><a href="#closeModalOnClickOutside-false" class="headerlink" title="closeModalOnClickOutside: false"></a><code>closeModalOnClickOutside: false</code></h3><p>Set to true to automatically close the modal when the user clicks outside of it.</p>
 <h3 id="closeAfterFinish-false"><a href="#closeAfterFinish-false" class="headerlink" title="closeAfterFinish: false"></a><code>closeAfterFinish: false</code></h3><p>Set to true to automatically close the modal when all current uploads are complete. You can use this together with the <a href="/docs/uppy#allowMultipleUploads-true"><code>allowMultipleUploads: false</code></a> option in Uppy Core to create a smooth experience when uploading a single (batch of) file(s).</p>
 <p>With this option, the modal is only automatically closed when uploads are complete <em>and successful</em>. If some uploads failed, the modal stays open so the user can retry failed uploads or cancel the current batch and upload an entirely different set of files instead.</p>
@@ -671,7 +671,7 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <h3 id="disableInformer-false"><a href="#disableInformer-false" class="headerlink" title="disableInformer: false"></a><code>disableInformer: false</code></h3><p>Dashboard ships with the <code>Informer</code> plugin that notifies when the browser is offline, or when it is time to say cheese if <code>Webcam</code> is taking a picture. If you want, you can disable the Informer and/or provide your own custom solution.</p>
 <h3 id="disableThumbnailGenerator-false"><a href="#disableThumbnailGenerator-false" class="headerlink" title="disableThumbnailGenerator: false"></a><code>disableThumbnailGenerator: false</code></h3><p>Dashboard ships with the <code>ThumbnailGenerator</code> plugin that adds small resized image thumbnails to images, for preview purposes only. If you want, you can disable the <code>ThumbnailGenerator</code> and/or provide your own custom solution.</p>
 <h3 id="locale"><a href="#locale" class="headerlink" title="locale: {}"></a><code>locale: {}</code></h3><p>Localize text that is shown to the user.</p>
-<p>The Dashboard also contains the <a href="/docs/status-bar"><code>@uppy/status-bar</code></a> plugin by default, which has its own strings. Strings for the Status Bar can also be specified in the Dashboard <code>locale.strings</code> option, and will be passed down. They are not all listed below—see the <a href="/docs/status-bar"><code>@uppy/status-bar</code></a> documentation pages for the full list.</p>
+<p>The Dashboard also contains the <a href="/docs/status-bar"><code>@uppy/status-bar</code></a> plugin by default, which has its own strings. Strings for the Status Bar can also be specified in the Dashboard <code>locale.strings</code> option, and will be passed down. They are not all listed below&#x2014;see the <a href="/docs/status-bar"><code>@uppy/status-bar</code></a> documentation pages for the full list.</p>
 <p>The default English strings are:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>strings<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   <span class="token comment">// When `inline: false`, used as the screen reader label for the button that closes the modal.</span>
@@ -742,16 +742,34 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 </pre></td></tr></table></figure>
 <h3 id="replaceTargetContent-false"><a href="#replaceTargetContent-false" class="headerlink" title="replaceTargetContent: false"></a><code>replaceTargetContent: false</code></h3><p>Remove all children of the <code>target</code> element before mounting the Dashboard. By default, Uppy will append any UI to the <code>target</code> DOM element. This is the least dangerous option. However, there might be cases when you would want to clear the container element before placing Uppy UI in there (for example, to provide a fallback <code>&lt;form&gt;</code> that will be shown if Uppy or JavaScript is not available). Set <code>replaceTargetContent: true</code> to clear the <code>target</code> before appending.</p>
 <h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><h3 id="openModal"><a href="#openModal" class="headerlink" title="openModal()"></a><code>openModal()</code></h3><p>Shows the Dashboard modal. Use it like this:</p>
-<p><code>uppy.getPlugin(&#39;Dashboard&#39;).openModal()</code></p>
+<p><code>uppy.getPlugin(&apos;Dashboard&apos;).openModal()</code></p>
 <h3 id="closeModal"><a href="#closeModal" class="headerlink" title="closeModal()"></a><code>closeModal()</code></h3><p>Hides the Dashboard modal. Use it like this:</p>
-<p><code>uppy.getPlugin(&#39;Dashboard&#39;).closeModal()</code></p>
+<p><code>uppy.getPlugin(&apos;Dashboard&apos;).closeModal()</code></p>
 <h3 id="isModalOpen"><a href="#isModalOpen" class="headerlink" title="isModalOpen()"></a><code>isModalOpen()</code></h3><p>Returns <code>true</code> if the Dashboard modal is open, <code>false</code> otherwise.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> dashboard <span class="token operator">=</span> uppy<span class="token punctuation">.</span><span class="token function">getPlugin</span><span class="token punctuation">(</span><span class="token string">'Dashboard'</span><span class="token punctuation">)</span>
 <span class="token keyword">if</span> <span class="token punctuation">(</span> dashboard<span class="token punctuation">.</span><span class="token function">isModalOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
   dashboard<span class="token punctuation">.</span><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/dashboard.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

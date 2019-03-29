@@ -73,9 +73,7 @@
           
 <div class="Content js-Content ">
     <h1></h1>
-    <link rel="stylesheet" href="/uppy/uppy.min.css">
-
-<div id="uppy-dnd"></div>
+    <div id="uppy-dnd"></div>
 
 <script src="/uppy/uppy.min.js"></script>
 <script>
@@ -86,7 +84,25 @@
 
   console.log('Uppy loaded from CDN with tus enabled');
 </script>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/examples/bundle/app.html" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

@@ -98,7 +98,7 @@ In 0.27, we have some more iterations on the Dashboard UI for you in store again
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ In 0.27, we have some more iterations on the Dashboard UI for you in store again
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -166,11 +162,11 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p><img src="/images/blog/0.27/uppy-with-tabs.jpg"></p>
 <p>So in <code>0.27</code>, we are iterating on the UI again:</p>
 <p><img src="/images/blog/0.27/uppy-add-initial.jpg"></p>
-<p>The providers are now visible as a list of icons on the initial screen (plus, we’ve added colors!), but when you complete the inital selection, it is hidden behind the “plus” button:</p>
+<p>The providers are now visible as a list of icons on the initial screen (plus, we&#x2019;ve added colors!), but when you complete the inital selection, it is hidden behind the &#x201C;plus&#x201D; button:</p>
 <p><img src="/images/blog/0.27/uppy-files-selected.jpg"></p>
 <p>You can always add more:</p>
 <p><img src="/images/blog/0.27/uppy-add-more.jpg"></p>
-<p>The StatusBar that shows progress has been “lightened”:</p>
+<p>The StatusBar that shows progress has been &#x201C;lightened&#x201D;:</p>
 <p><img src="/images/blog/0.27/uppy-upload-in-progress.jpg"></p>
 <p><img src="/images/blog/0.27/uppy-upload-complete.jpg"></p>
 <p>We have decided to drop multiple-color support, so Informer messages will now always appear in a gray, round bubble. Apart from that, we have made tons of small fixes, such as better animations, colors, font sizes, and more. <a href="https://github.com/transloadit/uppy/pull/942" target="_blank" rel="noopener">Check out the PR #942</a> for details.</p>
@@ -178,36 +174,54 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>The mobile version is now much more refined as well:</p>
 <p><img src="/images/blog/0.27/uppy-mobile.jpg"></p>
 <p>As always, feel free to <a href="https://uppy.io/examples/dashboard/">try Uppy live on the Dashboard example</a>.</p>
-<h2 id="autoProceed-false-by-default"><a href="#autoProceed-false-by-default" class="headerlink" title="autoProceed: false by default"></a><code>autoProceed: false</code> by default</h2><p>⚠️ <strong>breaking</strong></p>
+<h2 id="autoProceed-false-by-default"><a href="#autoProceed-false-by-default" class="headerlink" title="autoProceed: false by default"></a><code>autoProceed: false</code> by default</h2><p>&#x26A0;&#xFE0F; <strong>breaking</strong></p>
 <p>By default, Uppy used to begin uploading right after you selected a file. If you wanted to let users edit some file metadata or pick and choose from multiple sources first, you had to set <code>autoProceed: false</code>:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token comment">// this line could be seen in many of the Uppy examples</span>
 <span class="token keyword">const</span> uppy <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span> autoProceed<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>Since in most cases we actually wanted <code>autoProceed: false</code>, this is now the new default. While it makes Uppy’s UI less magical and harder to make irreversible mistakes with, right out of the box, we feel this is the way to go. Make sure you change this in your project if needed. If you weren’t setting an <code>autoProceed</code> option at all, you will now have to add <code>autoProceed: true</code>.</p>
-<h2 id="Progress-on-React-Native"><a href="#Progress-on-React-Native" class="headerlink" title="Progress on React Native"></a>Progress on React Native</h2><p>We’ve begun working on supporting React Native in Uppy. Since <code>0.27</code>, it should run in a React Native environment — meaning you can use Uppy API (<code>uppy.addFile()</code>, <code>uppy.upload()</code>) for adding files and uploading, without the UI. <code>@uppy/xhr-upload</code> uploader is already supported, and we are working on making <code>@uppy/tus</code> (and <code>tus-js-client</code> itself) run in React Native as well.</p>
+<p>Since in most cases we actually wanted <code>autoProceed: false</code>, this is now the new default. While it makes Uppy&#x2019;s UI less magical and harder to make irreversible mistakes with, right out of the box, we feel this is the way to go. Make sure you change this in your project if needed. If you weren&#x2019;t setting an <code>autoProceed</code> option at all, you will now have to add <code>autoProceed: true</code>.</p>
+<h2 id="Progress-on-React-Native"><a href="#Progress-on-React-Native" class="headerlink" title="Progress on React Native"></a>Progress on React Native</h2><p>We&#x2019;ve begun working on supporting React Native in Uppy. Since <code>0.27</code>, it should run in a React Native environment &#x2014; meaning you can use Uppy API (<code>uppy.addFile()</code>, <code>uppy.upload()</code>) for adding files and uploading, without the UI. <code>@uppy/xhr-upload</code> uploader is already supported, and we are working on making <code>@uppy/tus</code> (and <code>tus-js-client</code> itself) run in React Native as well.</p>
 <p>We plan to make sure all non-UI Uppy plugins work in RN, and then provide a few useful components for adding Uppy to your RN apps.</p>
-<p>Please head to the <a href="https://github.com/transloadit/uppy/pull/988" target="_blank" rel="noopener">React Native PR #988</a> for details. We’d love to hear what you think and your suggestions for improving the Uppy React Native experience.</p>
-<p>Built-in React Native support has been a 1.0 goal from the start. We have had many requests about Angular.js and Vue support. There are already community-built solutions for these platforms that seem to work well, but unfortunately we won’t be officially supporting them before our 1.0 milestone. Depending on community input, we might add that later.</p>
+<p>Please head to the <a href="https://github.com/transloadit/uppy/pull/988" target="_blank" rel="noopener">React Native PR #988</a> for details. We&#x2019;d love to hear what you think and your suggestions for improving the Uppy React Native experience.</p>
+<p>Built-in React Native support has been a 1.0 goal from the start. We have had many requests about Angular.js and Vue support. There are already community-built solutions for these platforms that seem to work well, but unfortunately we won&#x2019;t be officially supporting them before our 1.0 milestone. Depending on community input, we might add that later.</p>
 <h2 id="Package-sizes"><a href="#Package-sizes" class="headerlink" title="Package sizes"></a>Package sizes</h2><p>We now have a cool table showing mingzipped bundle sizes for each individual Uppy package, <a href="https://uppy.io/docs/stats/#bundle-sizes">check it out</a>:</p>
 <p><img width="400" src="/images/blog/0.27/uppy-sizes.png"></p>
-<h2 id="“Uppy-Server”-is-now-“Companion”"><a href="#“Uppy-Server”-is-now-“Companion”" class="headerlink" title="“Uppy Server” is now “Companion”"></a>“Uppy Server” is now “Companion”</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> @uppy/companion
+<h2 id="&#x201C;Uppy-Server&#x201D;-is-now-&#x201C;Companion&#x201D;"><a href="#&#x201C;Uppy-Server&#x201D;-is-now-&#x201C;Companion&#x201D;" class="headerlink" title="&#x201C;Uppy Server&#x201D; is now &#x201C;Companion&#x201D;"></a>&#x201C;Uppy Server&#x201D; is now &#x201C;Companion&#x201D;</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> @uppy/companion
 </pre></td></tr></table></figure>
-<p>Uppy Server is an optional service that Uppy can use to import files from sources like Instagram or Dropbox. However, simply naming it “Server” was quite unclear and has caused some confusion. Many people thought you could upload files to Uppy Server as well, but that is not the case. We recommend uploading to a <a href="https://tus.io" target="_blank" rel="noopener">tus.io</a> server, or — if that’s too much for your simple usecase — using your existing webserver to handle the upload. </p>
+<p>Uppy Server is an optional service that Uppy can use to import files from sources like Instagram or Dropbox. However, simply naming it &#x201C;Server&#x201D; was quite unclear and has caused some confusion. Many people thought you could upload files to Uppy Server as well, but that is not the case. We recommend uploading to a <a href="https://tus.io" target="_blank" rel="noopener">tus.io</a> server, or &#x2014; if that&#x2019;s too much for your simple usecase &#x2014; using your existing webserver to handle the upload. </p>
 <p>So, to hopefully end this confusion once and for all, we are renaming Uppy Server to Companion: an optional tool in the datacenter, which you can use to add more functionality to your Uppy.js client. If nothing else, maybe it will net us some points for having yet another dog-themed name!</p>
 <p>Simultaneously, we moved Companion into the main <a href="https://github.com/transloadit/uppy" target="_blank" rel="noopener">transloadit/uppy</a> <a href="https://github.com/babel/babel/blob/master/doc/design/monorepo.md" target="_blank" rel="noopener">monorepo</a>. This centralizes Uppy issue reporting and makes it easier to do updates and simultaneous releases of the client and Companion parts.</p>
 <p>The first release of <code>@uppy/companion</code> is 0.14, and the last <code>uppy-server</code> release is 0.13.4. <code>uppy-server</code> will be deprecated on npm soon.</p>
 <p>Note that despite the rename, configuration for standalone Companion still uses <code>UPPYSERVER_</code> environment variables. This should ease the transition, since you will only have to update the package name for now. Once we add <code>COMPANION_</code> variable support, we will continue to support <code>UPPYSERVER_</code> environment variables to smoothen the transition. And of course, we will notify you here when that time comes!</p>
 <h2 id="Other-Cool-Changes"><a href="#Other-Cool-Changes" class="headerlink" title="Other Cool Changes"></a>Other Cool Changes</h2><ul>
-<li>@uppy/core: allow editing plugin titles (names) so that, for instance, “Camera” can be translated into different languages, fixes #920 (#942 / @arturi)</li>
-<li>@uppy/dashboard: fix animation — wait for closing animation to finish before opening modal (#942 / @arturi)</li>
+<li>@uppy/core: allow editing plugin titles (names) so that, for instance, &#x201C;Camera&#x201D; can be translated into different languages, fixes #920 (#942 / @arturi)</li>
+<li>@uppy/dashboard: fix animation &#x2014; wait for closing animation to finish before opening modal (#942 / @arturi)</li>
 <li>@uppy/url: fix Url plugin reacting to wrong drop/paste events, add ignoreEvent (#942 / @arturi)</li>
 <li>build: build: Split integration tests and add one using create-react-app (#952 / @goto-bus-stop)</li>
-<li>@uppy/companion: google Drive — move to v3 API (#977 / @pauln)</li>
+<li>@uppy/companion: google Drive &#x2014; move to v3 API (#977 / @pauln)</li>
 </ul>
 <p>See <a href="https://github.com/transloadit/uppy/blob/master/CHANGELOG.md#0270" target="_blank" rel="noopener">full changelog (0.27 and 0.26.x patches) for more</a></p>
 <p>See you in the next release!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#ife">

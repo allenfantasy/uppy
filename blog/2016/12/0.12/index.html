@@ -98,7 +98,7 @@ Dashboard: local mode and multipart uploads support in UIPrior to this release, 
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ Dashboard: local mode and multipart uploads support in UIPrior to this release, 
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,12 +155,12 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.12: Responsive. Cancel. Feedback. Refreshed ES6 server</h1>
   <h4>Wednesday Dec 7, 2016</h4>
     
-    <p>Hello! Here’s what’s new in Uppy 0.12.</p>
-<h2 id="Dashboard-local-mode-and-multipart-uploads-support-in-UI"><a href="#Dashboard-local-mode-and-multipart-uploads-support-in-UI" class="headerlink" title="Dashboard: local mode and multipart uploads support in UI"></a>Dashboard: local mode and multipart uploads support in UI</h2><p>Prior to this release, we’ve optimized the Dashboard for usage with multiple “acquire plugins”, say Webcam + Google Drive. But sometimes all you need is “local disk” with drag &amp; drop support, nice file previews and progress. And now the Dashboard UI works great with that use case out of the box. When you don’t add (.use) any acquire plugins, it looks like this:</p>
+    <p>Hello! Here&#x2019;s what&#x2019;s new in Uppy 0.12.</p>
+<h2 id="Dashboard-local-mode-and-multipart-uploads-support-in-UI"><a href="#Dashboard-local-mode-and-multipart-uploads-support-in-UI" class="headerlink" title="Dashboard: local mode and multipart uploads support in UI"></a>Dashboard: local mode and multipart uploads support in UI</h2><p>Prior to this release, we&#x2019;ve optimized the Dashboard for usage with multiple &#x201C;acquire plugins&#x201D;, say Webcam + Google Drive. But sometimes all you need is &#x201C;local disk&#x201D; with drag &amp; drop support, nice file previews and progress. And now the Dashboard UI works great with that use case out of the box. When you don&#x2019;t add (.use) any acquire plugins, it looks like this:</p>
 <figure class="wide"><img src="/images/blog/0.12/uppy-dashboard-local.jpg"></figure>
 
-<p>Also (prior to this release), we’ve built the Dashboard to work well with <a href="http://tus.io" target="_blank" rel="noopener">tus resumable uploads</a>. That’s why you can pause and resume individual uploads, as well as all at once. But if you use an endpoint that is not yet ready for the future and upload resumability (here’s <a href="https://github.com/tus/tus-node-server" target="_blank" rel="noopener">how</a> to <a href="https://github.com/tus/tusd" target="_blank" rel="noopener">fix that</a>, by the way), the Dashboard UI will show regular “cancel” buttons instead of pause/resume.</p>
-<p>Dashboard is gradually becoming more mobile friendly too, but we’ll be saving some of that stuff for the next release.</p>
+<p>Also (prior to this release), we&#x2019;ve built the Dashboard to work well with <a href="http://tus.io" target="_blank" rel="noopener">tus resumable uploads</a>. That&#x2019;s why you can pause and resume individual uploads, as well as all at once. But if you use an endpoint that is not yet ready for the future and upload resumability (here&#x2019;s <a href="https://github.com/tus/tus-node-server" target="_blank" rel="noopener">how</a> to <a href="https://github.com/tus/tusd" target="_blank" rel="noopener">fix that</a>, by the way), the Dashboard UI will show regular &#x201C;cancel&#x201D; buttons instead of pause/resume.</p>
+<p>Dashboard is gradually becoming more mobile friendly too, but we&#x2019;ll be saving some of that stuff for the next release.</p>
 <h2 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h2><p>Uppy server has undergone a quite a few changes, including the build setup:</p>
 <ul>
 <li>We are using ES2015, transpiling to ES5 with Babel.</li>
@@ -176,14 +172,14 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <a id="more"></a>
 <h2 id="And"><a href="#And" class="headerlink" title="And"></a>And</h2><ul>
 <li>The website now features a video demo of Uppy in action, check it out: <a href="http://uppy.io">http://uppy.io</a>.</li>
-<li>Fixed a bug where the Webcam would continue to be active (green light on) even after the picture was taken — all good now.</li>
-<li>Improved import/require support for ES2015 and CommonJS modules. Basically, we don’t recommend ES2015 spread imports as a default option just yet — no tree shaking in Browserify and Webpack 1. Both <code>import DragDrop from &#39;uppy/lib/plugin/DragDrop&#39;</code> and <code>const DragDrop = require(&#39;uppy/lib/plugin/DragDrop&#39;)</code> are now supported. We’ve added <code>add-module-exports</code> babel plugin that replaces <code>export default</code> with <code>module.exports</code> for backwards compatibility.</li>
-<li>Optimized dependencies a little: removed the ones we don’t use, upgraded some that we do.</li>
+<li>Fixed a bug where the Webcam would continue to be active (green light on) even after the picture was taken &#x2014; all good now.</li>
+<li>Improved import/require support for ES2015 and CommonJS modules. Basically, we don&#x2019;t recommend ES2015 spread imports as a default option just yet &#x2014; no tree shaking in Browserify and Webpack 1. Both <code>import DragDrop from &apos;uppy/lib/plugin/DragDrop&apos;</code> and <code>const DragDrop = require(&apos;uppy/lib/plugin/DragDrop&apos;)</code> are now supported. We&#x2019;ve added <code>add-module-exports</code> babel plugin that replaces <code>export default</code> with <code>module.exports</code> for backwards compatibility.</li>
+<li>Optimized dependencies a little: removed the ones we don&#x2019;t use, upgraded some that we do.</li>
 </ul>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.12:</p>
 <ul>
 <li>meta: write 0.12 release blog post (@arturi)</li>
-<li>core: figure out import/require for core and plugins — just don’t use spread for plugins (@arturi)</li>
+<li>core: figure out import/require for core and plugins &#x2014; just don&#x2019;t use spread for plugins (@arturi)</li>
 <li>meta: create a demo GIF, showcasing Uppy Dashboard for the main page, like <a href="https://zeit.co/blog/next" target="_blank" rel="noopener">https://zeit.co/blog/next</a> (@arturi)</li>
 <li>meta: update Readme, update screenshot (@arturi)</li>
 <li>server: add pre-commit and lint-staged (@arturi)</li>
@@ -196,15 +192,33 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>server: bug fix: failing google drive (@ifedapoolarewaju)</li>
 <li>webcam: stop using the webcam (green light off) after the picture is taken / tab is hidden (@arturi)</li>
 <li>core: allow usage without <code>new</code>, start renaming <code>Core()</code> to <code>Uppy()</code> in examples (@arturi)</li>
-<li>core: api — consider <a href="https://gist.github.com/yoshuawuyts/b5e5b3e7aacbee85a3e61b8a626709ab" target="_blank" rel="noopener">Yosh’s feedback and proposals</a>, come up with follow up questions (@arturi)</li>
-<li>dashboard: local mode — no acquire plugins / external services, just DnD. ActionBrowseTagline component (@arturi)</li>
+<li>core: api &#x2014; consider <a href="https://gist.github.com/yoshuawuyts/b5e5b3e7aacbee85a3e61b8a626709ab" target="_blank" rel="noopener">Yosh&#x2019;s feedback and proposals</a>, come up with follow up questions (@arturi)</li>
+<li>dashboard: local mode &#x2014; no acquire plugins / external services, just DnD. ActionBrowseTagline component (@arturi)</li>
 <li>dashboard: only show pause/resume when tus is used (@arturi)</li>
 <li>dashboard: cancel uploads button for multipart (@arturi)</li>
-<li>dashboard: responsive design — stage 1 (@arturi)</li>
+<li>dashboard: responsive design &#x2014; stage 1 (@arturi)</li>
 <li>meta: write 0.11 release blog post (@arturi)</li>
 </ul>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

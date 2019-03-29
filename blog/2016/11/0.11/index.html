@@ -98,7 +98,7 @@ In October, we have been working hard to get Uppy 0.11 ready for release. This e
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -123,10 +123,6 @@ In October, we have been working hard to get Uppy 0.11 ready for release. This e
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,44 +155,44 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.11: StatusBar, research, https and API docs</h1>
   <h4>Tuesday Nov 15, 2016</h4>
     
-    <p>Hey everyone! It has been a while since we last shared some news about our progress and we can’t wait to let you know what’s up(py)!</p>
-<p>In October, we have been working hard to get Uppy 0.11 ready for release. This entailed, among other things, doing a write-up of our general architecture, bringing in a friend to look at what we’ve been up to, experimenting with Redux, and updating the Dashboard UI and website example.</p>
-<p>Here’s what we have been up to, in some more detail.</p>
+    <p>Hey everyone! It has been a while since we last shared some news about our progress and we can&#x2019;t wait to let you know what&#x2019;s up(py)!</p>
+<p>In October, we have been working hard to get Uppy 0.11 ready for release. This entailed, among other things, doing a write-up of our general architecture, bringing in a friend to look at what we&#x2019;ve been up to, experimenting with Redux, and updating the Dashboard UI and website example.</p>
+<p>Here&#x2019;s what we have been up to, in some more detail.</p>
 <a id="more"></a>
 <h2 id="More-research-and-experiments"><a href="#More-research-and-experiments" class="headerlink" title="More research and experiments"></a>More research and experiments</h2><ul>
 <li>We wrote an <a href="https://github.com/transloadit/uppy/blob/master/ARCHITECTURE.md" target="_blank" rel="noopener">ARCHITECTURE.md</a> document, describing our architecture and APIs.</li>
-<li>Author of <a href="https://github.com/yoshuawuyts/choo" target="_blank" rel="noopener">Choo</a>, Yoshua Wuyts, was invited to take a look at the state of things in Uppy, and he came up with a proposal for some changes, which we’ll be considering in the coming releases.</li>
-<li>We also conducted a few Redux experiments on Uppy, in the process of which, no animals were hurt. :dog:</li>
+<li>Author of <a href="https://github.com/yoshuawuyts/choo" target="_blank" rel="noopener">Choo</a>, Yoshua Wuyts, was invited to take a look at the state of things in Uppy, and he came up with a proposal for some changes, which we&#x2019;ll be considering in the coming releases.</li>
+<li>We also conducted a few Redux experiments on Uppy, in the process of which, no animals were hurt. <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f436.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f436.png?v8">&#x1F436;</span></li>
 </ul>
 <h2 id="Dashboard-example-features-StatusBar-and-updated-UI"><a href="#Dashboard-example-features-StatusBar-and-updated-UI" class="headerlink" title="Dashboard: example features, StatusBar and updated UI"></a>Dashboard: example features, StatusBar and updated UI</h2><p><strong>Dashboard example</strong> <a href="https://uppy.io/examples/dashboard/">on our website</a> now features several options:</p>
 <ul>
-<li>switchting between “inline” and “modal dialog / popup” mode;</li>
-<li>toggling the <code>autoProceed</code> option that starts uploads automatically, without waiting for a click on the “upload” button;</li>
+<li>switchting between &#x201C;inline&#x201D; and &#x201C;modal dialog / popup&#x201D; mode;</li>
+<li>toggling the <code>autoProceed</code> option that starts uploads automatically, without waiting for a click on the &#x201C;upload&#x201D; button;</li>
 <li>enabling/disabling acquire plugins, like Google Drive and Webcam.</li>
 </ul>
 <p><img src="/images/blog/0.11/dashboard-example-options.png"></p>
-<p><strong>StatusBar</strong> is a – you guessed it – bar that appears on the bottom of the Dashboard and unifies progress with pause/resume buttons.</p>
-<p><strong>Dashboard UI</strong> has undergone minor improvements, such as: a new “drag files here” icon and tagline. Furthermore, the text before “acquire” icons on the top — Local Disk, Google Drive, Webcam — has been removed (it used to say “Import files from:”). We also added new “remove file” icons. You know, small things, big difference. :sunglasses:</p>
+<p><strong>StatusBar</strong> is a &#x2013; you guessed it &#x2013; bar that appears on the bottom of the Dashboard and unifies progress with pause/resume buttons.</p>
+<p><strong>Dashboard UI</strong> has undergone minor improvements, such as: a new &#x201C;drag files here&#x201D; icon and tagline. Furthermore, the text before &#x201C;acquire&#x201D; icons on the top &#x2014; Local Disk, Google Drive, Webcam &#x2014; has been removed (it used to say &#x201C;Import files from:&#x201D;). We also added new &#x201C;remove file&#x201D; icons. You know, small things, big difference. <span class="github-emoji" style="color: transparent;background:no-repeat url(https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8) center/contain" data-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f60e.png?v8">&#x1F60E;</span></p>
 <p><img src="/images/blog/0.11/uppy-dashboard-oct-2016-1.jpg" alt="Dashboard UI, no files. Text: Drop files here, paste or import from one of the locations above"></p>
 <p><img src="/images/blog/0.11/uppy-dashboard-oct-2016-2.jpg" alt="Dashboard UI, file upload in progress. StatusBar with pause/resume button and progress"></p>
-<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>We have upgraded both <a href="http://uppy.io/">uppy.io</a> and <a href="http://tus.io/" target="_blank" rel="noopener">tus.io</a> to support HTTPS with Let’s Encrypt. This will ensure that webcam example now works, secure uploads work, and – hopefully – that all will be well.</p>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>We have upgraded both <a href="http://uppy.io/">uppy.io</a> and <a href="http://tus.io/" target="_blank" rel="noopener">tus.io</a> to support HTTPS with Let&#x2019;s Encrypt. This will ensure that webcam example now works, secure uploads work, and &#x2013; hopefully &#x2013; that all will be well.</p>
 <h2 id="And-more"><a href="#And-more" class="headerlink" title="And more"></a>And more</h2><ul>
-<li>We have renamed FormTag plugin to FileInput and made it pretty by default, with an added option to just show the default browser “choose file”.</li>
+<li>We have renamed FormTag plugin to FileInput and made it pretty by default, with an added option to just show the default browser &#x201C;choose file&#x201D;.</li>
 <li><a href="https://github.com/transloadit/uppy/issues/126" target="_blank" rel="noopener">Fixed a bug</a> with <code>autoProceed: true</code> duplicating uploads.</li>
 <li>Refactored Dashboard to only keep active acquire panel in DOM.</li>
-<li>Added PersistentState plugin that saves state to localStorage — which is useful for development.</li>
+<li>Added PersistentState plugin that saves state to localStorage &#x2014; which is useful for development.</li>
 <li><a href="https://github.com/transloadit/uppy/pull/131" target="_blank" rel="noopener">Grand refactor of Uppy Server</a> with dynamic controllers.</li>
 <li>Webcam stream no longer flashes when state is updated.</li>
 </ul>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.11:</p>
 <ul>
 <li>core: log method should have an option to throw error in addition to just logging (@arturi)</li>
-<li>experimental: PersistentState plugin that saves state to localStorage — useful for development (@arturi)</li>
+<li>experimental: PersistentState plugin that saves state to localStorage &#x2014; useful for development (@arturi)</li>
 <li>dashboard: implement new StatusBar with progress and pause/resume buttons <a href="https://github.com/transloadit/uppy/issues/96#issuecomment-249401532" target="_blank" rel="noopener">https://github.com/transloadit/uppy/issues/96#issuecomment-249401532</a> (@arturi)</li>
-<li>dashboard: attempt to throttle StatusBar, so it doesn’t re-render too often (@arturi)</li>
-<li>dashboard: refactor — only load one acquire panel at a time (activeAcquirer or empty), change focus behavior, utilize onload/onunload</li>
+<li>dashboard: attempt to throttle StatusBar, so it doesn&#x2019;t re-render too often (@arturi)</li>
+<li>dashboard: refactor &#x2014; only load one acquire panel at a time (activeAcquirer or empty), change focus behavior, utilize onload/onunload</li>
 <li>experimental: create a Dashboard UI for Redux refactor (@hedgerh)</li>
-<li>dashboard: make trigger optional — not needed when rendering inline (@arturi)</li>
+<li>dashboard: make trigger optional &#x2014; not needed when rendering inline (@arturi)</li>
 <li>fileinput: pretty input element #93 (@arturi)</li>
 <li>meta: document current Uppy architecture and question about the future (@arturi, @hedgerh)</li>
 <li>test: see about adding tests for autoProceed: true (@arturi)</li>
@@ -205,9 +201,27 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>website: update guide, API docs and main page example to match current actual API (@arturi)</li>
 <li>uppy-server: Make uppy server have dynamic controllers (@hedgerh)</li>
 </ul>
-<p>We hope you’ll enjoy this latest release. We have got a lot more in store for Uppy and we won’t wait too long with throwing you a bone again!</p>
+<p>We hope you&#x2019;ll enjoy this latest release. We have got a lot more in store for Uppy and we won&#x2019;t wait too long with throwing you a bone again!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

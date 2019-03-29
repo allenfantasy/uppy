@@ -553,7 +553,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>Companion was previously known as Uppy Server. It was renamed in v0.14.0.</p>
 </blockquote>
 <p>Drag and drop, webcam, basic file manipulation (adding metadata, for example) and uploading via tus-resumable uploads or XHR/Multipart are all possible using just the Uppy client module.</p>
-<p>However, if you add <a href="https://github.com/transloadit/uppy/tree/master/packages/@uppy/companion" target="_blank" rel="noopener">Companion</a> to the mix, your users will be able to select files from remote sources, such as Instagram, Google Drive and Dropbox, bypassing the client (so a 5 GB video isn’t eating into your users’ data plans), and then uploaded to the final destination. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don’t stick around for long, for security reasons.</p>
+<p>However, if you add <a href="https://github.com/transloadit/uppy/tree/master/packages/@uppy/companion" target="_blank" rel="noopener">Companion</a> to the mix, your users will be able to select files from remote sources, such as Instagram, Google Drive and Dropbox, bypassing the client (so a 5 GB video isn&#x2019;t eating into your users&#x2019; data plans), and then uploaded to the final destination. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don&#x2019;t stick around for long, for security reasons.</p>
 <p>Companion handles the server-to-server communication between your server and file storage providers such as Google Drive, Dropbox, Instagram, etc. Note that you can <strong>not</strong> upload files <strong>to</strong> Companion, it just handles the third party integrations.</p>
 <h2 id="Supported-providers"><a href="#Supported-providers" class="headerlink" title="Supported providers"></a>Supported providers</h2><p>As of now, Companion is integrated to work with:</p>
 <ul>
@@ -594,6 +594,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token punctuation">}</span>
 
 app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>companion<span class="token punctuation">.</span><span class="token function">app</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
 </pre></td></tr></table></figure>
 <p>See <a href="#Options">Options</a> for valid configuration options.</p>
 <p>To use WebSockets for realtime upload progress, you can call the <code>socket</code> method, like so:</p>
@@ -727,7 +728,7 @@ companion<span class="token punctuation">.</span><span class="token function">so
 <li>host(required) - your server host (e.g localhost:3020, mydomain.com)</li>
 <li>path - the server path to where the Uppy app is sitting (e.g if Companion is at <code>mydomain.com/uppy</code>, then the path would be <code>/uppy</code>).</li>
 <li>oauthDomain - if you have multiple instances of Companion with different (and perhaps dynamic) subdomains, you can set a master domain (e.g <code>sub1.mydomain.com</code>) to handle your oauth authentication for you. This would then redirect to the slave subdomain with the required credentials on completion.</li>
-<li>validHosts - if you are setting a master <code>oauthDomain</code>, you need to set a list of valid hosts, so the master oauth handler can validate the host of the Uppy instance requesting the authentication. This is basically a list of valid domains running your Companion instances. The list may also contain regex patterns. e.g <code>[&#39;sub2.mydomain.com&#39;, &#39;sub3.mydomain.com&#39;, &#39;(\\w+).mydomain.com&#39;]</code></li>
+<li>validHosts - if you are setting a master <code>oauthDomain</code>, you need to set a list of valid hosts, so the master oauth handler can validate the host of the Uppy instance requesting the authentication. This is basically a list of valid domains running your Companion instances. The list may also contain regex patterns. e.g <code>[&apos;sub2.mydomain.com&apos;, &apos;sub3.mydomain.com&apos;, &apos;(\\w+).mydomain.com&apos;]</code></li>
 </ul>
 </li>
 <li><p><strong>sendSelfEndpoint(optional)</strong> - This is basically the same as the <code>server.host + server.path</code> attributes. The major reason for this attribute is that, when set, it adds the value as the <code>i-am</code> header of every request response.</p>
@@ -752,7 +753,7 @@ app<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>The default value simply returns <code>filename</code>, so all files will be uploaded to the root of the bucket as their original file name.</p>
-<h3 id="Running-in-Kubernetes"><a href="#Running-in-Kubernetes" class="headerlink" title="Running in Kubernetes"></a>Running in Kubernetes</h3><p>We have <a href="https://github.com/transloadit/uppy/blob/master/packages/%40uppy/companion/KUBERNETES.md" target="_blank" rel="noopener">a detailed guide on running Companion in Kubernetes</a> for you, that’s how we currently run our example server at <a href="http://server.uppy.io" target="_blank" rel="noopener">http://server.uppy.io</a>.</p>
+<h3 id="Running-in-Kubernetes"><a href="#Running-in-Kubernetes" class="headerlink" title="Running in Kubernetes"></a>Running in Kubernetes</h3><p>We have <a href="https://github.com/transloadit/uppy/blob/master/packages/%40uppy/companion/KUBERNETES.md" target="_blank" rel="noopener">a detailed guide on running Companion in Kubernetes</a> for you, that&#x2019;s how we currently run our example server at <a href="http://server.uppy.io" target="_blank" rel="noopener">http://server.uppy.io</a>.</p>
 <h3 id="Adding-custom-providers"><a href="#Adding-custom-providers" class="headerlink" title="Adding custom providers"></a>Adding custom providers</h3><p>As of now, Companion supports <strong>Google Drive</strong>, <strong>Dropbox</strong>, <strong>Instagram</strong>, and <strong>URL</strong> (remote urls) out of the box, but you may also choose to add your own custom providers. You can do this by passing the <code>customProviders</code> option when calling the Uppy <code>app</code> method. The custom provider is expected to support Oauth 1 or 2 for authentication/authorization.</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="token keyword">let</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
     customProviders<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -778,7 +779,7 @@ uppy<span class="token punctuation">.</span><span class="token function">app</sp
 <li><code>list (options, done)</code> - lists JSON data of user files (e.g. list of all the files in a particular directory).<ul>
 <li><code>options</code> - is an object containing the following attributes<ul>
 <li>token - authorization token (retrieved from oauth process) to send along with your request</li>
-<li>directory - the <code>id/name</code> of the directory from which data is to be retrieved. This may be ignored if it doesn’t apply to your provider</li>
+<li>directory - the <code>id/name</code> of the directory from which data is to be retrieved. This may be ignored if it doesn&#x2019;t apply to your provider</li>
 <li>query - expressjs query params object received by the server (just in case there is some data you need in there).</li>
 </ul>
 </li>
@@ -808,7 +809,25 @@ uppy<span class="token punctuation">.</span><span class="token function">app</sp
 </pre></td></tr></table></figure>
 <p>This would get the Companion instance running on <code>http://localhost:3020</code>. It uses <a href="https://github.com/remy/nodemon" target="_blank" rel="noopener">nodemon</a> so it will automatically restart when files are changed.</p>
 <h2 id="Live-example"><a href="#Live-example" class="headerlink" title="Live example"></a>Live example</h2><p>An example server is running at <a href="http://companion.uppy.io" target="_blank" rel="noopener">http://companion.uppy.io</a>, which is deployed with <a href="https://github.com/transloadit/uppy/blob/master/packages/%40uppy/companion/KUBERNETES.md" target="_blank" rel="noopener">Kubernetes</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/companion.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

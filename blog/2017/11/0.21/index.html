@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -157,18 +153,18 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.21: End to End Tests, Accessibility, Additional Security for Uppy Server</h1>
   <h4>Friday Nov 24, 2017</h4>
     
-    <p>Hi all! We’ve been busy with Halloween, but also another release, so here is Uppy <code>0.21</code>! This one improves accessibility, features new end-to-end tests and improved security in Uppy Server.</p>
+    <p>Hi all! We&#x2019;ve been busy with Halloween, but also another release, so here is Uppy <code>0.21</code>! This one improves accessibility, features new end-to-end tests and improved security in Uppy Server.</p>
 <a id="more"></a>
-<h2 id="Accessibility"><a href="#Accessibility" class="headerlink" title="Accessibility"></a>Accessibility</h2><p>One of the goals we’ve set out to achieve with Uppy was to make an accessibe file upload widget, and in this release we’ve achieved some more progress in this area:</p>
+<h2 id="Accessibility"><a href="#Accessibility" class="headerlink" title="Accessibility"></a>Accessibility</h2><p>One of the goals we&#x2019;ve set out to achieve with Uppy was to make an accessibe file upload widget, and in this release we&#x2019;ve achieved some more progress in this area:</p>
 <ul>
-<li>Dashboard modal dialog now handles focus better (it’s trapped inside the modal while open);</li>
+<li>Dashboard modal dialog now handles focus better (it&#x2019;s trapped inside the modal while open);</li>
 <li>First button is in focus right after the modal dialog is open;</li>
 <li>More (aria-)labels have been added;</li>
 <li>Files from remote providers are now selectable with a keyboard.</li>
 </ul>
 <p>We plan to continue gradually improving in the accessibility area.</p>
 <p>See <a href="https://github.com/transloadit/uppy/pull/414" target="_blank" rel="noopener">#414 PR</a> for details.</p>
-<h2 id="Returning-successful-failed-from-uppy-upload"><a href="#Returning-successful-failed-from-uppy-upload" class="headerlink" title="Returning { successful, failed } from uppy.upload()"></a>Returning <code>{ successful, failed }</code> from <code>uppy.upload()</code></h2><p><strong>⚠️ Breaking change</strong></p>
+<h2 id="Returning-successful-failed-from-uppy-upload"><a href="#Returning-successful-failed-from-uppy-upload" class="headerlink" title="Returning { successful, failed } from uppy.upload()"></a>Returning <code>{ successful, failed }</code> from <code>uppy.upload()</code></h2><p><strong>&#x26A0;&#xFE0F; Breaking change</strong></p>
 <p><code>uppy.upload()</code> promise now resolves to a <code>result</code> object with two arrays of files: <code>{ successful, failed }</code>. This lets you handle succesful and failed uploads in one go:  </p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Successful uploads:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>successful<span class="token punctuation">)</span>
@@ -193,7 +189,7 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>See <a href="https://uppy.io/docs/uppy/#uppy-upload"><code>uppy.upload()</code></a> and <a href="https://uppy.io/docs/uppy/#core-complete"><code>core:complete</code></a> in docs, as well as <a href="https://github.com/transloadit/uppy/pull/404" target="_blank" rel="noopener">#404 PR</a> for more details.</p>
-<h2 id="End-to-end-tests"><a href="#End-to-end-tests" class="headerlink" title="End to end tests"></a>End to end tests</h2><p>We’ve refactored end to end tests to use <a href="http://webdriver.io" target="_blank" rel="noopener">Webdriver.io</a>, and for the occasion added tests for Edge, Safari, Android and iOS. Now tests on Travis and Sauce Labs (thanks for the open source tier!) run smoothly and it’s easier to alter them or write new ones.</p>
+<h2 id="End-to-end-tests"><a href="#End-to-end-tests" class="headerlink" title="End to end tests"></a>End to end tests</h2><p>We&#x2019;ve refactored end to end tests to use <a href="http://webdriver.io" target="_blank" rel="noopener">Webdriver.io</a>, and for the occasion added tests for Edge, Safari, Android and iOS. Now tests on Travis and Sauce Labs (thanks for the open source tier!) run smoothly and it&#x2019;s easier to alter them or write new ones.</p>
 <h2 id="More-secure-Uppy-Server"><a href="#More-secure-Uppy-Server" class="headerlink" title="More secure Uppy Server"></a>More secure Uppy Server</h2><p>We made sure access tokens from third-party providers, such as Google Drive or Instagram, are not stored on the server with Uppy Server, and kept in your browser instead. Then, when you want to pick a file from your Instagram, the token is used to make a request. Even though they live on the browser, these tokens are encrypted with JWT on the server side, before they are being sent to the client. So they can only be decrypted and understood on the server side.</p>
 <p>Data validation is also now done during intiation of an upload, to prevent corrupt data from triggering funny behaviours on the server. :)</p>
 <p>And, while we were at this, we also made sure all sensitive data is masked in request logs.</p>
@@ -210,14 +206,14 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <li>Fixed generating thumbnails for images with transparent background.</li>
 <li>We are now using <a href="https://github.com/goto-bus-stop/tinyify" target="_blank" rel="noopener"><code>tinyify</code></a>(by our own <a href="https://github.com/goto-bus-stop" target="_blank" rel="noopener">@goto-bus-stop</a>) for the Uppy bundle to make it smaller and more efficient.</li>
 <li>Instead of restarting only the file upload itself, start an entirely new upload for retries. Fixes retrying uploads with processing plugins.</li>
-<li>The S3 plugin now includes XHRUpload. <strong>⚠️ Breaking change: you should remove <code>.use(XHRUpload)</code> when using S3.</strong></li>
+<li>The S3 plugin now includes XHRUpload. <strong>&#x26A0;&#xFE0F; Breaking change: you should remove <code>.use(XHRUpload)</code> when using S3.</strong></li>
 <li>XHRUpload now includes a timeout <code>opts.timeout = 30000</code>, after which it errors and offers a retry (retry UI supported in Dashboard), see <a href="https://github.com/transloadit/uppy/pull/378" target="_blank" rel="noopener">#378</a> for more.</li>
-<li>Renamed <code>RestoreFiles</code> → <code>GoldenRetriever</code>, and <code>Tus10</code> → <code>Tus</code>. <strong>⚠️ Breaking change: please make sure to use the new names when setting up plugins</strong>.</li>
-<li>The Webcam plugin has been refactored. There’s no flash fallback now, it works in modern browsers only, and the Webcam tab won’t appear in the Dashboard if a camera is not supported on the device.</li>
+<li>Renamed <code>RestoreFiles</code> &#x2192; <code>GoldenRetriever</code>, and <code>Tus10</code> &#x2192; <code>Tus</code>. <strong>&#x26A0;&#xFE0F; Breaking change: please make sure to use the new names when setting up plugins</strong>.</li>
+<li>The Webcam plugin has been refactored. There&#x2019;s no flash fallback now, it works in modern browsers only, and the Webcam tab won&#x2019;t appear in the Dashboard if a camera is not supported on the device.</li>
 </ul>
 <h2 id="Full-Changelog"><a href="#Full-Changelog" class="headerlink" title="Full Changelog"></a>Full Changelog</h2><p>Here is the full list of changes for version <code>0.21.0</code> (and patches <code>0.20.1</code>, <code>0.20.2</code>, <code>0.20.3</code>):</p>
 <ul>
-<li>accessibility: add tabindex=”0” to buttons and tabs, aria-labels, focus (#414 / @arturi)</li>
+<li>accessibility: add tabindex=&#x201D;0&#x201D; to buttons and tabs, aria-labels, focus (#414 / @arturi)</li>
 <li>core: allow setting custom <code>id</code> for plugins to allow a plugin to be used multiple times (#418 / @arturi)</li>
 <li>core: do not check isPreviewSupported for unknown filetypes (#417 / @sadovnychyi)</li>
 <li>core: refactor <code>uppy-base</code> (#382 / @goto-bus-stop)</li>
@@ -230,11 +226,11 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <li>react: fix <code>uppy</code> PropType, closes (#416 / @goto-bus-stop)</li>
 <li>s3: automatically wrap XHRUpload. Users should remove <code>.use(XHRUpload)</code> when using S3. (#408 / @goto-bus-stop)</li>
 <li>test: refactored end-to-end tests to not use website, switched to Webdriver.io, added tests for Edge, Safari, Android and iOS (#410 / @arturi)</li>
-<li>tus: Rename Tus10 → Tus (#285 / @goto-bus-stop)</li>
+<li>tus: Rename Tus10 &#x2192; Tus (#285 / @goto-bus-stop)</li>
 <li>uppy-serer: mask sensitive data from request logs (@ifedapoolarewaju)</li>
 <li>uppy-server: add request body validators (@ifedapoolarewaju)</li>
 <li>uppy-server: migrate dropbox to use v2 API (#386 / @ifedapoolarewaju)</li>
-<li>uppy-server: store tokens in user’s browser only (@ifedapoolarewaju)</li>
+<li>uppy-server: store tokens in user&#x2019;s browser only (@ifedapoolarewaju)</li>
 <li>webcam: only show the webcam tab when browser support is available (media recorder API) (#421 / @arturi, @goto-bus-stop)</li>
 <li>webcam: simplify and refactor webcam plugin (modern browser APIs only) (#382 / @goto-bus-stop)</li>
 <li>xhrupload: set a timeout in the onprogress event handler to detect stale network (#378 / @goto-bus-stop)</li>
@@ -247,11 +243,29 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <li>docs: fix <code>getMetaFromForm</code> documentation (@arturi)</li>
 <li>core: fix generating thumbnails for images with transparent background (#380 / @goto-bus-stop)</li>
 <li>transloadit: use Translator class for localised strings (#383 / @goto-bus-stop)</li>
-<li>goldenretriever: don’t crash when required server-side (#384 / @goto-bus-stop)</li>
+<li>goldenretriever: don&#x2019;t crash when required server-side (#384 / @goto-bus-stop)</li>
 <li>redux: add plugin for syncing uppy state with a Redux store (#376 / @richardwillars)</li>
 </ul>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

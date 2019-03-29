@@ -550,7 +550,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <div class="Content js-Content docs with-sidebar">
     <h1>Redux</h1>
     <p>Uppy supports the popular <a href="https://redux.js.org/" target="_blank" rel="noopener">Redux</a> state management library in two ways:</p>
-<h2 id="Redux-Store"><a href="#Redux-Store" class="headerlink" title="Redux Store"></a>Redux Store</h2><p>You can tell Uppy to use your app’s Redux store for its files and UI state. Please check out <a href="/docs/stores/">Custom Stores</a> for more information on that. Here’s an example to give you a sense of how this works:</p>
+<h2 id="Redux-Store"><a href="#Redux-Store" class="headerlink" title="Redux Store"></a>Redux Store</h2><p>You can tell Uppy to use your app&#x2019;s Redux store for its files and UI state. Please check out <a href="/docs/stores/">Custom Stores</a> for more information on that. Here&#x2019;s an example to give you a sense of how this works:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'redux'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> ReduxStore <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/store-redux'</span><span class="token punctuation">)</span>
 
@@ -579,9 +579,27 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>XHRUpload<span class="token punctuation">,</span> <span class="token punctuation">{</span> endpoint<span class="token punctuation">:</span> <span class="token string">'https://example.com'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ReduxDevTools<span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>After you <code>.use(ReduxDevTools)</code>, you should be able to see Uppy’s state in Redux Dev Tools.</p>
+<p>After you <code>.use(ReduxDevTools)</code>, you should be able to see Uppy&#x2019;s state in Redux Dev Tools.</p>
 <p>You will likely not need this if you are actually using Redux yourself, as well as Redux Store in Uppy like in the example above, since it will just work automatically in that case.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/redux.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

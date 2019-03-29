@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -159,7 +155,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     
     <p>Hi! We are back with yet another Uppy release that contains some often requested features such as file restrictions and better file type detection, alongside a brand new Instagram plugin, UI improvements and more!</p>
 <a id="more"></a>
-<h2 id="⚠️-File-Restrictions"><a href="#⚠️-File-Restrictions" class="headerlink" title="⚠️ File Restrictions"></a>⚠️ File Restrictions</h2><p>Something that a few of our biggest fans were asking for, is finally here! Here’s the gist of it:</p>
+<h2 id="&#x26A0;&#xFE0F;-File-Restrictions"><a href="#&#x26A0;&#xFE0F;-File-Restrictions" class="headerlink" title="&#x26A0;&#xFE0F; File Restrictions"></a>&#x26A0;&#xFE0F; File Restrictions</h2><p>Something that a few of our biggest fans were asking for, is finally here! Here&#x2019;s the gist of it:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>  <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     debug<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
     autoProceed<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
@@ -184,7 +180,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p>Basically, there are two ways to set restrictions:</p>
-<p>1. Using the <code>restrictions</code> object in Uppy’s core settings:</p>
+<p>1. Using the <code>restrictions</code> object in Uppy&#x2019;s core settings:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>restrictions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
   maxFileSize<span class="token punctuation">:</span> <span class="token number">300000</span><span class="token punctuation">,</span>
   maxNumberOfFiles<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
@@ -195,27 +191,27 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>Translation: allow only images and videos of any type, a minimum of 2 and maximum of 5 files must be selected, 300kb or less.</p>
 <p><code>allowedFileTypes</code> must be an array of strings with supported file mime-types. Anything from <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="noopener">this list</a> should work, as long as Uppy is able to detect it (and Uppy promises to try real hard, see below for details). Both wildcards <code>video/*</code> and specicifc types <code>image/jpeg</code> are supported!</p>
 <p>2. Using the more advanced callbacks: <code>onBeforeFileAdded(currentFile, files)</code>, which fires before a file is added and allows you to run whatever checks you wish against either the single file that is about to be added or all files currently selected / uploaded, and <code>onBeforeUpload(files)</code>, where you are able to check stuff before proceeding with the upload.</p>
-<p>Basically, use the first option for the simple stuff such as limiting uploads to images or a maximum of three files. Use the second option for things like “we need users to upload 5 photos and an audio file, so we can make a short clip out of it”. Let us know if this suits your needs, we are all 👂ears👂!</p>
+<p>Basically, use the first option for the simple stuff such as limiting uploads to images or a maximum of three files. Use the second option for things like &#x201C;we need users to upload 5 photos and an audio file, so we can make a short clip out of it&#x201D;. Let us know if this suits your needs, we are all &#x1F442;ears&#x1F442;!</p>
 <p>Also, a new <code>note</code> option has been added to the Dashboard, as a quick and easy way to inform users about the restrictions you choose to set up:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Dashboard<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   note<span class="token punctuation">:</span> <span class="token string">'Images and video only, 300kb or less'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <p><img class="border" src="/images/blog/0.17/restrictions-note.jpg"></p>
-<h2 id="📸-Instagram-plugin-and-UI-overhaul"><a href="#📸-Instagram-plugin-and-UI-overhaul" class="headerlink" title="📸 Instagram plugin and UI overhaul"></a>📸 Instagram plugin and UI overhaul</h2><p>Yes, Instagram is now supported in Uppy, so you can easily import all of your cat, dog and food pictures!</p>
+<h2 id="&#x1F4F8;-Instagram-plugin-and-UI-overhaul"><a href="#&#x1F4F8;-Instagram-plugin-and-UI-overhaul" class="headerlink" title="&#x1F4F8; Instagram plugin and UI overhaul"></a>&#x1F4F8; Instagram plugin and UI overhaul</h2><p>Yes, Instagram is now supported in Uppy, so you can easily import all of your cat, dog and food pictures!</p>
 <figure class="wide"><br>  <img class="border" src="/images/blog/0.17/instagram-ui.jpg"><br></figure>
 
 <p>You can try it live in the <a href="https://uppy.io/examples/dashboard/">Dashboard example</a>.</p>
-<p>The UI for all “provider” plugins, which is the way we call Google Drive, Dropbox and other external services, have been revamped to make better use of the space.</p>
-<p>Files are now selected, or added, on click/tap, rather than double click, which is easier and also works on mobile. 🙀</p>
+<p>The UI for all &#x201C;provider&#x201D; plugins, which is the way we call Google Drive, Dropbox and other external services, have been revamped to make better use of the space.</p>
+<p>Files are now selected, or added, on click/tap, rather than double click, which is easier and also works on mobile. &#x1F640;</p>
 <p><img class="border" src="/images/blog/0.17/provider-search.jpg"></p>
-<h2 id="StatusBar"><a href="#StatusBar" class="headerlink" title="StatusBar"></a>StatusBar</h2><p>The Dashboard’s StatusBar has been improved. First of all, even though it still comes bundled with the Dashboard like before, it is now a separate plugin that can be used anywhere, like with the Drag and Drop plugin or your own custom thing. Furthermore, it now shows fatal upload errors in addition to the upload / processing / transcoding progress. 💪</p>
-<p>In the Dashboard, you can now disable the StatusBar and/or Informer if you don’t need them or want something custom, by setting <code>disableStatusBar: true</code> and <code>disableInformer: true</code>.</p>
+<h2 id="StatusBar"><a href="#StatusBar" class="headerlink" title="StatusBar"></a>StatusBar</h2><p>The Dashboard&#x2019;s StatusBar has been improved. First of all, even though it still comes bundled with the Dashboard like before, it is now a separate plugin that can be used anywhere, like with the Drag and Drop plugin or your own custom thing. Furthermore, it now shows fatal upload errors in addition to the upload / processing / transcoding progress. &#x1F4AA;</p>
+<p>In the Dashboard, you can now disable the StatusBar and/or Informer if you don&#x2019;t need them or want something custom, by setting <code>disableStatusBar: true</code> and <code>disableInformer: true</code>.</p>
 <p>Details: <a href="https://github.com/transloadit/uppy/pull/217" target="_blank" rel="noopener">#217</a></p>
-<h2 id="Better-file-type-detection"><a href="#Better-file-type-detection" class="headerlink" title="Better file type detection"></a>Better file type detection</h2><p>We’ve added a <a href="https://github.com/sindresorhus/file-type" target="_blank" rel="noopener"><code>file-type</code></a> module that helps with figuring out the file type by reading the first magic bytes of the file. If that doesn’t work, we try to use the mime-type provided by the system/browser, and if that is still a dead end, we attempt to figure it out by extension. All in all, this leads to a more robust file type detecting experience. Personally, I’m just happy my Sex and the City 🍸 <code>.avi</code> files are now recognized as <code>video</code> on a Mac! </p>
+<h2 id="Better-file-type-detection"><a href="#Better-file-type-detection" class="headerlink" title="Better file type detection"></a>Better file type detection</h2><p>We&#x2019;ve added a <a href="https://github.com/sindresorhus/file-type" target="_blank" rel="noopener"><code>file-type</code></a> module that helps with figuring out the file type by reading the first magic bytes of the file. If that doesn&#x2019;t work, we try to use the mime-type provided by the system/browser, and if that is still a dead end, we attempt to figure it out by extension. All in all, this leads to a more robust file type detecting experience. Personally, I&#x2019;m just happy my Sex and the City &#x1F378; <code>.avi</code> files are now recognized as <code>video</code> on a Mac! </p>
 <p>Further details can be found here: <a href="https://github.com/transloadit/uppy/pull/219" target="_blank" rel="noopener">#219</a></p>
-<h2 id="Extracting-metadata-from-lt-form-gt-inputs"><a href="#Extracting-metadata-from-lt-form-gt-inputs" class="headerlink" title="Extracting metadata from &lt;form&gt; inputs"></a>Extracting metadata from <code>&lt;form&gt;</code> inputs</h2><p>If a plugin’s <code>target</code> is a <code>form</code> element, we are going to try to extract all the data from that form’s inputs and add it as <code>meta</code> to Uppy’s state. That <code>meta</code> is then merged with file’s meta when it is being added.</p>
-<p>Uppy’s core options have received a new <code>meta</code> property, where you can define some metadata from the start, as well as a new <code>setMeta</code> method that can be called at any time.</p>
+<h2 id="Extracting-metadata-from-lt-form-gt-inputs"><a href="#Extracting-metadata-from-lt-form-gt-inputs" class="headerlink" title="Extracting metadata from &lt;form&gt; inputs"></a>Extracting metadata from <code>&lt;form&gt;</code> inputs</h2><p>If a plugin&#x2019;s <code>target</code> is a <code>form</code> element, we are going to try to extract all the data from that form&#x2019;s inputs and add it as <code>meta</code> to Uppy&#x2019;s state. That <code>meta</code> is then merged with file&#x2019;s meta when it is being added.</p>
+<p>Uppy&#x2019;s core options have received a new <code>meta</code> property, where you can define some metadata from the start, as well as a new <code>setMeta</code> method that can be called at any time.</p>
 <p>See here for more details: <a href="https://github.com/transloadit/uppy/pull/238" target="_blank" rel="noopener">#238</a> </p>
 <h2 id="More"><a href="#More" class="headerlink" title="More"></a>More</h2><ul>
 <li>Added a <code>reset()</code> method that stops uploads, clears files and totalProgress, and restores things to the way they were on initialization, before user interactions <a href="https://github.com/transloadit/uppy/pull/226" target="_blank" rel="noopener">#226</a></li>
@@ -224,7 +220,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </ul>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.17:</p>
 <ul>
-<li>core: added restrictions — by file type, size, number of files (@arturi)</li>
+<li>core: added restrictions &#x2014; by file type, size, number of files (@arturi)</li>
 <li>provider: improved UI: improve overall look, breadcrumbs, more responsive (@arturi)</li>
 <li>core: css-in-js demos, try template-css (@arturi @goto-bus-stop #239)</li>
 <li>core: added <code>uppy.reset()</code> as discussed in #179 (@arturi)</li>
@@ -234,9 +230,9 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>fileinput: allow retrieving fields/options from form (@arturi #153)</li>
 <li>server: configurable server port (@ifedapoolarewaju)</li>
 <li>server: added support for custom providers (@ifedapoolarewaju)</li>
-<li>statusbar: also show major errors, add “error” state (@goto-bus-stop)</li>
+<li>statusbar: also show major errors, add &#x201C;error&#x201D; state (@goto-bus-stop)</li>
 <li>statusbar: pre/postprocessing status updates in the StatusBar (@goto-bus-stop, #202)</li>
-<li>statusbar: show status “Upload started…” when the remote upload has begun, but no progress events received yet (@arturi)</li>
+<li>statusbar: show status &#x201C;Upload started&#x2026;&#x201D; when the remote upload has begun, but no progress events received yet (@arturi)</li>
 <li>statusbar: work towards extracting StatusBar to a separate plugin, still bundle it with Dashboard (@goto-bus-stop, @arturi)</li>
 <li>tus/uppy-server: support metadata in remote tus uploads (@ifedapoolarewaju, @goto-bus-stop / #210)</li>
 <li>uploaders: added direct-to-s3 upload plugin and test it with the flow to then upload to transloadit, stage 1, WIP (@goto-bus-stop)</li>
@@ -255,7 +251,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </ul>
 <p>Enjoy!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#artur">

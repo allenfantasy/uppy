@@ -549,9 +549,9 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Getting Started</h1>
-    <p>Uppy is a sleek and modular file uploader. It fetches files from local disk, Google Drive, Instagram, remote urls, cameras etc, and then uploads them to the final destination. It’s fast, easy to use and lets you worry about more important problems than building a file uploader.</p>
+    <p>Uppy is a sleek and modular file uploader. It fetches files from local disk, Google Drive, Instagram, remote urls, cameras etc, and then uploads them to the final destination. It&#x2019;s fast, easy to use and lets you worry about more important problems than building a file uploader.</p>
 <p>Uppy consists of a core module and <a href="/docs/plugins/">various plugins</a> for selecting, manipulating and uploading files.</p>
-<p>Here’s the simplest example html page with Uppy (it uses a CDN bundle, while we recommend to use a bundler, see <a href="#Installation">Installation</a>):</p>
+<p>Here&#x2019;s the simplest example html page with Uppy (it uses a CDN bundle, while we recommend to use a bundler, see <a href="#Installation">Installation</a>):</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token doctype">&lt;!doctype html></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -580,7 +580,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </pre></td></tr></table></figure>
 <p><a class="TryButton" href="/examples/dashboard/">Try it live</a></p>
 <p>Drag and drop, webcam, basic file manipulation (adding metadata), uploading via tus-resumable uploads or XHR/Multipart is all possible using just the Uppy client module.</p>
-<p>Adding <a href="/docs/companion/">Companion</a> to the mix enables remote sources such as Instagram, Google Drive, Dropbox, and remote URLs. Uploads from remote sources are handled server-to-server, so a 5 GB video won’t be eating into your mobile data plan. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don’t stick around for long, for security reasons.</p>
+<p>Adding <a href="/docs/companion/">Companion</a> to the mix enables remote sources such as Instagram, Google Drive, Dropbox, and remote URLs. Uploads from remote sources are handled server-to-server, so a 5 GB video won&#x2019;t be eating into your mobile data plan. Files are removed from Companion after an upload is complete, or after a reasonable timeout. Access tokens also don&#x2019;t stick around for long, for security reasons.</p>
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Uppy can be used with a module bundler such as <a href="http://webpack.js.org/" target="_blank" rel="noopener">Webpack</a> or <a href="http://browserify.org/" target="_blank" rel="noopener">Browserify</a>, or by including it in a script tag.</p>
 <blockquote>
 <p>You may need polyfills if your application supports Internet Explorer or other older browsers. See <a href="#browser-support">Browser Support</a>.</p>
@@ -618,9 +618,9 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">import</span> Uppy<span class="token punctuation">,</span> <span class="token punctuation">{</span> XHRUpload<span class="token punctuation">,</span> DragDrop <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'uppy'</span>
 </pre></td></tr></table></figure>
 <p>And add the <code>uppy/dist/uppy.min.css</code> file to your page.</p>
-<h3 id="With-a-script-tag"><a href="#With-a-script-tag" class="headerlink" title="With a script tag"></a>With a script tag</h3><p>You can also use a pre-built bundle from Transloadit’s CDN: Edgly. <code>Uppy</code> will attach itself to the global <code>window.Uppy</code> object.</p>
+<h3 id="With-a-script-tag"><a href="#With-a-script-tag" class="headerlink" title="With a script tag"></a>With a script tag</h3><p>You can also use a pre-built bundle from Transloadit&#x2019;s CDN: Edgly. <code>Uppy</code> will attach itself to the global <code>window.Uppy</code> object.</p>
 <blockquote>
-<p>⚠️ The bundle consists of all plugins maintained by the Uppy team. This method is therefore not recommended for production, as your users will have to download all plugins, even if you are only using a few of them.</p>
+<p>&#x26A0;&#xFE0F; The bundle consists of all plugins maintained by the Uppy team. This method is therefore not recommended for production, as your users will have to download all plugins, even if you are only using a few of them.</p>
 </blockquote>
 <p>1. Add a script at the bottom of the closing <code>&lt;/body&gt;</code> tag:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://transloadit.edgly.net/releases/uppy/v0.30.3/uppy.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
@@ -636,11 +636,11 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </pre></td></tr></table></figure>
 <h2 id="Documentation"><a href="#Documentation" class="headerlink" title="Documentation"></a>Documentation</h2><ul>
-<li><a href="/docs/uppy/">Uppy</a> — full list of options, methods and events.</li>
-<li><a href="/docs/plugins/">Plugins</a> — list of Uppy plugins and their options.</li>
-<li><a href="/docs/companion/">Server</a> — setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.</li>
-<li><a href="/docs/react/">React</a> — components to integrate Uppy UI plugins with React apps.</li>
-<li><a href="/docs/writing-plugins">Writing Plugins</a> — how to write a plugin for Uppy [documentation in progress].</li>
+<li><a href="/docs/uppy/">Uppy</a> &#x2014; full list of options, methods and events.</li>
+<li><a href="/docs/plugins/">Plugins</a> &#x2014; list of Uppy plugins and their options.</li>
+<li><a href="/docs/companion/">Server</a> &#x2014; setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.</li>
+<li><a href="/docs/react/">React</a> &#x2014; components to integrate Uppy UI plugins with React apps.</li>
+<li><a href="/docs/writing-plugins">Writing Plugins</a> &#x2014; how to write a plugin for Uppy [documentation in progress].</li>
 </ul>
 <h2 id="Browser-Support"><a href="#Browser-Support" class="headerlink" title="Browser Support"></a>Browser Support</h2><p><a href="https://saucelabs.com/u/transloadit-uppy" target="_blank" rel="noopener"><br>  <img src="https://saucelabs.com/browser-matrix/transloadit-uppy.svg" alt="Sauce Test Status"><br></a></p>
 <p>We currently aim to support IE10+ and recent versions of Safari, Edge, Chrome, Firefox and Opera.</p>
@@ -653,12 +653,30 @@ uppy<span class="token punctuation">.</span><span class="token function">on</spa
 <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'whatwg-fetch'</span><span class="token punctuation">)</span>
 <span class="token keyword">const</span> Uppy <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/core'</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<p>If you’re using Uppy via a script tag, you can load the polyfills from <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">JSDelivr</a> like so:</p>
+<p>If you&#x2019;re using Uppy via a script tag, you can load the polyfills from <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">JSDelivr</a> like so:</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/es6-promise@4.2.5/dist/es6-promise.auto.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0.0/dist/fetch.umd.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://transloadit.edgly.net/releases/uppy/v0.30.3/uppy.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/index.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

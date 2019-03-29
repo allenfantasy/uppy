@@ -549,7 +549,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <div class="Content js-Content docs with-sidebar">
     <h1>Drag & Drop</h1>
-    <p>The <code>@uppy/drag-drop</code> plugin renders a simple drag and drop area for file selection. it can be useful when you only want the local device as a file source, don’t need file previews and a UI for metadata editing, and the <a href="/docs/dashboard/">Dashboard</a> feels like overkill.</p>
+    <p>The <code>@uppy/drag-drop</code> plugin renders a simple drag and drop area for file selection. it can be useful when you only want the local device as a file source, don&#x2019;t need file previews and a UI for metadata editing, and the <a href="/docs/dashboard/">Dashboard</a> feels like overkill.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> DragDrop <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/drag-drop'</span><span class="token punctuation">)</span>
 
 uppy<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>DragDrop<span class="token punctuation">,</span> <span class="token punctuation">{</span>
@@ -579,13 +579,13 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <blockquote>
-<p>Note that certain <a href="/docs/uppy#restrictions">restrictions set in Uppy’s main options</a>, namely <code>maxNumberOfFiles</code> and <code>allowedFileTypes</code>, affect the system file picker dialog. If <code>maxNumberOfFiles: 1</code>, users will only be able to select one file, and <code>allowedFileTypes: [&#39;video/*&#39;, &#39;.gif&#39;]</code> means only videos or gifs (files with <code>.gif</code> extension) will be selectable.</p>
+<p>Note that certain <a href="/docs/uppy#restrictions">restrictions set in Uppy&#x2019;s main options</a>, namely <code>maxNumberOfFiles</code> and <code>allowedFileTypes</code>, affect the system file picker dialog. If <code>maxNumberOfFiles: 1</code>, users will only be able to select one file, and <code>allowedFileTypes: [&apos;video/*&apos;, &apos;.gif&apos;]</code> means only videos or gifs (files with <code>.gif</code> extension) will be selectable.</p>
 </blockquote>
-<h3 id="id-39-DragDrop-39"><a href="#id-39-DragDrop-39" class="headerlink" title="id: &#39;DragDrop&#39;"></a><code>id: &#39;DragDrop&#39;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&#39;DragDrop&#39;</code>. Use this if you need to add multiple DragDrop instances.</p>
+<h3 id="id-39-DragDrop-39"><a href="#id-39-DragDrop-39" class="headerlink" title="id: &apos;DragDrop&apos;"></a><code>id: &apos;DragDrop&apos;</code></h3><p>A unique identifier for this plugin. It defaults to <code>&apos;DragDrop&apos;</code>. Use this if you need to add multiple DragDrop instances.</p>
 <h3 id="target-null"><a href="#target-null" class="headerlink" title="target: null"></a><code>target: null</code></h3><p>DOM element, CSS selector, or plugin to place the drag and drop area into.</p>
-<h3 id="width-39-100-39"><a href="#width-39-100-39" class="headerlink" title="width: &#39;100%&#39;"></a><code>width: &#39;100%&#39;</code></h3><p>Drag and drop area width, set in inline CSS, so feel free to use percentage, pixels or other values that you like.</p>
-<h3 id="height-39-100-39"><a href="#height-39-100-39" class="headerlink" title="height: &#39;100%&#39;"></a><code>height: &#39;100%&#39;</code></h3><p>Drag and drop area height, set in inline CSS, so feel free to use percentage, pixels or other values that you like.</p>
-<h3 id="note-null"><a href="#note-null" class="headerlink" title="note: null"></a><code>note: null</code></h3><p>Optionally, specify a string of text that explains something about the upload for the user. This is a place to explain any <code>restrictions</code> that are put in place. For example: <code>&#39;Images and video only, 2–3 files, up to 1 MB&#39;</code>.</p>
+<h3 id="width-39-100-39"><a href="#width-39-100-39" class="headerlink" title="width: &apos;100%&apos;"></a><code>width: &apos;100%&apos;</code></h3><p>Drag and drop area width, set in inline CSS, so feel free to use percentage, pixels or other values that you like.</p>
+<h3 id="height-39-100-39"><a href="#height-39-100-39" class="headerlink" title="height: &apos;100%&apos;"></a><code>height: &apos;100%&apos;</code></h3><p>Drag and drop area height, set in inline CSS, so feel free to use percentage, pixels or other values that you like.</p>
+<h3 id="note-null"><a href="#note-null" class="headerlink" title="note: null"></a><code>note: null</code></h3><p>Optionally, specify a string of text that explains something about the upload for the user. This is a place to explain any <code>restrictions</code> that are put in place. For example: <code>&apos;Images and video only, 2&#x2013;3 files, up to 1 MB&apos;</code>.</p>
 <h3 id="locale"><a href="#locale" class="headerlink" title="locale: {}"></a><code>locale: {}</code></h3><p>Localize text that is shown to the user.</p>
 <p>The default English strings are:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>strings<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -596,7 +596,25 @@ uppy<span class="token punctuation">.</span><span class="token function">use</sp
   browse<span class="token punctuation">:</span> <span class="token string">'browse'</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/dragdrop.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

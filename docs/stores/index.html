@@ -553,7 +553,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p>This section concerns storing the internal application state, if you work with React/Redux, for example. If none of this rings a bell, you can safely skip this section.</p>
 </blockquote>
 <p>By default, Uppy stores its internal state in an object.</p>
-<p>If your app uses a state management library such as <a href="https://redux.js.org" target="_blank" rel="noopener">Redux</a>, it can be useful to have Uppy store its state there instead—that way, you could write custom uploader UI components in the same way as the other components in the application.</p>
+<p>If your app uses a state management library such as <a href="https://redux.js.org" target="_blank" rel="noopener">Redux</a>, it can be useful to have Uppy store its state there instead&#x2014;that way, you could write custom uploader UI components in the same way as the other components in the application.</p>
 <p>Uppy comes with two state management solutions (stores):</p>
 <ul>
 <li><code>@uppy/store-default</code>, a simple object-based store.</li>
@@ -570,7 +570,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   store<span class="token punctuation">:</span> <span class="token function">defaultStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h3 id="DefaultStore"><a href="#DefaultStore" class="headerlink" title="DefaultStore"></a><code>DefaultStore</code></h3><p>Uppy uses the <code>DefaultStore</code>…by default! You do not need to do anything to use it.<br>It does not take any options.</p>
+<h3 id="DefaultStore"><a href="#DefaultStore" class="headerlink" title="DefaultStore"></a><code>DefaultStore</code></h3><p>Uppy uses the <code>DefaultStore</code>&#x2026;by default! You do not need to do anything to use it.<br>It does not take any options.</p>
 <h3 id="ReduxStore"><a href="#ReduxStore" class="headerlink" title="ReduxStore"></a><code>ReduxStore</code></h3><p>The <code>ReduxStore</code> stores Uppy state on a key in an existing Redux store.<br>The <code>ReduxStore</code> dispatches <code>uppy/STATE_UPDATE</code> actions to update state.<br>When the state in Redux changes, it notifies Uppy.<br>This way, you get most of the benefits of Redux, including support for the Redux Devtools and time traveling!</p>
 <p>To use the <code>ReduxStore</code>, add its reducer to the <code>uppy</code> key:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> ReduxStore <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@uppy/store-redux'</span><span class="token punctuation">)</span>
@@ -597,7 +597,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   id<span class="token punctuation">:</span> <span class="token string">'avatarUpload'</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
-<h4 id="opts-selector"><a href="#opts-selector" class="headerlink" title="opts.selector"></a><code>opts.selector</code></h4><p>If you’d rather not store the Uppy state under the <code>state.uppy</code> key at all, use the <code>selector</code> option to the <code>ReduxStore</code> constructor to tell it where to find state instead:</p>
+<h4 id="opts-selector"><a href="#opts-selector" class="headerlink" title="opts.selector"></a><code>opts.selector</code></h4><p>If you&#x2019;d rather not store the Uppy state under the <code>state.uppy</code> key at all, use the <code>selector</code> option to the <code>ReduxStore</code> constructor to tell it where to find state instead:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="token keyword">const</span> uppy <span class="token operator">=</span> <span class="token function">Uppy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   store<span class="token punctuation">:</span> <span class="token function">ReduxStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     store<span class="token punctuation">:</span> store<span class="token punctuation">,</span>
@@ -611,7 +611,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li><code>getState()</code> - Return the current state object.</li>
 <li><code>setState(patch)</code> - Merge the object <code>patch</code> into the current state.</li>
 <li><p><code>subscribe(listener)</code> - Call <code>listener</code> whenever the state changes.<br><code>listener</code> is a function that should receive three parameters:<br><code>(prevState, nextState, patch)</code></p>
-<p>The <code>subscribe()</code> method should return a function that ‘unsubscribes’ (removes) the <code>listener</code>.</p>
+<p>The <code>subscribe()</code> method should return a function that &#x2018;unsubscribes&#x2019; (removes) the <code>listener</code>.</p>
 </li>
 </ul>
 <p>The default store implementation, for example, looks a bit like this:</p>
@@ -640,7 +640,25 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 </pre></td></tr></table></figure>
 <p>A pattern like this, where users can pass options via a function call if necessary, is recommended.</p>
 <p>See the <a href="https://github.com/transloadit/uppy/tree/master/src/store" target="_blank" rel="noopener">./src/store</a> folder in the repository for more inspiration.</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
     <div class="footer">Caught a mistake or want to contribute to the documentation?
        <a href="https://github.com/transloadit/uppy/blob/master/website/src/docs/stores.md" rel="noreferrer noopener" target="_blank">Edit/fork this page directly on Github</a>!

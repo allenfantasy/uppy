@@ -96,7 +96,7 @@
         <ul>
   
   <li>
-    <a href="/blog/2019/03/liftoff-03/" class="sidebar-link">30 Days to Liftoff</a>
+    <a href="/blog/2019/03/liftoff-04/" class="sidebar-link">30 Days to Liftoff</a>
   </li>
   
   <li>
@@ -121,10 +121,6 @@
   
   <li>
     <a href="/blog/2018/06/0.25/" class="sidebar-link">Uppy 0.25: Drag & Drop Links Urls & Images, Improved File Selecting in Providers, Interactive Components In i18n</a>
-  </li>
-  
-  <li>
-    <a href="/blog/2018/04/0.24/" class="sidebar-link">Uppy 0.24: Refreshed Dashboard, StatusBar and Provider UI, revamped XHR Response Handling</a>
   </li>
   
 </ul>
@@ -157,12 +153,12 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <h1>Uppy 0.9: Making Progress, then pause & resume. Remote file uploads, Informer.</h1>
   <h4>Friday Aug 26, 2016</h4>
     
-    <p>We have just released Uppy 0.9.0. This release features some changes that we think you will be very excited about.  Let’s see what’s new!</p>
+    <p>We have just released Uppy 0.9.0. This release features some changes that we think you will be very excited about.  Let&#x2019;s see what&#x2019;s new!</p>
 <a id="more"></a>
 <h2 id="Ability-to-pause-uploads-progress-indicators-amp-ETA"><a href="#Ability-to-pause-uploads-progress-indicators-amp-ETA" class="headerlink" title="Ability to pause uploads, progress indicators &amp; ETA"></a>Ability to pause uploads, progress indicators &amp; ETA</h2><p>The most visible feature that has been added is the ability to pause and resume file uploads.</p>
 <p><img alt="dashboard UI with paused uploads" src="/images/blog/0.9/upload-pause.jpg" class="border"></p>
 <p><img alt="dashboard UI with files uploading and a pause all button" src="/images/blog/0.9/upload-resume.jpg" class="border"></p>
-<p>The upload dashboard now contains more information about uploads, such as the time remaining until an upload is finished. We have also added circular progress indicators to give better visual feedback on an upload’s progress.</p>
+<p>The upload dashboard now contains more information about uploads, such as the time remaining until an upload is finished. We have also added circular progress indicators to give better visual feedback on an upload&#x2019;s progress.</p>
 <h2 id="Remote-file-uploads"><a href="#Remote-file-uploads" class="headerlink" title="Remote file uploads"></a>Remote file uploads</h2><p>Remote file uploading is now working again.</p>
 <h2 id="Informer-interface"><a href="#Informer-interface" class="headerlink" title="Informer interface"></a>Informer interface</h2><p>We have added a new <code>Informer</code> plugin (tested with <code>Dashboard</code>, should also work anywhere else) that listens to <code>informer</code> events, like so:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre>bus<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'informer'</span><span class="token punctuation">,</span> message<span class="token punctuation">,</span> type<span class="token punctuation">,</span> duration<span class="token punctuation">)</span>
@@ -171,20 +167,20 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <p><img alt="info: no connection" src="/images/blog/0.9/info-no-connection.jpg" class="border"></p>
 <p>Or when Uppy has successfully uploaded your files:</p>
 <p><img alt="info: upload successful" src="/images/blog/0.9/info-upload-success.jpg" class="border"></p>
-<h2 id="Webcam-Say-Cheese"><a href="#Webcam-Say-Cheese" class="headerlink" title="Webcam: Say Cheese!"></a>Webcam: Say Cheese!</h2><p>The Webcam plugin can now take snapshots and add them to the file dashboard in Uppy’s modal.  We have also added Flash support for Safari/IE users.  The UI has also been cleaned up in the dashboard.  We have temporarily disabled video recording in order to focus on rolling out the snapshot feature.</p>
-<h2 id="Under-the-hood-UI-refactors"><a href="#Under-the-hood-UI-refactors" class="headerlink" title="Under the hood: UI refactors"></a>Under the hood: UI refactors</h2><p>Under the hood, we have made some changes to how the UI is structured.  We are taking a more componentized approach.  For example, the rendering of Google Drive’s UI has been separated into multiple smaller components that can be found in the <a href="https://github.com/transloadit/uppy/tree/master/src/plugins/GoogleDrive" target="_blank" rel="noopener"><code>plugins/GoogleDrive</code> folder</a>.</p>
+<h2 id="Webcam-Say-Cheese"><a href="#Webcam-Say-Cheese" class="headerlink" title="Webcam: Say Cheese!"></a>Webcam: Say Cheese!</h2><p>The Webcam plugin can now take snapshots and add them to the file dashboard in Uppy&#x2019;s modal.  We have also added Flash support for Safari/IE users.  The UI has also been cleaned up in the dashboard.  We have temporarily disabled video recording in order to focus on rolling out the snapshot feature.</p>
+<h2 id="Under-the-hood-UI-refactors"><a href="#Under-the-hood-UI-refactors" class="headerlink" title="Under the hood: UI refactors"></a>Under the hood: UI refactors</h2><p>Under the hood, we have made some changes to how the UI is structured.  We are taking a more componentized approach.  For example, the rendering of Google Drive&#x2019;s UI has been separated into multiple smaller components that can be found in the <a href="https://github.com/transloadit/uppy/tree/master/src/plugins/GoogleDrive" target="_blank" rel="noopener"><code>plugins/GoogleDrive</code> folder</a>.</p>
 <h2 id="Release-Notes"><a href="#Release-Notes" class="headerlink" title="Release Notes"></a>Release Notes</h2><p>Here is the full list of changes for version 0.9.0.:</p>
 <ul>
-<li>dashboard: informer interface: message when all uploads are “done” (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>dashboard: improve file paste — not really possible — no file names, weird API, Chrome-only <a href="http://stackoverflow.com/a/22940020" target="_blank" rel="noopener">http://stackoverflow.com/a/22940020</a> (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>dashboard: informer interface: message when all uploads are &#x201C;done&#x201D; (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>dashboard: improve file paste &#x2014; not really possible &#x2014; no file names, weird API, Chrome-only <a href="http://stackoverflow.com/a/22940020" target="_blank" rel="noopener">http://stackoverflow.com/a/22940020</a> (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>meta: add google demo account <a href="https://github.com/kvz" target="_blank" rel="noopener">@kvz</a>)</li>
 <li>meta: Set up a Google testing account that people can use to try the demo (<a href="https://github.com/hedgerh" target="_blank" rel="noopener">@hedgerh</a>)</li>
 <li>meta: write 0.9 release blog post (<a href="https://github.com/hedgerh" target="_blank" rel="noopener">@hedgerh</a>)</li>
 <li>webcam: a barely working webcam snapshot &amp; upload (<a href="https://github.com/hedgerh" target="_blank" rel="noopener">@hedgerh</a>)</li>
-<li>metadata: Uppy + tus empty metadata value issue in Safari <a href="https://github.com/tus/tus-js-client/issues/41" target="_blank" rel="noopener">https://github.com/tus/tus-js-client/issues/41</a> –&gt; tus issue — nailed down, passed to @account (@arturi, @account)</li>
+<li>metadata: Uppy + tus empty metadata value issue in Safari <a href="https://github.com/tus/tus-js-client/issues/41" target="_blank" rel="noopener">https://github.com/tus/tus-js-client/issues/41</a> &#x2013;&gt; tus issue &#x2014; nailed down, passed to @account (@arturi, @account)</li>
 <li>core: experiment with switching to <code>virtual-dom</code> in a separate branch; experiment with rollup again (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>core: figure out race conditions (animations not completing because file div gets re-added to the dom each time) with <code>yo-yo</code>/<code>morphdom</code> <a href="https://github.com/shama/bel/issues/26#issuecomment-238004130" target="_blank" rel="noopener">https://github.com/shama/bel/issues/26#issuecomment-238004130</a> (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>core: switch to <a href="https://github.com/sethvincent/namespace-emitter" target="_blank" rel="noopener">https://github.com/sethvincent/namespace-emitter</a> — smaller, allows for <code>on(&#39;*&#39;)</code> (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>core: switch to <a href="https://github.com/sethvincent/namespace-emitter" target="_blank" rel="noopener">https://github.com/sethvincent/namespace-emitter</a> &#x2014; smaller, allows for <code>on(&apos;*&apos;)</code> (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>dashboard: add aria-labels and titles everywhere to improve accessibility #114 (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>dashboard: file name + extension should fit on two lines, truncate in the middle (maybe <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/measureText</a>) (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>dashboard: implement a circular progress indicator on top of the fileItem with play/pause (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
@@ -192,16 +188,34 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <li>google drive: refactor to smaller components, as discussed in #110 (<a href="https://github.com/hedgerh" target="_blank" rel="noopener">@hedgerh</a>)</li>
 <li>google drive: add demo account (<a href="https://github.com/hedgerh" target="_blank" rel="noopener">@hedgerh</a>)</li>
 <li>metadata: add labels to fields in fileCard (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>metadata: the aftermath — better UI (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>metadata: the aftermath &#x2014; better UI (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>test: Get IE6 on Win XP to run Uppy and see it fall back to regular form upload #108 (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>test: refactor tests, add DragDrop back (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
-<li>tus: update uppy to tus-js-client@1.2.1, test on requirebin (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
+<li>tus: update uppy to <a href="mailto:tus-js-client@1.2.1" target="_blank" rel="noopener">tus-js-client@1.2.1</a>, test on requirebin (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>tus: add ability to pause/resume all uploads at once (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 <li>tus: add ability to pause/resume upload (<a href="https://github.com/arturi" target="_blank" rel="noopener">@arturi</a>)</li>
 </ul>
 <p>We hope you will enjoy this latest release. Uppy is still improving every day and we hope to bring you more news about our progress soon!</p>
 <p>The Uppy Team</p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
     
         <div class="PostAuthor">
             <a href="https://transloadit.com/about/#harry">
