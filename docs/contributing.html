@@ -620,7 +620,7 @@ selenium-standalone <span class="token function">install</span>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> website <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cd</span> <span class="token punctuation">..</span>
 </pre></td></tr></table></figure>
 <p>For local previews on <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>, type:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> start
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="token function">npm</span> run web:start <span class="token comment"># that gets you just the website. if you need companion, etc. you can use `npm start` instead</span>
 </pre></td></tr></table></figure>
 <p>This will watch the website, as well as Uppy, as the examples, and rebuild everything and refresh your browser as files change.</p>
 <p>Then, to work on, for instance, the XHRUpload example, you would edit the following files:</p>
