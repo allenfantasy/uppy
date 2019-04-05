@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
     <title>Uppy — Uppy File Uploader</title>
     <meta charset="utf-8">
     <meta name="title" content="Uppy — Uppy File Uploader">
@@ -24,7 +24,7 @@
     <meta property="og:image" content="http://uppy.io/images/uppy-social-pink.png">
     <meta name="twitter:image" content="http://uppy.io/images/uppy-social-pink.png">
     
-    <meta name="google-site-verification" content="JxARoHXoCI8bD07pLV_u3z6xpuWNcSIZIcHEytyCkUc" />
+    <meta name="google-site-verification" content="JxARoHXoCI8bD07pLV_u3z6xpuWNcSIZIcHEytyCkUc">
 
     <link rel="icon" href="/images/logos/uppy-dog-head-arrow.png" type="image/x-icon">
     <link rel="alternate" type="application/rss+xml" title="Uppy File Uploader" href="/atom.xml">
@@ -34,7 +34,8 @@
     <script>
       window.PAGE_TYPE = "docs"
     </script>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?version=2">
+    <!-- ^-- poor man's solution to css cache busting. bump the version when there's something new we really want users to see -->
   </head>
   <body class="page-inner">
     <div class="page">
@@ -65,7 +66,7 @@
           </ul>
         </nav>
 
-        <a href="https://github.com/transloadit/uppy" class="github-corner" aria-label="View source on Github"><svg width="67" height="67" viewBox="0 0 250 250" style="fill:#e02177; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+        <a href="https://github.com/transloadit/uppy" class="github-corner" aria-label="View source on Github"><svg width="67" height="67" viewbox="0 0 250 250" style="fill:#e02177; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
       </header>
 
       <main class="MainContent js-MainContent" id="main">
@@ -95,63 +96,50 @@
         <a href="/docs">Docs</a>
       
     </h2>
+
     <ul class="menu-root">
       
         
         
         
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/" class="sidebar-link">Getting Started</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/uppy/" class="sidebar-link current">Uppy</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/companion/" class="sidebar-link">Companion</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/stores/" class="sidebar-link">Custom Stores</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/contributing.html" class="sidebar-link">Contributing</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/stats/" class="sidebar-link">Stats</a>
           </li>
@@ -159,24 +147,23 @@
       
         
         
-        
-        
-        
           <li>
             
-              <h3><a href="/docs/plugins/">Plugins</a></h3>
+            <h3><a href="/docs/plugins/">Plugins</a></h3>
             
           </li>
+        
+        
+          
+          
+          
           <li>
             <a href="/docs/plugins/" class="sidebar-link">List & Common Options</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/writing-plugins/" class="sidebar-link">Writing Plugins</a>
           </li>
@@ -184,179 +171,37 @@
       
         
         
-        
-        
-        
           <li>
             
-              <h3>Local Sources</h3>
+            <h3>UI Elements</h3>
             
           </li>
-          <li>
-            <a href="/docs/dashboard/" class="sidebar-link">Dashboard</a>
-          </li>
         
-      
         
-        
-        
-        
-        
-          <li>
-            <a href="/docs/drag-drop/" class="sidebar-link">Drag & Drop</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/file-input/" class="sidebar-link">File Input</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/webcam/" class="sidebar-link">Webcam</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            
-              <h3><a href="/docs/providers/">Remote Providers</a></h3>
-            
-          </li>
-          <li>
-            <a href="/docs/providers/" class="sidebar-link">Provider Plugins</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/dropbox/" class="sidebar-link">Dropbox</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/google-drive/" class="sidebar-link">Google Drive</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/instagram/" class="sidebar-link">Instagram</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/url/" class="sidebar-link">Import From URL</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            
-              <h3>Uploaders</h3>
-            
-          </li>
-          <li>
-            <a href="/docs/tus/" class="sidebar-link">Tus</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/xhr-upload/" class="sidebar-link">XHR Upload</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/aws-s3/" class="sidebar-link">AWS S3</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/aws-s3-multipart/" class="sidebar-link">AWS S3 Multipart</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            
-              <h3>UI Elements</h3>
-            
-          </li>
+          
+          
+          
           <li>
             <a href="/docs/status-bar/" class="sidebar-link">Status Bar</a>
           </li>
         
-      
+          
+          
+          
+          <li>
+            <a href="/docs/dashboard/" class="sidebar-link">Dashboard</a>
+          </li>
         
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/progress-bar/" class="sidebar-link">Progress Bar</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/informer/" class="sidebar-link">Informer</a>
           </li>
@@ -364,14 +209,148 @@
       
         
         
+          <li>
+            
+            <h3>Sources</h3>
+            
+          </li>
         
+        
+          
+          
+          
+          <li>
+            <a href="/docs/drag-drop/" class="sidebar-link">Drag & Drop</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/file-input/" class="sidebar-link">File Input</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/webcam/" class="sidebar-link">Webcam</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/providers/" class="sidebar-link">Provider Plugins</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <span title="Requires Companion">ⓒ </span><a href="/docs/dropbox/" class="sidebar-link">Dropbox</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <span title="Requires Companion">ⓒ </span><a href="/docs/google-drive/" class="sidebar-link">Google Drive</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <span title="Requires Companion">ⓒ </span><a href="/docs/instagram/" class="sidebar-link">Instagram</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <span title="Requires Companion">ⓒ </span><a href="/docs/url/" class="sidebar-link">Import From URL</a>
+          </li>
+        
+      
         
         
           <li>
             
-              <h3>File Processing</h3>
+            <h3>Destinations</h3>
             
           </li>
+        
+        
+          
+          
+          
+          <li>
+            <a href="/docs/tus/" class="sidebar-link">Tus</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/xhr-upload/" class="sidebar-link">XHR</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/aws-s3/" class="sidebar-link">AWS S3</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/aws-s3-multipart/" class="sidebar-link">AWS S3 Multipart</a>
+          </li>
+        
+      
+        
+        
+          <li>
+            
+            <h3><a href="/docs/robodog/">File Processing</a></h3>
+            
+          </li>
+        
+        
+          
+          
+          
+          <li>
+            <a href="/docs/robodog/" class="sidebar-link">Robodog Introduction</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/robodog/picker/" class="sidebar-link">Robodog File Picker</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/robodog/form/" class="sidebar-link">Robodog Form</a>
+          </li>
+        
+          
+          
+          
+          <li>
+            <a href="/docs/robodog/upload/" class="sidebar-link">Robodog Upload</a>
+          </li>
+        
+          
+          
+          
           <li>
             <a href="/docs/transloadit/" class="sidebar-link">Transloadit</a>
           </li>
@@ -379,24 +358,23 @@
       
         
         
-        
-        
-        
           <li>
             
-              <h3>Miscellaneous</h3>
+            <h3>Miscellaneous</h3>
             
           </li>
+        
+        
+          
+          
+          
           <li>
             <a href="/docs/form/" class="sidebar-link">Form</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/golden-retriever/" class="sidebar-link">Golden Retriever</a>
           </li>
@@ -404,131 +382,69 @@
       
         
         
-        
-        
-        
           <li>
             
-              <h3><a href="/docs/react/">React Components</a></h3>
+            <h3><a href="/docs/react/">React</a></h3>
             
           </li>
+        
+        
+          
+          
+          
           <li>
             <a href="/docs/react/" class="sidebar-link">Introduction</a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/react/status-bar/" class="sidebar-link">&lt;StatusBar /></a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/react/drag-drop/" class="sidebar-link">&lt;DragDrop /></a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/react/progress-bar/" class="sidebar-link">&lt;ProgressBar /></a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/react/dashboard/" class="sidebar-link">&lt;Dashboard /></a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/react/dashboard-modal/" class="sidebar-link">&lt;DashboardModal /></a>
           </li>
         
-      
-        
-        
-        
-        
-        
+          
+          
+          
           <li>
             <a href="/docs/redux/" class="sidebar-link">Redux</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            
-              <h3><a href="/docs/robodog/">Robodog</a></h3>
-            
-          </li>
-          <li>
-            <a href="/docs/robodog/" class="sidebar-link">Introduction</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/robodog/picker/" class="sidebar-link">File Picker</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/robodog/form/" class="sidebar-link">Form</a>
-          </li>
-        
-      
-        
-        
-        
-        
-        
-          <li>
-            <a href="/docs/robodog/upload/" class="sidebar-link">Upload</a>
           </li>
         
       
     </ul>
     <ul class="Social">
   <li><a href="https://twitter.com/uppy_io" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @uppy_io</a></li>
-  <li><iframe src="https://ghbtns.com/github-btn.html?user=transloadit&repo=uppy&type=watch&count=true"
-allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
+  <li><iframe src="https://ghbtns.com/github-btn.html?user=transloadit&repo=uppy&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
   <!-- to regenerate you can use this link: https://img.shields.io/badge/community-forum-d8006a.svg -->
-  <li><a href="https://community.transloadit.com/c/uppy"><img src="/images/community-forum-d8006a.svg" /> </a></li>
+  <li><a href="https://community.transloadit.com/c/uppy"><img src="/images/community-forum-d8006a.svg"> </a></li>
   <li class="BuildBadge">
    <span class="wrapper">
      <a href="https://travis-ci.org/transloadit/uppy"><img src="https://travis-ci.org/transloadit/uppy.svg?branch=master" alt="Build Status"></a>
@@ -537,7 +453,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
   <li class="SauceBadge">
    <span class="wrapper">
      <a href="https://saucelabs.com/u/transloadit-uppy">
-       <img src="https://saucelabs.com/buildstatus/transloadit-uppy" alt="Sauce Test Status"/>
+       <img src="https://saucelabs.com/buildstatus/transloadit-uppy" alt="Sauce Test Status">
      </a>
    </span>
   </li>
@@ -545,6 +461,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
   </div>
 </div>
+
 
 
 <div class="Content js-Content docs with-sidebar">
@@ -573,8 +490,8 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
     allowedFileTypes<span class="token punctuation">:</span> <span class="token keyword">null</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   meta<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-  onBeforeFileAdded<span class="token punctuation">:</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">,</span> files<span class="token punctuation">)</span> <span class="token operator">=></span> currentFile<span class="token punctuation">,</span>
-  onBeforeUpload<span class="token punctuation">:</span> <span class="token punctuation">(</span>files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">onBeforeFileAdded</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">currentFile<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=></span> currentFile<span class="token punctuation">,</span>
+  <span class="token function-variable function">onBeforeUpload</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
   locale<span class="token punctuation">:</span> defaultLocale<span class="token punctuation">,</span>
   store<span class="token punctuation">:</span> <span class="token keyword">new</span> <span class="token class-name">DefaultStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -615,7 +532,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 <h3 id="onBeforeFileAdded-currentFile-files-gt-currentFile"><a href="#onBeforeFileAdded-currentFile-files-gt-currentFile" class="headerlink" title="onBeforeFileAdded: (currentFile, files) =&gt; currentFile"></a><code>onBeforeFileAdded: (currentFile, files) =&gt; currentFile</code></h3><p>A function run before a file is added to Uppy. It gets passed <code>(currentFile, files)</code> where <code>currentFile</code> is a file that is about to be added, and <code>files</code> is an object with all files that already are in Uppy.</p>
 <p>Use this function to run any number of custom checks on the selected file, or manipulate it, for instance, by optimizing a file name.</p>
 <p>Return true/nothing or a modified file object to proceed with adding the file:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre>onBeforeFileAdded<span class="token punctuation">:</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">,</span> files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="token function-variable function">onBeforeFileAdded</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">currentFile<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">'forest-IMG_0616.jpg'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span>
   <span class="token punctuation">}</span>
@@ -623,7 +540,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"><
 
 <span class="token comment">// or</span>
 
-onBeforeFileAdded<span class="token punctuation">:</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">,</span> files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<span class="token function-variable function">onBeforeFileAdded</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">currentFile<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> modifiedFile <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>
     <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
     currentFile<span class="token punctuation">,</span>
@@ -633,7 +550,7 @@ onBeforeFileAdded<span class="token punctuation">:</span> <span class="token pun
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
 <p>Return false to abort adding the file:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre>onBeforeFileAdded<span class="token punctuation">:</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">,</span> files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="token function-variable function">onBeforeFileAdded</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">currentFile<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFile<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// log to console</span>
     uppy<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Skipping file because it has no type`</span></span><span class="token punctuation">)</span>
@@ -648,16 +565,16 @@ onBeforeFileAdded<span class="token punctuation">:</span> <span class="token pun
 <h3 id="onBeforeUpload-files-gt-files"><a href="#onBeforeUpload-files-gt-files" class="headerlink" title="onBeforeUpload: (files) =&gt; files"></a><code>onBeforeUpload: (files) =&gt; files</code></h3><p>A function run before an upload begins. Gets passed <code>files</code> object with all the files that are already in Uppy.</p>
 <p>Use this to check if all files or their total number match your requirements, or manipulate all the files at once before upload.</p>
 <p>Return true or modified <code>files</code> object to proceed:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre>onBeforeUpload<span class="token punctuation">:</span> <span class="token punctuation">(</span>files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="token function-variable function">onBeforeUpload</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> updatedFiles <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> files<span class="token punctuation">)</span>
-  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>updatedFiles<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>fileId <span class="token operator">=></span> <span class="token punctuation">{</span>
+  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>updatedFiles<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fileId</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     updatedFiles<span class="token punctuation">[</span>fileId<span class="token punctuation">]</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'myCustomPrefix_'</span> <span class="token operator">+</span> updatedFiles<span class="token punctuation">[</span>fileId<span class="token punctuation">]</span><span class="token punctuation">.</span>name
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token keyword">return</span> updatedFiles
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
 <p>Return false to abort:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre>onBeforeUpload<span class="token punctuation">:</span> <span class="token punctuation">(</span>files<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="token function-variable function">onBeforeUpload</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">files</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// log to console</span>
     uppy<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Aborting upload because only </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>files<span class="token punctuation">)</span><span class="token punctuation">.</span>length<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> files were selected`</span></span><span class="token punctuation">)</span>
@@ -688,7 +605,7 @@ onBeforeFileAdded<span class="token punctuation">:</span> <span class="token pun
 <p>It also offers the pluralization function, which is used to determine which string will be used for the provided <code>smart_count</code> number.</p>
 <p>For example, for the Icelandic language, the pluralization function would be:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre>locale<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-  pluralize<span class="token punctuation">:</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">!==</span> <span class="token number">1</span> <span class="token operator">||</span> n <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">===</span> <span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token punctuation">:</span> <span class="token number">0</span>
+  <span class="token function-variable function">pluralize</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>n <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">!==</span> <span class="token number">1</span> <span class="token operator">||</span> n <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">===</span> <span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token punctuation">:</span> <span class="token number">0</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
 <p>We are using a forked <a href="https://github.com/airbnb/polyglot.js/blob/master/index.js#L37-L60" target="_blank" rel="noopener">Polyglot.js</a>.</p>
@@ -747,12 +664,12 @@ document<span class="token punctuation">.</span><span class="token function">que
 <li><code>result.successful</code> - Files that were uploaded successfully.</li>
 <li><code>result.failed</code> - Files that did not upload successfully. These file objects will have a <code>.error</code> property describing what went wrong.</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">upload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Successful uploads:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>successful<span class="token punctuation">)</span>
 
   <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>failed<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Errors:'</span><span class="token punctuation">)</span>
-    result<span class="token punctuation">.</span>failed<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    result<span class="token punctuation">.</span>failed<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>error<span class="token punctuation">)</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
@@ -839,17 +756,17 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 <h3 id="uppy-off-39-event-39-action"><a href="#uppy-off-39-event-39-action" class="headerlink" title="uppy.off(&apos;event&apos;, action)"></a><code>uppy.off(&apos;event&apos;, action)</code></h3><p>Unsubscribe to an uppy-event. See below for the full list of events.</p>
 <h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>Uppy exposes events that you can subscribe to in your app:</p>
 <h3 id="file-added"><a href="#file-added" class="headerlink" title="file-added"></a><code>file-added</code></h3><p>Fired each time a file is added.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'file-added'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'file-added'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Added file'</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="file-removed"><a href="#file-removed" class="headerlink" title="file-removed"></a><code>file-removed</code></h3><p>Fired each time a file is removed.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'file-removed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'file-removed'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">file</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Removed file'</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="upload"><a href="#upload" class="headerlink" title="upload"></a><code>upload</code></h3><p>Fired when upload starts.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// data object consists of `id` with upload ID and `fileIDs` array</span>
   <span class="token comment">// with file IDs in current upload</span>
   <span class="token comment">// data: { id, fileIDs }</span>
@@ -857,7 +774,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="upload-progress"><a href="#upload-progress" class="headerlink" title="upload-progress"></a><code>upload-progress</code></h3><p>Fired each time file upload progress is available:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-progress'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> progress<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-progress'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> progress</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token comment">// file: { id, name, type, ... }</span>
   <span class="token comment">// progress: { uploader, bytesUploaded, bytesTotal }</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>id<span class="token punctuation">,</span> progress<span class="token punctuation">.</span>bytesUploaded<span class="token punctuation">,</span> progress<span class="token punctuation">.</span>bytesTotal<span class="token punctuation">)</span>
@@ -871,7 +788,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
   uploadURL <span class="token comment">// the file url, if it was returned</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-success'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-success'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span>name<span class="token punctuation">,</span> response<span class="token punctuation">.</span>uploadURL<span class="token punctuation">)</span>
   <span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
   img<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">300</span>
@@ -882,7 +799,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 </pre></td></tr></table></figure>
 <h3 id="complete"><a href="#complete" class="headerlink" title="complete"></a><code>complete</code></h3><p>Fired when all uploads are complete.</p>
 <p>The <code>result</code> parameter is an object with arrays of <code>successful</code> and <code>failed</code> files, just like in <a href="#uppy-upload"><code>uppy.upload()</code></a>&#x2019;s return value.</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'successful files:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>successful<span class="token punctuation">)</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'failed files:'</span><span class="token punctuation">,</span> result<span class="token punctuation">.</span>failed<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
@@ -895,13 +812,13 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
   body <span class="token comment">// response body</span>
 <span class="token punctuation">}</span>
 </pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-error'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> error<span class="token punctuation">,</span> response<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight javascript"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-error'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">file<span class="token punctuation">,</span> error<span class="token punctuation">,</span> response</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error with file:'</span><span class="token punctuation">,</span> file<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error message:'</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="upload-retry"><a href="#upload-retry" class="headerlink" title="upload-retry"></a><code>upload-retry</code></h3><p>Fired when an upload has been retried (after an error, for example):</p>
-<figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-retry'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>fileID<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+<figure class="highlight js"><table><tr><td class="code"><pre>uppy<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'upload-retry'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">fileID</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'upload retried:'</span><span class="token punctuation">,</span> fileID<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
@@ -918,7 +835,7 @@ uppy<span class="token punctuation">.</span><span class="token function">setStat
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </pre></td></tr></table></figure>
 <h3 id="info-hidden"><a href="#info-hidden" class="headerlink" title="info-hidden"></a><code>info-hidden</code></h3><p>Fired when &#x201C;info&#x201D; message should be hidden in the UI. See <a href="#info-visible"><code>info-visible</code></a>.</p>
-<h3 id="cancel-all"><a href="#cancel-all" class="headerlink" title="cancel-all"></a><code>cancel-all</code></h3><p>Fired when <a href=""><code>uppy.cancelAll()</code></a> is called, all uploads are canceled, files removed and progress is reset.</p>
+<h3 id="cancel-all"><a href="#cancel-all" class="headerlink" title="cancel-all"></a><code>cancel-all</code></h3><p>Fired when <a href><code>uppy.cancelAll()</code></a> is called, all uploads are canceled, files removed and progress is reset.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
